@@ -1,4 +1,5 @@
 import os
+import json
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -27,7 +28,7 @@ def  speaker_transcription_and_identify(audio_file):
 
     # Whisper procesing
     audio = whisperx.load_audio(audio_file)
-    model = whisperx.load_model("medium", device, compute_type=compute_type)
+    model = whisperx.load_model("tiny", device, compute_type=compute_type)
     result = model.transcribe(audio, batch_size=batch_size)
 
     # 2. Align whisper output
@@ -41,11 +42,12 @@ def  speaker_transcription_and_identify(audio_file):
 
     diarize_segments = diarize_model(audio, min_speakers=2, max_speakers=2)
     result = whisperx.assign_word_speakers(diarize_segments, result)
-
+    print(result)
     # Process the audio to OpenAI training format
     result = process_audio_to_openai_training_format(result["segments"])
 
     final_format = {"messages": result}
+    print(final_format)
     return final_format
 
 def process_directory(audio_directory, output_file):
@@ -64,12 +66,17 @@ def process_directory(audio_directory, output_file):
     with open(output_file, 'a') as jsonl_file:
         for audio_file in audio_files:
             audio_path = os.path.join(audio_directory, audio_file)
+            print('The audio will process is: ', audio_path)
             result = speaker_transcription_and_identify(audio_path)
             # Escribir el resultado como una nueva línea en el archivo JSONL
             jsonl_file.write(json.dumps(result) + '\n')
             print(f"Processed and added to JSONL: {audio_file}")
 
 if __name__ == "__main__":
-    audio_directory = "audios_train_assistant"
-    output_file = "path_to_your_output_file.jsonl"
-    process_directory(audio_directory, output_file)
+    # audio_directory = "audios_train_assistant"
+    # output_file = "output_files/training_dialer.jsonl"
+    # process_directory(audio_directory, output_file)
+
+    result = speaker_transcription_and_identify('audios_train_assistant/20240325-184022_8605638886-all.mp3')
+    with open('output_files/training_dialer.jsonl', 'a') as jsonl_file:
+        jsonl_file.write(json.dumps(result) + '\n')

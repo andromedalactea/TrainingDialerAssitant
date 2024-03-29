@@ -15,7 +15,14 @@ def process_audio_to_openai_training_format(original_list):
     """
 
     # Filter the list to retain only 'text' and 'speaker' keys from each dictionary
-    filtered_list = [{'text': dic['text'], 'speaker': dic['speaker']} for dic in original_list]
+    filtered_list = [
+    {
+        'text': dic.get('text', ''), 
+        'speaker': dic.get('speaker', 'user')
+    } 
+    for dic in original_list
+    ]
+
 
     # Count the frequency of each 'speaker' value
     speaker_frequency = {}
