@@ -1,0 +1,83 @@
+{"role": "system", "content":
+      """
+      Prompt for OpenAI Assistant:
+
+You will be provided with transcripts of conversations between call center agents and customers. Your task is to structure these dialogues into a JSON format, identifying which parts of the conversation are spoken by the agent (labeled as "assistant") and which are spoken by the customer (labeled as "user").
+
+The format of your output should resemble the following JSON structure:
+
+json
+Copy code
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Example user dialogue here."
+    },
+    {
+      "role": "assistant",
+      "content": "Example assistant dialogue here.",
+      "weight": 0
+    }
+  ]
+}
+Please adhere to these guidelines:
+
+Do not alter the text: You must not change the content of the dialogues. Present them as they are, ensuring the essence of the conversation remains intact.
+
+Removal of inappropriate content: If there are parts of the dialogue that seem out of context or inappropriate for a professional call center agent to say (such as repeated numbers or irrelevant statements), you may omit these. However, this should be done sparingly and with caution to ensure that the dialogue's integrity is maintained.
+
+Maintain dialogue integrity: Ensure that the dialogue flow is logical and coherent, reflecting the progression of the conversation between the agent and the customer.
+
+Assign roles accurately: Carefully assign the "role" field to "assistant" for the call center agent's dialogue and "user" for the customer's responses.
+
+Remember, the objective is to structure the dialogue in a way that accurately represents the interaction between the call center agent and the customer, facilitating analysis or further processing of the conversation data.
+     """},
+    {"role": "user", "content":
+      """
+      Hello. Yes, hello sir. May I speak with the business owner of Miguel Srectoran, the owner? Oh, pleasure speaking to you sir. Apologies, I know you're busy, this is just less than a minute. So my name here is Nat, I'm from Aventus Bay and I'm not here to change any of what you have, I respect what you have. This is regarding about the new guidelines because you're an owner. So basically, her owners are no longer required to pay any processing fees, which is good news. It's zero processing, you will save thousands of dollars. But like I said sir, this is just information that we want to share to you. So my colleagues, they were trying to definitely reach you back tomorrow for only a couple of minutes and you will explain to you zero processing. So my question here, sir, is what would be the best time to reach you back tomorrow? Would it be the morning sir or in the afternoon?
+      """},
+    {"role": "assistant", "content":
+      """
+      {
+    "messages": [
+      {
+        "role": "assistant",
+        "content": "Hello. Yes, hello sir. May I speak with the business owner of Miguel Srectoran, the owner? Oh, pleasure speaking to you sir. Apologies, I know you're busy, this is just less than a minute. So my name here is Nat, I'm from Aventus Bay and I'm not here to change any of what you have, I respect what you have. This is regarding about the new guidelines because you're an owner. So basically, her owners are no longer required to pay any processing fees, which is good news. It's zero processing, you will save thousands of dollars. But like I said sir, this is just information that we want to share to you. So my colleagues, they were trying to definitely reach you back tomorrow for only a couple of minutes and you will explain to you zero processing. So my question here, sir, is what would be the best time to reach you back tomorrow? Would it be the morning sir or in the afternoon?"
+      },
+      {
+        "role": "user",
+        "content": "Sure the morning. I really had in the program that we don't pay processing fees."
+      },
+      {
+        "role": "assistant",
+        "content": "Oh, that's good, what type of program do you use sir? I do want to pay, I think the customer's pay 3% or 325."
+      },
+      {
+        "role": "user",
+        "content": "Oh, 3% that there's still a percent, but this one sir, this is zero processing, there's no percentage."
+      },
+      {
+        "role": "assistant",
+        "content": "But don't worry sir, like I said, I respect what you have, this is just information that we want to share to you. Who knows, maybe in the near future, if you will change at least, you will find us with zero with no 3% okay. So tomorrow sir, would you like, what time in the morning or in the afternoon sir?"
+      },
+      {
+        "role": "user",
+        "content": "In the morning, you can call me in the morning, what time is it for you?"
+      },
+      {
+        "role": "assistant",
+        "content": "Okay, 9 a.m. sir, 9 a.m. Is it okay?"
+      },
+      {
+        "role": "user",
+        "content": "9 a.m."
+      },
+      {
+        "role": "assistant",
+        "content": "9 a.m.  last question Miguel, I do believe with your success in the Mrs. Miguel, your dear processing of this $5,000 US dollar someone neutrally. Just to get some of it I believe so. Yes, okay, yes. Good. So Miguel, tomorrow 9 a.m. Don't forget, we'll call you, okay? Have a great day, sir. God bless you. You're so kind sir. Thank you. Bye."
+      }
+    ]
+  }
+  
+      """}
