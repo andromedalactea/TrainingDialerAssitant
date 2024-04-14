@@ -66,7 +66,7 @@ def webhook():
         # Decode calification
         decode_calification = codecs.decode(calification, 'unicode_escape')
         
-        print_to_console(decode_calification)
+        print_to_console(decode_calification.replace("```json", "").replace("```", ""))
         
         return jsonify({"status": "success", "calification": calification}), 200
     else:
@@ -74,7 +74,7 @@ def webhook():
     
 def shutdown():
     print('Shutting down server...')
-    os.kill(os.getpid(), signal.SIGINT)
+    os.kill(os.getpid(), signal.SIGINT) 
     return 'Server shutting down...'
 
 app = Flask(__name__)

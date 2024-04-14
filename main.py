@@ -15,14 +15,17 @@ def main_flux():
     if call == "Call made":
         print_to_console("Call made")
     else: 
-        print_to_console("Error making the call")
+        print_to_console("Error making the call.. Verify the number and format")
+        print_to_console(r'Example format "+18065133220"')
+        os.kill(os.getpid(), signal.SIGINT)
+
 
     ## Start the weebhook to receive the call end data
     # Define the port of your choice, by default Flask uses port 5000
     port = 5000
     # Configure ngrok with the port on which Flask is running
     ngrok_tunnel = ngrok.connect(port, domain=domain)
-    
+
     # Run the Flask server, making sure it is publicly accessible and on the correct port
     app.run(host='0.0.0.0', port=5000)
 
