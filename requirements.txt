@@ -1,3 +1,7 @@
 openai-whisper
 python-dotenv
 git+https://github.com/m-bain/whisperx.git
+requests
+openai
+pyngrok
+pytz
