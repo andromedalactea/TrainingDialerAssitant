@@ -25,7 +25,7 @@ def call_ai(phone_number, url_server, phoneNumberId="c976502a-22c5-4f10-9aa0-36b
         promt_AI_like_user = file.read()  # read all content
 
     ## Determinate the fisrt message respect the actual time of United States
-    # Establecer la zona horaria de Nueva York
+    # Timexopne for New York
     try:
         timezone = pytz.timezone('America/New_York')
 
@@ -58,8 +58,9 @@ def call_ai(phone_number, url_server, phoneNumberId="c976502a-22c5-4f10-9aa0-36b
         "model": {
           "provider": "custom-llm",
           "url": "https://api.openai.com/v1/chat/completions",
-          "model": "ft:gpt-3.5-turbo-0125:igd:okey:9CrshYXi",
+          "model": "ft:gpt-3.5-turbo-1106:igd:okey:9EiCPG5O",
           "urlRequestMetadataEnabled": False,
+          "temperature": 0.1,
           "messages": [
              {
                "role": "system",
@@ -82,6 +83,6 @@ def call_ai(phone_number, url_server, phoneNumberId="c976502a-22c5-4f10-9aa0-36b
 # Example usage:
 if __name__ == "__main__":
 
-    phone_number = "+18065133219" # My phone number
+    phone_number = "+16814043771" # My phone number
     # phone_number = "+19545158586" # Other phone number
     print(call_ai( phone_number, 'https://loosely-stirred-porpoise.ngrok-free.app/calificate_call'))

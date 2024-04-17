@@ -19,6 +19,7 @@ def main_flux():
         print_to_console(r'Example format "+18065133220"')
         os.kill(os.getpid(), signal.SIGINT)
 
+    os.kill(os.getpid(), signal.SIGINT)
 
     ## Start the weebhook to receive the call end data
     # Define the port of your choice, by default Flask uses port 5000
