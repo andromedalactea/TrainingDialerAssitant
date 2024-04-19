@@ -55,6 +55,7 @@ def call_ai(phone_number, url_server, phoneNumberId="c976502a-22c5-4f10-9aa0-36b
           "firstMessage": f"{first_message}",
           "serverUrl": url_server,
           "voicemailDetectionEnabled": False,
+          "backgroundSound": "off",
         "model": {
           "provider": "custom-llm",
           "url": "https://api.openai.com/v1/chat/completions",
@@ -70,7 +71,9 @@ def call_ai(phone_number, url_server, phoneNumberId="c976502a-22c5-4f10-9aa0-36b
          },
          "voice":{
              "provider": "playht",
-             "voiceId": "michael"
+             "voiceId": "michael",
+             "styleGuidance": 15,
+             "textGuidance": 1
          }
       }
     }
