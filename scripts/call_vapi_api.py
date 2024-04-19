@@ -67,7 +67,11 @@ def call_ai(phone_number, url_server, phoneNumberId="c976502a-22c5-4f10-9aa0-36b
                "content": f"{promt_AI_like_user}"
              }
            ]
-         } 
+         },
+         "voice":{
+             "provider": "playht",
+             "voiceId": "michael"
+         }
       }
     }
     headers = {
