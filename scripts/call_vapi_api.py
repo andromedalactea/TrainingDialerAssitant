@@ -54,13 +54,13 @@ def call_ai(phone_number, url_server, phoneNumberId="c976502a-22c5-4f10-9aa0-36b
       "assistant": {
           "firstMessage": f"{first_message}",
           "serverUrl": url_server,
-
+          "voicemailDetectionEnabled": False,
         "model": {
           "provider": "custom-llm",
           "url": "https://api.openai.com/v1/chat/completions",
           "model": "ft:gpt-3.5-turbo-1106:igd:okey:9EiCPG5O",
           "urlRequestMetadataEnabled": False,
-          "temperature": 0.1,
+          "temperature": 0.2,
           "messages": [
              {
                "role": "system",
