@@ -10,6 +10,18 @@ from flask import Flask, request, jsonify
 from pyngrok import ngrok
 from dotenv import load_dotenv
 
+# # Guardar las referencias originales
+# original_stdout = sys.stdout
+# original_stderr = sys.stderr
+
+# # Redirigir stdout y stderr a /dev/null para suprimir la salida
+# sys.stdout = open(os.devnull, 'w')
+# sys.stderr = open(os.devnull, 'w')
+
+# # Función para imprimir mensajes críticos en la consola original
+# def print_to_console(*args, **kwargs):
+#     print(*args, file=original_stdout, **kwargs)
+
 # Load environment variables from the .env file
 load_dotenv()
 
@@ -90,7 +102,7 @@ if __name__ == '__main__':
     subdomain = "loosely-stirred-porpoise.ngrok-free.app"  # El subdominio que reservaste
 
     # Configure ngrok with the port on which Flask is running
-    ngrok_tunnel = ngrok.connect(port, doamain=subdomain)
+    ngrok_tunnel = ngrok.connect(port, domain=subdomain)
     print('NGROK Tunnel URL:', ngrok_tunnel.public_url)
 
     # Run the Flask server, making sure it is publicly accessible and on the correct port
