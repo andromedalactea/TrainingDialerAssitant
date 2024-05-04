@@ -99,4 +99,4 @@ if __name__ == "__main__":
 
     phone_number = "+16179702027" # My phone number
     # phone_number = "+19545158586" # Other phone number
-    print(call_ai( phone_number, 'https://loosely-stirred-porpoise.ngrok-free.app/calificate_call'))
+    print(call_ai( phone_number, 'http://89.117.21.214:8501/calificate_call'))
