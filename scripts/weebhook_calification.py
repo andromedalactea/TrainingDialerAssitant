@@ -90,11 +90,11 @@ if __name__ == '__main__':
     subdomain = "loosely-stirred-porpoise.ngrok-free.app"  # El subdominio que reservaste
 
     # Configure ngrok with the port on which Flask is running
-    # ngrok_tunnel = ngrok.connect(port, doamain=subdomain)
-    # print('NGROK Tunnel URL:', ngrok_tunnel.public_url)
+    ngrok_tunnel = ngrok.connect(port, doamain=subdomain)
+    print('NGROK Tunnel URL:', ngrok_tunnel.public_url)
 
     # Run the Flask server, making sure it is publicly accessible and on the correct port
     app.run(host='0.0.0.0', port=port)
 
     # Disconnect the ngrok tunnel when you are ready to end the session
-    # ngrok.disconnect(ngrok_tunnel.public_url)
+    ngrok.disconnect(ngrok_tunnel.public_url)
