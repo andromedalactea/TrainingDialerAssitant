@@ -21,7 +21,7 @@ def call_ai(phone_number, url_server, phoneNumberId="c976502a-22c5-4f10-9aa0-36b
       None
     """
     # Extract the promt for the AI like USer
-    with open('promts/calificate_call.promt', 'r') as file:
+    with open('promts/AI_like_user.promt', 'r') as file:
         promt_AI_like_user = file.read()  # read all content
 
     ## Determinate the fisrt message respect the actual time of United States
@@ -83,13 +83,20 @@ def call_ai(phone_number, url_server, phoneNumberId="c976502a-22c5-4f10-9aa0-36b
     }
 
     response = requests.request("POST", url, json=payload, headers=headers)
-    # print(response.text)
-    # print(response.status_code)
-    return "Call made" if response.status_code == 201 else "Error making the call"+ response.text
-
+    if response.status_code == 201:
+        try:
+            response_data = response.json()
+            call_id = response_data.get('id')
+            return call_id
+        except Exception as e:
+            print(f"Error parsing response: {str(e)}")
+            return None
+    else:
+        print(f"Error making the call: {response.text}")
+        return None
 # Example usage:
 if __name__ == "__main__":
 
-    phone_number = "+16814043771" # My phone number
+    phone_number = "+16179702027" # My phone number
     # phone_number = "+19545158586" # Other phone number
     print(call_ai( phone_number, 'https://loosely-stirred-porpoise.ngrok-free.app/calificate_call'))

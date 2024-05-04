@@ -6,3 +6,4 @@ openai
 pyngrok
 pytz
 flask
+streamlit
