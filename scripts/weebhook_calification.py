@@ -10,18 +10,6 @@ from flask import Flask, request, jsonify
 from pyngrok import ngrok
 from dotenv import load_dotenv
 
-# # Guardar las referencias originales
-# original_stdout = sys.stdout
-# original_stderr = sys.stderr
-
-# # Redirigir stdout y stderr a /dev/null para suprimir la salida
-# sys.stdout = open(os.devnull, 'w')
-# sys.stderr = open(os.devnull, 'w')
-
-# # Función para imprimir mensajes críticos en la consola original
-# def print_to_console(*args, **kwargs):
-#     print(*args, file=original_stdout, **kwargs)
-
 # Load environment variables from the .env file
 load_dotenv()
 
@@ -59,38 +47,31 @@ def main_call():
         message_vapi = data.get('message')
         print(data)
         if  message_vapi.get('type') == 'end-of-call-report':
-            print('---------------------------------------------------------')
             # Extract call id
             call_data = message_vapi.get('call', {})
-            print(call_data)
             call_id = call_data.get('id')
             
 
-            print(call_id)
             transcript = message_vapi.get('transcript')
             calification = calificate_call(transcript)
-            print('---------------------------------------------------------')
 
-            print(calification)
             # Decode calification and clean it up
             decoded_calification = codecs.decode(calification, 'unicode_escape').replace("```json", "").replace("```", "")
-            print(decoded_calification)
             # Prepare the dictionary to be saved
             calification_dict = {
                 "call_id": call_id,
                 "calification": decoded_calification
             }
-            print(calification_dict)
             # Save the calification in a file like a jsonl
             # Read the existing data
             try:
-                with open("califications.jsonl", "r") as file:
+                with open("output_files/califications_history.jsonl", "r") as file:
                     existing_data = file.readlines()
             except FileNotFoundError:
                 existing_data = []
 
             # Write the new data at the top
-            with open("califications.jsonl", "w") as file:
+            with open("output_files/califications_history.jsonl", "w") as file:
                 file.write(json.dumps(calification_dict) + "\n" + "".join(existing_data))
             
             print(json.dumps(calification_dict))
@@ -104,7 +85,7 @@ def main_call():
 
 if __name__ == '__main__':
     # Define the port of your choice, by default Flask uses port 5000
-    port = 8501
+    port = 8080
     # Configura el subdominio personalizado
     subdomain = "loosely-stirred-porpoise.ngrok-free.app"  # El subdominio que reservaste
 
