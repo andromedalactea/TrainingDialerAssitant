@@ -39,7 +39,7 @@ def calificate_call(call_transcript: str):
     client = OpenAI()
 
     completion = client.chat.completions.create(
-    model="gpt-4-0125-preview",
+    model="gpt-4o",
     temperature = 0,
     messages=[
         {"role": "system", "content": f"{promt_calificate_AI}"},
