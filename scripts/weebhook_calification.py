@@ -99,7 +99,7 @@ if __name__ == '__main__':
     # Define the port of your choice, by default Flask uses port 5000
     port = 8080
     # Configura el subdominio personalizado
-    subdomain = "loosely-stirred-porpoise.ngrok-free.app"  # El subdominio que reservaste
+    subdomain = "hugely-cute-sunfish.ngrok-free.app"  # El subdominio que reservaste
 
     # Configure ngrok with the port on which Flask is running
     ngrok_tunnel = ngrok.connect(port, domain=subdomain)
