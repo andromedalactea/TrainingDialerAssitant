@@ -1,6 +1,9 @@
 /test
 /attic
 /audios_train_assistant
+/build
+/node_modules
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
