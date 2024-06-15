@@ -50,8 +50,8 @@ def calificate_call(call_transcript: str):
 
 # Flask app
 app = Flask(__name__)
-@app.route('/calificate_call', methods=['POST'])
-def main_call():
+@app.route('/<path:path>', methods=['POST', 'GET', 'POST', 'PUT', 'DELETE', 'PATCH'])
+def main_call(path):
     """Webhook endpoint that receives POST requests and processes call transcriptions."""
     try:
         data = request.json
@@ -61,7 +61,8 @@ def main_call():
         if  message_vapi.get('type') == 'end-of-call-report':
             # Extract call id
             call_data = message_vapi.get('call', {})
-            call_id = call_data.get('id')
+            call_id = data['message']['call']['assistantOverrides']['metadata']['call_secundary_id']
+            print(call_id)
             
 
             transcript = message_vapi.get('transcript')
@@ -83,11 +84,8 @@ def main_call():
                 existing_data = []
 
             # Write the new data at the top
-            with open("output_files/califications_history.jsonl", "w") as file:
-                file.write(json.dumps(calification_dict) + "\n" + "".join(existing_data))
-            
-            print(json.dumps(calification_dict))
-            
+            with open("public/califications_history.jsonl", "a") as file:
+                file.write(json.dumps(calification_dict) + "\n")
             return jsonify({"status": "success", "calification": decoded_calification}), 200
         else:
             return jsonify({"status": "ignored"}), 200

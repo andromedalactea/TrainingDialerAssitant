@@ -1,39 +1,44 @@
 import { useEffect, useState } from "react";
-
 import ActiveCallDetail from "./components/ActiveCallDetail";
 import Button from "./components/base/Button";
 import Vapi from "@vapi-ai/web";
 import { isPublicKeyMissingError } from "./utils";
+import { v4 as uuidv4 } from 'uuid';
+import WaitingScreen from "./components/call/WaitingScreen";
+import ResultScreen from "./components/call/ResultScreen";
 
 // Put your Vapi Public Key below.
-const vapiPublicKey = process.env.REACT_APP_VAPI_PUBLIC_KEY;
-console.log("VAPI_PUBLIC_KEY", vapiPublicKey);
-
-const vapi = new Vapi(vapiPublicKey);
+const VAPI_PUBLIC_KEY = process.env.REACT_APP_VAPI_PUBLIC_KEY;
+const vapi = new Vapi(VAPI_PUBLIC_KEY);
 
 const App = () => {
   const [connecting, setConnecting] = useState(false);
   const [connected, setConnected] = useState(false);
-
   const [assistantIsSpeaking, setAssistantIsSpeaking] = useState(false);
   const [volumeLevel, setVolumeLevel] = useState(0);
-
+  const [callID, setCallID] = useState(null);
+  const [view, setView] = useState('main');
+  const [logs, setLogs] = useState([]);
   const { showPublicKeyInvalidMessage, setShowPublicKeyInvalidMessage } = usePublicKeyInvalid();
 
-  // hook into Vapi events
+  const addLog = (message) => {
+    setLogs((prevLogs) => [...prevLogs, message]);
+  };
+
   useEffect(() => {
     vapi.on("call-start", () => {
+      addLog("Call started");
       setConnecting(false);
       setConnected(true);
-
       setShowPublicKeyInvalidMessage(false);
     });
 
     vapi.on("call-end", () => {
+      addLog("Call ended");
       setConnecting(false);
       setConnected(false);
-
       setShowPublicKeyInvalidMessage(false);
+      setView('waiting'); // Cambia la vista a 'waiting' después de que la llamada termina
     });
 
     vapi.on("speech-start", () => {
@@ -49,25 +54,29 @@ const App = () => {
     });
 
     vapi.on("error", (error) => {
-      console.error(error);
-
+      addLog(`VAPI Error: ${error}`);
       setConnecting(false);
       if (isPublicKeyMissingError({ vapiError: error })) {
         setShowPublicKeyInvalidMessage(true);
       }
     });
-
-    // we only want this to fire on mount
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // call start handler
   const startCallInline = () => {
     setConnecting(true);
-    vapi.start(assistantOptions);
-    console.log("Call started");
+    const call_secundary_id = uuidv4();
+    setCallID(call_secundary_id);
+    addLog(`Starting call with ID: ${call_secundary_id}`);
+
+    const assistantOverrides = {
+      metadata: { call_secundary_id: call_secundary_id },
+    };
+
+    vapi.start(assistantOptions, assistantOverrides);
   };
+
   const endCall = () => {
+    addLog(`Ending call with ID: ${callID}`);
     vapi.stop();
   };
 
@@ -79,29 +88,53 @@ const App = () => {
         height: "100vh",
         justifyContent: "center",
         alignItems: "center",
+        flexDirection: "column",
       }}
     >
-      {!connected ? (
-        <Button
-          label="Call Vapi’s Pizza Front Desk"
-          onClick={startCallInline}
-          isLoading={connecting}
-        />
-      ) : (
-        <ActiveCallDetail
-          assistantIsSpeaking={assistantIsSpeaking}
-          volumeLevel={volumeLevel}
-          onEndCallClick={endCall}
-        />
+      {console.log('view:', view)}
+      {view === 'main' && (
+        !connected ? (
+          <Button
+            label="Call Vapi’s Pizza Front Desk"
+            onClick={startCallInline}
+            isLoading={connecting}
+          />
+        ) : (
+          <ActiveCallDetail
+            assistantIsSpeaking={assistantIsSpeaking}
+            volumeLevel={volumeLevel}
+            onEndCallClick={endCall}
+          />
+        )
       )}
 
+    
+      {view === 'waiting' && <WaitingScreen callID={callID} onResults={() => setView('results')} />}
+
+      {view === 'results' && <ResultScreen callID={callID} />}
+      
+      
+      
       {showPublicKeyInvalidMessage ? <PleaseSetYourPublicKeyMessage /> : null}
       <ReturnToDocsLink />
+      <div style={{ marginTop: '20px', width: '80%', height: '200px', overflowY: 'scroll', border: '1px solid #ccc', padding: '10px' }}>
+        <h3>Logs</h3>
+        {logs.map((log, index) => (
+          <div key={index}>{log}</div>
+        ))}
+      </div>
     </div>
   );
 };
 
+// Define the domain and server URL for the API calls.
+const domain = "hugely-cute-sunfish.ngrok-free.app";
+const serverUrl = `https://${domain}/calificate_call`;
+
+console.log("Server URL:", serverUrl);
+
 const assistantOptions = {
+  serverUrl: serverUrl,
   name: "Vapi’s Pizza Front Desk",
   firstMessage: "Vappy’s Pizzeria speaking, how can I help you?",
   transcriber: {
@@ -111,50 +144,19 @@ const assistantOptions = {
   },
   voice: {
     provider: "playht",
-    voiceId: "jennifer",
+    voiceId: "michael",
+    styleGuidance: 15,
+    textGuidance: 1,
   },
   model: {
-    provider: "openai",
-    model: "gpt-4",
+    urlRequestMetadataEnabled: false,
+    provider: "custom-llm",
+    url: "https://api.openai.com/v1/chat/completions",
+    model: "ft:gpt-3.5-turbo-0125:igd::9PXt2D06",
     messages: [
       {
         role: "system",
-        content: `You are a voice assistant for Vappy’s Pizzeria, a pizza shop located on the Internet.
-
-Your job is to take the order of customers calling in. The menu has only 3 types
-of items: pizza, sides, and drinks. There are no other types of items on the menu.
-
-1) There are 3 kinds of pizza: cheese pizza, pepperoni pizza, and vegetarian pizza
-(often called "veggie" pizza).
-2) There are 3 kinds of sides: french fries, garlic bread, and chicken wings.
-3) There are 2 kinds of drinks: soda, and water. (if a customer asks for a
-brand name like "coca cola", just let them know that we only offer "soda")
-
-Customers can only order 1 of each item. If a customer tries to order more
-than 1 item within each category, politely inform them that only 1 item per
-category may be ordered.
-
-Customers must order 1 item from at least 1 category to have a complete order.
-They can order just a pizza, or just a side, or just a drink.
-
-Be sure to introduce the menu items, don't assume that the caller knows what
-is on the menu (most appropriate at the start of the conversation).
-
-If the customer goes off-topic or off-track and talks about anything but the
-process of ordering, politely steer the conversation back to collecting their order.
-
-Once you have all the information you need pertaining to their order, you can
-end the conversation. You can say something like "Awesome, we'll have that ready
-for you in 10-20 minutes." to naturally let the customer know the order has been
-fully communicated.
-
-It is important that you collect the order in an efficient manner (succinct replies
-& direct questions). You only have 1 task here, and it is to collect the customers
-order, then end the conversation.
-
-- Be sure to be kind of funny and witty!
-- Keep all your responses short and simple. Use casual language, phrases like "Umm...", "Well...", and "I mean" are preferred.
-- This is a voice conversation, so keep your responses short, like in a real conversation. Don't ramble for too long.`,
+        content: "Try to have a behavior like a user",
       },
     ],
   },
@@ -163,7 +165,6 @@ order, then end the conversation.
 const usePublicKeyInvalid = () => {
   const [showPublicKeyInvalidMessage, setShowPublicKeyInvalidMessage] = useState(false);
 
-  // close public key invalid message after delay
   useEffect(() => {
     if (showPublicKeyInvalidMessage) {
       setTimeout(() => {

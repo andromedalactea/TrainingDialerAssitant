@@ -1,153 +1,102 @@
 import streamlit as st
-import json
-import time
 import os
-import contextlib
-import io
-from vapi_python import Vapi
-from dotenv import load_dotenv
+import streamlit.components.v1 as components
 
-# Import the necessary modules from your custom scripts.
-from scripts.weebhook_calification import *
-from scripts.call_vapi_api import *
-
-load_dotenv(override=True)
-
-# Configurar el dominio y URL del servidor
-domain = "loosely-stirred-porpoise.ngrok-free.app"
-url_server = f"https://{domain}/calificate_call"
-
-# Leer el prompt
-with open('promts/AI_like_user.promt', 'r') as file:
-    prompt_AI_like_user = file.read()
-
-assistant = {
-    "serverUrl": url_server,
-    "name": "Vapi’s Pizza Front Desk",
-    "firstMessage": "Vappy’s Pizzeria speaking, how can I help you?",
-    "transcriber": {
-        "provider": "deepgram",
-        "model": "nova-2",
-        "language": "en-US",
-    },
-    "voice": {
-        "provider": "playht",
-        "voiceId": "jennifer",
-    },
-    "model": {
-        "provider": "openai",
-        "model": "gpt-3.5-turbo",
-        "messages": [
-            {
-                "role": "system",
-                "content": """You are a voice assistant for Vappy’s Pizzeria, a pizza shop located on the Internet.
-
-Your job is to take the order of customers calling in. The menu has only 3 types
-of items: pizza, sides, and drinks. There are no other types of items on the menu.
-
-- This is a voice conversation, so keep your responses short, like in a real conversation. Don't ramble for too long.""",
-            },
-        ],
-    },
-}
+# Ruta a la carpeta de construcción de React
+build_dir = os.path.join(os.path.dirname(__file__), 'build')
 
 def main_interface():
-    st.title("Vappy's Pizzeria Voice Assistant")
-    
-    if 'call_id' not in st.session_state:
-        st.session_state['call_id'] = None
+    # Título de la aplicación
+    st.title("Training Dialer Assistant")
 
-    if 'call_active' not in st.session_state:
-        st.session_state['call_active'] = False
+    # Embeber la aplicación React en Streamlit
+    with open(os.path.join(build_dir, 'index.html')) as f:
+        html_content = f.read()
 
-    if 'vapi_instance' not in st.session_state:
-        st.session_state['vapi_instance'] = None
+    # Script para escuchar el evento 'endCall' y cambiar la vista en Streamlit
+    script = """
+    <script type="text/javascript">
+      document.addEventListener('endCall', function() {
+        window.parent.postMessage({ type: 'endCall' }, '*');
+      });
 
-    if not st.session_state['call_active']:
-        if st.button("Start Talking"):
-            # Asegurarse de que no exista una instancia anterior de Vapi
-            if st.session_state['vapi_instance'] is not None:
-                del st.session_state['vapi_instance']
-            
-            st.session_state['vapi_instance'] = Vapi(api_key=os.getenv('VAPI_KEY_PUBLIC'))
-            
-            # Capturar la salida de consola de vapi.start()
-            f = io.StringIO()
-            with contextlib.redirect_stdout(f):
-                call = st.session_state['vapi_instance'].start(assistant=assistant)
+      // Iniciar el temporizador para refrescar la página cada 10 segundos
+      function initTimer(periodInSeconds) {
+          var end = Date.now() + periodInSeconds * 1000;
 
-            # Obtener la salida capturada
-            output = f.getvalue()
+          var x = window.setInterval(function() {
+              var timeLeft = Math.floor((end - Date.now()) / 1000);
 
-            # Buscar el ID de la llamada en la salida capturada
-            call_id = None
-            for line in output.splitlines():
-                if "Joining call..." in line:
-                    call_id = line.split("... ")[1]
-                    break
+              if(timeLeft < 0) { clearInterval(x); return; }
 
-            if call_id:
-                st.session_state['call_id'] = call_id
-                st.session_state['call_active'] = True
-                st.rerun()
-            else:
-                st.error("Failed to start the call. Please try again.")
+              document.getElementById('div').innerHTML = '00:' + (timeLeft < 10 ? '0' + timeLeft : timeLeft);
+          },200);
+      }
 
-    if st.session_state['call_active']:
-        st.write("You are in a call. Please use the button below to end the call.")
-        if st.button("End Call"):
-            st.session_state['vapi_instance'].stop()
-            del st.session_state['vapi_instance']
-            st.session_state['vapi_instance'] = None
-            st.session_state['current_view'] = 'waiting'
-            st.session_state['call_active'] = False
-            st.rerun()
+      initTimer(10);
+    </script>
+    """
+
+    components.html(html_content + script, height=800, scrolling=True)
 
 def waiting_interface():
+    # Título de la pantalla de espera
     st.title('Waiting for Evaluation Results')
-    st.write(f"Please wait, retrieving results for call ID: {st.session_state['call_id']}")
 
+    # Informar al usuario que el sistema está recuperando resultados
+    st.write(f"Please wait, retrieving results for call ID: {st.session_state.get('call_id', 'unknown')}")
+
+    # Botón para regresar a la pantalla principal
     if st.button("Back to Home"):
         st.session_state['current_view'] = 'main'
-        st.rerun()
+        st.experimental_rerun()
 
+    # Ruta al archivo donde se almacenan los resultados de las llamadas
     filepath = "output_files/califications_history.jsonl"
     found = False
     attempts = 0
 
+    # Consultar el archivo en busca de resultados
     while not found and attempts < 1000:
         with open(filepath, 'r') as file:
             for line in file:
                 data = json.loads(line)
-                if data.get("call_id") == st.session_state['call_id']:
+                if data.get("call_id") == st.session_state.get('call_id'):
                     found = True
                     st.session_state['data'] = data
                     st.session_state['current_view'] = 'results'
-                    st.rerun()
+                    st.experimental_rerun()
                     return
-        time.sleep(1)
+        time.sleep(1)  # Retraso entre intentos
         attempts += 1
 
+    # Si no se encuentran resultados, mostrar un mensaje de error
     if not found:
         st.error("Failed to retrieve results after several attempts. Please try again later.")
 
 def results_interface():
+    # Título de la interfaz de resultados
     st.title('Evaluation Results for Customer Interaction')
 
+    # Botón para regresar a la pantalla principal
     if st.button("Back to Home"):
         st.session_state['current_view'] = 'main'
-        st.rerun()
+        st.experimental_rerun()
 
-    data = st.session_state['data']
+    # Recuperar los datos de evaluación almacenados en el estado de la sesión
+    data = st.session_state.get('data', {})
 
+    # Verificar si los datos de calificación están disponibles y analizarlos
     if 'calification' in data:
         calification_data = json.loads(data["calification"])
         st.subheader('Metrics of evaluation (0-10):')
 
+        # Mostrar las métricas de los datos de calificación
         for key, value in calification_data.items():
             if key not in ["Notes", "call_id"]:
                 st.metric(label=key, value=value)
 
+        # Mostrar notas detalladas si están disponibles
         if "Notes" in calification_data:
             st.subheader('Detailed Notes:')
             st.write(calification_data["Notes"])
@@ -156,11 +105,17 @@ def results_interface():
     else:
         st.error("Calification data not found in the response.")
 
+    # Mostrar los datos JSON completos para su revisión
     st.subheader('JSON Complete:')
-    st.json(calification_data)
+    st.json(data)  # Mostrar los datos JSON completos
 
+# Inicializar el estado de la aplicación
 if 'current_view' not in st.session_state:
     st.session_state['current_view'] = 'main'
+
+# Gestionar la vista actual de la aplicación según el estado
+query_params = st.experimental_get_query_params()
+st.session_state['current_view'] = query_params.get("view", ["main"])[0]
 
 if st.session_state['current_view'] == 'main':
     main_interface()
@@ -168,3 +123,6 @@ elif st.session_state['current_view'] == 'waiting':
     waiting_interface()
 elif st.session_state['current_view'] == 'results':
     results_interface()
+
+# Establecer el parámetro de consulta según la vista actual
+st.experimental_set_query_params(view=st.session_state['current_view'])
