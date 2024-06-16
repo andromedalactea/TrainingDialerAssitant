@@ -25,7 +25,7 @@ const ActiveCallDetail = ({ assistantIsSpeaking, volumeLevel, onEndCallClick }) 
       <div style={{ marginTop: "20px", textAlign: "center" }}>
         <Button label="End Call" onClick={onEndCallClick} />
       </div>
-    </div>
+    </div> 
   );
 };
 

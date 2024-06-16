@@ -78,14 +78,26 @@ def main_call(path):
             # Save the calification in a file like a jsonl
             # Read the existing data
             try:
-                with open("output_files/califications_history.jsonl", "r") as file:
-                    existing_data = file.readlines()
+                # Lee el archivo JSON existente
+                with open('public/califications_history.json', 'r') as file:
+                    data = json.load(file)
+
+                # Verifica que el archivo contenga una lista
+                if isinstance(data, list):
+                    # Inserta el nuevo elemento al principio de la lista
+                    data.insert(0, calification_dict)
+                else:
+                    print("El archivo JSON no contiene una lista.")
+
+                # Escribe la lista actualizada de nuevo en el archivo JSON
+                with open('public/califications_history.json', 'w') as file:
+                    json.dump(data, file, indent=4)
+
             except FileNotFoundError:
                 existing_data = []
 
-            # Write the new data at the top
-            with open("public/califications_history.jsonl", "a") as file:
-                file.write(json.dumps(calification_dict) + "\n")
+            
+
             return jsonify({"status": "success", "calification": decoded_calification}), 200
         else:
             return jsonify({"status": "ignored"}), 200
