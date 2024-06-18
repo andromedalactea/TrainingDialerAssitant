@@ -22,6 +22,15 @@ function InitVapi() {
     if (waiting) {
       navigate('/result?id='+callID+'');
     }
+    vapi.on("volume-level", (level) => {
+      setVolumeLevel(level);
+    });
+    vapi.on("speech-start", () => {
+      setAssistantIsSpeaking(true);
+    });
+    vapi.on("speech-end", () => {
+      setAssistantIsSpeaking(false);
+    });
   }, [waiting, navigate]);
 
 
@@ -62,7 +71,7 @@ function InitVapi() {
             // <WaitingScreen callID={callID} />
           ) : (
             <Button
-              label="Call Vapi’s Pizza Front Desk"
+              label="Training Dialer"
               onClick={startCallInline}
               // isLoading={connecting}
             />
@@ -75,12 +84,38 @@ function InitVapi() {
 
 export default InitVapi;
 
+// Generate the Initial message
+const moment = require('moment-timezone');
+
+let firstMessage;
+
+try {
+    // Establecer la zona horaria deseada
+    const timezone = 'America/New_York';
+
+    // Obtener la hora actual en la zona horaria deseada
+    const time = moment.tz(timezone);
+
+    // Determinar el mensaje apropiado según la hora
+    if (time.hour() < 12) {
+        firstMessage = "Good morning";
+    } else if (time.hour() < 18) {
+        firstMessage = "Good afternoon";
+    } else {
+        firstMessage = "Good night";
+    }
+} catch (error) {
+    firstMessage = "Hello";
+}
+
+console.log(firstMessage);
+
 const domain = "hugely-cute-sunfish.ngrok-free.app";
 const serverUrl = `https://${domain}/calificate_call`;
 const assistantOptions = {
   serverUrl: serverUrl,
   name: "Vapi’s Pizza Front Desk",
-  firstMessage: "Vappy’s Pizzeria speaking, how can I help you?",
+  firstMessage: firstMessage,
   transcriber: {
     provider: "deepgram",
     model: "nova-2",

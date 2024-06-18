@@ -21,6 +21,7 @@ function Result() {
         // Ajusta esta URL según tu estructura de archivos
           const data = await respones.json();
           const findData = data.filter((item) => item.call_id === callID);
+
         let arr = []
           for (const i in findData){
             findData[i].calification = JSON.parse(findData[i].calification );
@@ -40,20 +41,20 @@ function Result() {
     }
     return (
       <div>
-        <h1>Waiting for Evaluation Results</h1>
         <div>
           <h1>Evaluation Results for Customer Interaction</h1>
-          <p>There was an error fetching the results.</p>
-          <div style={{ marginTop: '20px', width: '80%', height: '200px', overflowY: 'scroll', border: '1px solid #ccc', padding: '10px' }}>
-            <h3>Logs</h3>
+          
+          <div style={{ marginTop: '20px', width: '80%', height: '600px', overflowY: 'scroll', border: '1px solid #ccc', padding: '10px' }}>
             { results.map(item => (
                 <>
-                <h1>{item.calification.Notes} </h1>
-                <p> {item.calification['Communication Clarity']}</p>
-                <p>{item.calification['Empathy Expression']}</p>
-                <p>{item.calification['Resolution Efficiency']}</p>
-                <p>{item.calification['Rebuttal Appropriateness']}</p>
-                <p>{item.calification['Overall Interaction Quality']}</p>
+                <h1>Call ID: {item.call_id}</h1>
+                <p>General Notes:  </p><br/>
+                <p>{item.calification.Notes}</p><br/>
+                <p>Communication Clarity: {item.calification['Communication Clarity']}</p><br/>
+                <p>Empathy Expression: {item.calification['Empathy Expression']}</p><br/>
+                <p>Resolution Efficiency: {item.calification['Resolution Efficiency']}</p><br/>
+                <p>Rebuttal Appropriateness: {item.calification['Rebuttal Appropriateness']}</p><br/>
+                <p>Overall Interaction Quality {item.calification['Overall Interaction Quality']}</p><br/>
                 </>
             ))} 
           </div>

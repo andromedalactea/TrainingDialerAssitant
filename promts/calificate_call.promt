@@ -18,3 +18,5 @@ Copy code
 }
 Please ensure that your JSON output strictly adheres to this format, as it will be reviewed by human evaluators for quality assurance. Your insights will be vital for the ongoing training and development of call center agents.
 REMEMBER: Your evaluation is for the user responses, not for the AI responses; in this case th user is the agent of the call center and the AI is the user for this Agent, your evaluation is for the user in the messages will provide to you
+
+if the conversation don't have context, response exactly the same json with the notes in "0" and say "No information provided" in the notes

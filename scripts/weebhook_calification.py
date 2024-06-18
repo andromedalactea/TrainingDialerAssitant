@@ -28,7 +28,6 @@ load_dotenv()
 # Function to calificate the call
 from openai import OpenAI
 
-
 ## Define some functions
 def calificate_call(call_transcript: str):
     # System promt to the AI
