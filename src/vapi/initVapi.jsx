@@ -135,7 +135,7 @@ const assistantOptions = {
     messages: [
       {
         role: "system",
-        content: "Try to have a behavior like a user called by an Call Center Agent",
+        content: "Try to have a behavior like a user",
       },
     ],
   },
