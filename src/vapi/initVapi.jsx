@@ -114,7 +114,7 @@ const domain = "hugely-cute-sunfish.ngrok-free.app";
 const serverUrl = `https://${domain}/calificate_call`;
 const assistantOptions = {
   serverUrl: serverUrl,
-  name: "Vapi’s Pizza Front Desk",
+  name: "Training Dialer",
   firstMessage: firstMessage,
   transcriber: {
     provider: "deepgram",
@@ -135,7 +135,7 @@ const assistantOptions = {
     messages: [
       {
         role: "system",
-        content: "Try to have a behavior like a user",
+        content: "Try to have a behavior like a user called by an Call Center Agent",
       },
     ],
   },
