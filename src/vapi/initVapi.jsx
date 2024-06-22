@@ -66,7 +66,7 @@ function InitVapi() {
       ) : (
         <>
           {waiting ? (
-            <h1>hola</h1>
+            <h1> </h1>
             // () => handleRedirect()
             // <WaitingScreen callID={callID} />
           ) : (

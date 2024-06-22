@@ -1,0 +1,102 @@
+/* HistoryCalls.css */
+
+.call-list-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #010810;
+  }
+  
+  .call-list-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff; /* Ajuste de color para el fondo oscuro */
+  }
+  
+  .call-list-container label {
+    margin-right: 10px;
+    color: #fff; /* Ajuste de color para el fondo oscuro */
+  }
+  
+  .call-list-container select {
+    margin-bottom: 20px;
+  }
+  
+  .call-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .call-list-item {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .call-list-item:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .call-list-item .call-id {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .pagination button:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+  }
+  
+  .pagination input {
+    width: 50px;
+    margin-left: 10px;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .pagination button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .pagination label {
+    color: #fff; /* Ajuste de color para el fondo oscuro */
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    padding: 5px;
+  }
+  

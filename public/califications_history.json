@@ -182,5 +182,1162 @@
     {
         "call_id": "69e8ebdf-cf7a-4185-92d1-89a6bfca2d0a",
         "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "845cc8e3-533c-421d-bc10-d82dbbd3892f",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent maintained a clear and polite conversation. However, the empathy expression could be improved by acknowledging the AI's response more warmly. The resolution efficiency was adequate, but the agent could have asked more questions to better understand the AI's needs. The rebuttal was somewhat appropriate but could have been more persuasive. Overall, the interaction was decent but has room for improvement in engagement and persuasion.\"\n}"
+    },
+    {
+        "call_id": "6605af90-2a33-463e-a9da-097652c98f4e",
+        "calification": "{\n\"Communication Clarity\": 0,\n\"Empathy Expression\": 0,\n\"Resolution Efficiency\": 0,\n\"Rebuttal Appropriateness\": 0,\n\"Overall Interaction Quality\": 0,\n\"Notes\": \"No information provided\"\n}"
+    },
+    {
+        "call_id": "bb9c636a-f265-4272-8001-28fe708674ff",
+        "calification": "\n{\n  \"Communication Clarity\": 0,\n  \"Empathy Expression\": 0,\n  \"Resolution Efficiency\": 0,\n  \"Rebuttal Appropriateness\": 0,\n  \"Overall Interaction Quality\": 0,\n  \"Notes\": \"No information provided\"\n}\n"
+    },
+    {
+        "call_id": "6ea032ca-8956-447d-a91c-b296d364ce76",
+        "calification": "{\n\"Communication Clarity\": 4,\n\"Empathy Expression\": 3,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 3,\n\"Notes\": \"The agent's communication lacks clarity and professionalism. The responses are abrupt and do not provide the requested information. There is a lack of empathy and politeness in addressing the caller. The agent should focus on being more courteous and providing clear, concise information. Additionally, the agent should avoid confrontational language and instead seek to understand the caller's needs.\"\n}"
+    },
+    {
+        "call_id": "a1d43f32-ed00-4b12-87a3-29e9da6cf8d1",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and to the point, but it could be improved by including a more personal touch, such as introducing themselves by name. Empathy was somewhat lacking; the agent could have expressed more warmth or eagerness to assist. The efficiency of the resolution was good, but the agent should ensure they fully understand the customer's needs before proceeding. The rebuttal was appropriate but could be more engaging. Overall, the interaction was satisfactory but could benefit from a more personable and empathetic approach.\"\n}"
+    },
+    {
+        "call_id": "ac57318b-88d1-4ea7-bc90-43ab3e76bc85",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and to the point, which is good for communication clarity. However, adding a bit more warmth or personalization could improve empathy expression. The agent was efficient in addressing the customer's needs, but there is room for improvement in making the interaction feel more personalized and empathetic.\"\n}"
+    },
+    {
+        "call_id": "fe0dcd07-6763-421d-b3bf-1bf007f09547",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "f888cdee-7f7d-447d-b807-c422ce6a14c8",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's response was somewhat unclear and did not fully address the customer's request. The agent should have provided the complete store number clearly and confirmed if the customer needed any additional assistance. Empathy was minimal, and the resolution was not efficient as the customer\u00e2\u0080\u0099s request was not fully met. The agent should aim to provide clear, complete information and show more understanding of the customer's needs.\"\n}"
+    },
+    {
+        "call_id": "e61f5def-26c0-4f39-9d16-a777a9fbcaa3",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by reducing filler words like 'um' and 'uh'. Empathy was minimal; the agent could have acknowledged the customer's need for a moment more warmly. Resolution efficiency was average as the interaction did not progress far enough to fully assess this. The agent's responses were appropriate but lacked engagement. Overall, the interaction quality was average, with room for improvement in clarity, empathy, and engagement.\"\n}"
+    },
+    {
+        "call_id": "a5bac7a6-88ea-48f7-a60f-068fac42c987",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency in addressing the customer's needs was good, but there is room for improvement in handling potential objections or questions more smoothly.\"\n}"
+    },
+    {
+        "call_id": "9dcaa21f-8a2e-491f-94d9-cfac4170d0e4",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked warmth and empathy. The agent did not directly address the user's request for a number, which could have been handled more efficiently. The agent should have asked for more context or provided a reason why they couldn't give out the number if that was the case. Overall, the interaction could benefit from more direct and empathetic communication.\"\n}"
+    },
+    {
+        "call_id": "a6e436cf-e9c9-4edf-8155-a4ad875b4b4c",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction."
+    },
+    {
+        "call_id": "a187b482-dc25-4c4e-bdec-82c4814d5c5e",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more valued. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "0a04a3c3-4b05-44ac-b782-add29cc25d55",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked detail and engagement. The agent did not provide the requested number, which could have been a misunderstanding or a refusal without explanation. Empathy was minimal, as the agent did not acknowledge the customer's needs or concerns. The resolution was inefficient because the customer's request was not addressed. The rebuttal was appropriate but could have been more informative. Overall, the interaction quality was average, with room for improvement in providing clear, empathetic, and efficient responses.\"\n}"
+    },
+    {
+        "call_id": "48240487-7d4c-4521-8d54-7caa923f0d92",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by avoiding filler words like 'uh' and 'um'. Empathy was minimally expressed; the agent could have shown more interest in the caller's well-being. The resolution efficiency was low as the conversation did not progress towards a resolution. The rebuttal appropriateness was average; the agent did not effectively steer the conversation towards understanding the caller's needs. Overall, the interaction quality was average but could be improved with more proactive engagement and clearer communication.\"\n}"
+    },
+    {
+        "call_id": "fd2d3100-20a5-4b9b-9658-5eda89ac24c5",
+        "calification": "User: Hi, I ordered a pizza an hour ago, and it still hasn't arrived. Can you check on the status for me?\n\nAI: I'm really sorry to hear that your pizza hasn't arrived yet. Can you please provide me with your order number or the phone number you used to place the order?"
+    },
+    {
+        "call_id": "0604123a-fc68-4bd9-9cb7-7c5c98c10d48",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more welcome. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "26ce10ed-bf28-43c9-af4d-b532922d394e",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more personalized and welcoming. Adding a friendly tone and expressing eagerness to assist could improve empathy. The efficiency of resolution is average; the agent should aim to quickly identify and address the customer's needs. The rebuttal appropriateness is acceptable but could be enhanced by anticipating common questions or concerns. Overall, the interaction quality is decent but has room for improvement in warmth and efficiency.\"\n}"
+    },
+    {
+        "call_id": "98819315-c31e-43bc-82f5-a75b84980859",
+        "calification": "{\n\"Communication Clarity\": 5,\n\"Empathy Expression\": 4,\n\"Resolution Efficiency\": 3,\n\"Rebuttal Appropriateness\": 4,\n\"Overall Interaction Quality\": 4,\n\"Notes\": \"The agent's communication was somewhat unclear, particularly in the final response where 'It lands' does not provide sufficient information. Empathy was minimal, as the agent did not acknowledge the business owner's needs or concerns. The resolution was inefficient due to the lack of clear information about the program. The rebuttal was not very appropriate as it did not address the business owner's potential interest or questions. Overall, the interaction quality was below average, with significant room for improvement in clarity, empathy, and providing detailed information.\"\n}"
+    },
+    {
+        "call_id": "e950cfdf-34a6-4143-99dd-74f6ab354279",
+        "calification": "\n{\n  \"Communication Clarity\": 3,\n  \"Empathy Expression\": 2,\n  \"Resolution Efficiency\": 2,\n  \"Rebuttal Appropriateness\": 3,\n  \"Overall Interaction Quality\": 2,\n  \"Notes\": \"The agent's communication was unclear and disjointed, making it difficult to follow the conversation. There was a lack of empathy and understanding of the customer's needs. The resolution was not efficient as the conversation did not lead to a clear outcome or solution. The rebuttals were inappropriate and did not address the customer's concerns effectively. Overall, the interaction quality was poor and needs significant improvement in clarity, empathy, and resolution strategies.\"\n}\n"
+    },
+    {
+        "call_id": "1b8d812b-cefd-4659-8cc8-8dbb0ee6dfa7",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response is highly unclear and does not make sense in the context of a typical call center interaction. The communication lacks clarity, making it difficult for the customer to understand. There is no expression of empathy or attempt to resolve any issue. The response does not appropriately address any potential rebuttals or concerns the customer might have. Overall, the interaction quality is very poor and needs significant improvement in all areas.\"\n}"
+    },
+    {
+        "call_id": "845cc8e3-533c-421d-bc10-d82dbbd3892f",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent maintained a clear and polite conversation. However, the empathy expression could be improved by acknowledging the AI's response more warmly. The resolution efficiency was adequate, but the agent could have asked more questions to better understand the AI's needs. The rebuttal was somewhat appropriate but could have been more persuasive. Overall, the interaction was decent but has room for improvement in engagement and persuasion.\"\n}"
+    },
+    {
+        "call_id": "6605af90-2a33-463e-a9da-097652c98f4e",
+        "calification": "{\n\"Communication Clarity\": 0,\n\"Empathy Expression\": 0,\n\"Resolution Efficiency\": 0,\n\"Rebuttal Appropriateness\": 0,\n\"Overall Interaction Quality\": 0,\n\"Notes\": \"No information provided\"\n}"
+    },
+    {
+        "call_id": "bb9c636a-f265-4272-8001-28fe708674ff",
+        "calification": "\n{\n  \"Communication Clarity\": 0,\n  \"Empathy Expression\": 0,\n  \"Resolution Efficiency\": 0,\n  \"Rebuttal Appropriateness\": 0,\n  \"Overall Interaction Quality\": 0,\n  \"Notes\": \"No information provided\"\n}\n"
+    },
+    {
+        "call_id": "6ea032ca-8956-447d-a91c-b296d364ce76",
+        "calification": "{\n\"Communication Clarity\": 4,\n\"Empathy Expression\": 3,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 3,\n\"Notes\": \"The agent's communication lacks clarity and professionalism. The responses are abrupt and do not provide the requested information. There is a lack of empathy and politeness in addressing the caller. The agent should focus on being more courteous and providing clear, concise information. Additionally, the agent should avoid confrontational language and instead seek to understand the caller's needs.\"\n}"
+    },
+    {
+        "call_id": "a1d43f32-ed00-4b12-87a3-29e9da6cf8d1",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and to the point, but it could be improved by including a more personal touch, such as introducing themselves by name. Empathy was somewhat lacking; the agent could have expressed more warmth or eagerness to assist. The efficiency of the resolution was good, but the agent should ensure they fully understand the customer's needs before proceeding. The rebuttal was appropriate but could be more engaging. Overall, the interaction was satisfactory but could benefit from a more personable and empathetic approach.\"\n}"
+    },
+    {
+        "call_id": "ac57318b-88d1-4ea7-bc90-43ab3e76bc85",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and to the point, which is good for communication clarity. However, adding a bit more warmth or personalization could improve empathy expression. The agent was efficient in addressing the customer's needs, but there is room for improvement in making the interaction feel more personalized and empathetic.\"\n}"
+    },
+    {
+        "call_id": "fe0dcd07-6763-421d-b3bf-1bf007f09547",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "f888cdee-7f7d-447d-b807-c422ce6a14c8",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's response was somewhat unclear and did not fully address the customer's request. The agent should have provided the complete store number clearly and confirmed if the customer needed any additional assistance. Empathy was minimal, and the resolution was not efficient as the customer\u00e2\u0080\u0099s request was not fully met. The agent should aim to provide clear, complete information and show more understanding of the customer's needs.\"\n}"
+    },
+    {
+        "call_id": "e61f5def-26c0-4f39-9d16-a777a9fbcaa3",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by reducing filler words like 'um' and 'uh'. Empathy was minimal; the agent could have acknowledged the customer's need for a moment more warmly. Resolution efficiency was average as the interaction did not progress far enough to fully assess this. The agent's responses were appropriate but lacked engagement. Overall, the interaction quality was average, with room for improvement in clarity, empathy, and engagement.\"\n}"
+    },
+    {
+        "call_id": "a5bac7a6-88ea-48f7-a60f-068fac42c987",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency in addressing the customer's needs was good, but there is room for improvement in handling potential objections or questions more smoothly.\"\n}"
+    },
+    {
+        "call_id": "9dcaa21f-8a2e-491f-94d9-cfac4170d0e4",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked warmth and empathy. The agent did not directly address the user's request for a number, which could have been handled more efficiently. The agent should have asked for more context or provided a reason why they couldn't give out the number if that was the case. Overall, the interaction could benefit from more direct and empathetic communication.\"\n}"
+    },
+    {
+        "call_id": "a6e436cf-e9c9-4edf-8155-a4ad875b4b4c",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction."
+    },
+    {
+        "call_id": "a187b482-dc25-4c4e-bdec-82c4814d5c5e",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more valued. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "0a04a3c3-4b05-44ac-b782-add29cc25d55",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked detail and engagement. The agent did not provide the requested number, which could have been a misunderstanding or a refusal without explanation. Empathy was minimal, as the agent did not acknowledge the customer's needs or concerns. The resolution was inefficient because the customer's request was not addressed. The rebuttal was appropriate but could have been more informative. Overall, the interaction quality was average, with room for improvement in providing clear, empathetic, and efficient responses.\"\n}"
+    },
+    {
+        "call_id": "48240487-7d4c-4521-8d54-7caa923f0d92",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by avoiding filler words like 'uh' and 'um'. Empathy was minimally expressed; the agent could have shown more interest in the caller's well-being. The resolution efficiency was low as the conversation did not progress towards a resolution. The rebuttal appropriateness was average; the agent did not effectively steer the conversation towards understanding the caller's needs. Overall, the interaction quality was average but could be improved with more proactive engagement and clearer communication.\"\n}"
+    },
+    {
+        "call_id": "fd2d3100-20a5-4b9b-9658-5eda89ac24c5",
+        "calification": "User: Hi, I ordered a pizza an hour ago, and it still hasn't arrived. Can you check on the status for me?\n\nAI: I'm really sorry to hear that your pizza hasn't arrived yet. Can you please provide me with your order number or the phone number you used to place the order?"
+    },
+    {
+        "call_id": "0604123a-fc68-4bd9-9cb7-7c5c98c10d48",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more welcome. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "26ce10ed-bf28-43c9-af4d-b532922d394e",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more personalized and welcoming. Adding a friendly tone and expressing eagerness to assist could improve empathy. The efficiency of resolution is average; the agent should aim to quickly identify and address the customer's needs. The rebuttal appropriateness is acceptable but could be enhanced by anticipating common questions or concerns. Overall, the interaction quality is decent but has room for improvement in warmth and efficiency.\"\n}"
+    },
+    {
+        "call_id": "98819315-c31e-43bc-82f5-a75b84980859",
+        "calification": "{\n\"Communication Clarity\": 5,\n\"Empathy Expression\": 4,\n\"Resolution Efficiency\": 3,\n\"Rebuttal Appropriateness\": 4,\n\"Overall Interaction Quality\": 4,\n\"Notes\": \"The agent's communication was somewhat unclear, particularly in the final response where 'It lands' does not provide sufficient information. Empathy was minimal, as the agent did not acknowledge the business owner's needs or concerns. The resolution was inefficient due to the lack of clear information about the program. The rebuttal was not very appropriate as it did not address the business owner's potential interest or questions. Overall, the interaction quality was below average, with significant room for improvement in clarity, empathy, and providing detailed information.\"\n}"
+    },
+    {
+        "call_id": "e950cfdf-34a6-4143-99dd-74f6ab354279",
+        "calification": "\n{\n  \"Communication Clarity\": 3,\n  \"Empathy Expression\": 2,\n  \"Resolution Efficiency\": 2,\n  \"Rebuttal Appropriateness\": 3,\n  \"Overall Interaction Quality\": 2,\n  \"Notes\": \"The agent's communication was unclear and disjointed, making it difficult to follow the conversation. There was a lack of empathy and understanding of the customer's needs. The resolution was not efficient as the conversation did not lead to a clear outcome or solution. The rebuttals were inappropriate and did not address the customer's concerns effectively. Overall, the interaction quality was poor and needs significant improvement in clarity, empathy, and resolution strategies.\"\n}\n"
+    },
+    {
+        "call_id": "1b8d812b-cefd-4659-8cc8-8dbb0ee6dfa7",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response is highly unclear and does not make sense in the context of a typical call center interaction. The communication lacks clarity, making it difficult for the customer to understand. There is no expression of empathy or attempt to resolve any issue. The response does not appropriately address any potential rebuttals or concerns the customer might have. Overall, the interaction quality is very poor and needs significant improvement in all areas.\"\n}"
+    },
+    {
+        "call_id": "82d8ed61-f80d-4cdb-82c0-14157a90ea5c",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting is clear but could be more specific by including the name of the pizzeria. Empathy is not strongly expressed, and the efficiency of resolution cannot be fully assessed with the given information. The overall interaction quality is average, with room for improvement in personalization and empathy.\"\n}"
+    },
+    {
+        "call_id": "652be889-5905-4534-bc88-38339e3abb3b",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more professional and welcoming. Adding a friendly tone and a more structured greeting, such as 'Thank you for calling [Pizzeria Name], how can I assist you today?' would improve the interaction. Empathy was not strongly conveyed, and the efficiency of resolution cannot be fully assessed from this single line. The agent should aim to sound more engaging and ready to help.\"\n}"
+    },
+    {
+        "call_id": "fef67675-23f7-41ab-9b7f-7e2eda8a54d0",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. However, the agent could have expressed more empathy by adding a friendly tone or asking how they can assist the customer more personally. The efficiency of the resolution cannot be fully assessed from this single line, but the agent's willingness to help is evident. The rebuttal appropriateness is not applicable in this context as there was no rebuttal needed. Overall, the interaction quality is good, but there is room for improvement in empathy and personalization.\"\n}"
+    },
+    {
+        "call_id": "f8599070-dc03-4d23-a7a5-004b9c6ea4da",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "0a2a09e6-f11b-4c43-9e19-9aa546ad2313",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction based on the specified criteria."
+    },
+    {
+        "call_id": "de0fb225-f246-4713-b2c3-d812f159c262",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "5f475f10-2f3c-4c9d-a042-650321f8bedd",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response was abrupt and dismissive, lacking any form of clarity or empathy. There was no attempt to understand or address the customer's needs, and the interaction was not resolved efficiently. The agent should focus on being more polite, empathetic, and clear in their communication to improve the overall quality of the interaction.\"\n}"
+    },
+    {
+        "call_id": "dd007075-19bd-4536-b2a7-953ceac36c58",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency of the resolution and appropriateness of rebuttals will depend on the continuation of the conversation, but the initial interaction sets a positive tone.\"\n}"
+    },
+    {
+        "call_id": "0c7bae4c-758f-45c4-a3eb-7b8aaf5815db",
+        "calification": "{\n\"Communication Clarity\": 3,\n\"Empathy Expression\": 2,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 2,\n\"Notes\": \"The agent's response was unclear and did not address the customer's query effectively. The agent should have asked for clarification in a more empathetic and professional manner. For example, 'I'm sorry, I didn't quite catch that. Could you please repeat or clarify your request?' This would have shown more empathy and a willingness to assist.\"\n}"
+    },
+    {
+        "call_id": "237da93e-ed14-4a7e-9130-25de91a6bc22",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch of warmth or personalization to express more empathy. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "6aee69a3-a830-4dbf-96dc-b86edac8bdc8",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "d5338b10-d6be-4e23-b3fa-77f5690c5215",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "de633d0e-5f57-4577-a331-52634986bd48",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response was unclear and did not address the customer's needs. The agent should aim to provide clear, concise, and relevant information. Additionally, there was no expression of empathy or attempt to resolve the issue. The agent should also ensure that their responses are appropriate and relevant to the customer's query.\"\n}"
+    },
+    {
+        "call_id": "2b7db3be-63f5-4800-87ba-7b5e2a54c370",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction based on the specified criteria."
+    },
+    {
+        "call_id": "df9a98c8-4de3-4fa9-a145-8985ef4e763f",
+        "calification": "Please provide the full conversation transcript so I can evaluate the interaction based on the specified criteria."
+    },
+    {
+        "call_id": "32140479-2301-4bbb-8aca-fe37f5777b8c",
+        "calification": "{\n\"Communication Clarity\": 9,\n\"Empathy Expression\": 8,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and professional. They expressed a willingness to help, which is a good start. However, the agent could improve by adding a bit more warmth or personalization to their greeting to enhance empathy. For example, 'Good afternoon, Vapis Pizzeria! How can I assist you today?' would make the interaction feel more welcoming.\"\n}"
+    },
+    {
+        "call_id": "b8492ac6-a315-4bda-ae47-18a23ccbac9f",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "26aeefdf-0a12-4f04-919b-26592be65b1b",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "aaa91008-9e60-40cf-9625-7544c8bb5f4f",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "a88c8ff4-d2c9-48b0-a1b6-5a66b261002c",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "11caf309-2b39-4006-a197-cf1d6fe751e6",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking to and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy, such as 'Good afternoon, VAPPE's pizzeria. How can I assist you today?' This would make the interaction feel more welcoming. Overall, the agent's performance was strong, with room for minor improvements in empathy and personalization.\"\n}"
+    },
+    {
+        "call_id": "78d5b7c7-4f40-49c3-8861-4524ebad2fc2",
+        "calification": "{\n\"Communication Clarity\": 9,\n\"Empathy Expression\": 8,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 8,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and professional, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a bit more warmth or personalization to the greeting to enhance empathy. The efficiency of resolution is not fully assessable from this single line, but the agent's promptness in addressing the customer's needs is a positive indicator. Overall, a strong start to the interaction.\"\n}"
+    },
+    {
+        "call_id": "91f441b5-c003-4e9c-8835-ed5c62bf6046",
+        "calification": "Please provide the conversation transcript that you would like me to evaluate."
+    },
+    {
+        "call_id": "b4b53fe2-780e-4ee9-9105-0a6b82139e59",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and polite, setting a positive tone for the interaction. However, the agent could improve by introducing themselves by name to create a more personal connection. Additionally, expressing empathy more explicitly could enhance the customer's experience.\"\n}"
+    },
+    {
+        "call_id": "69e8ebdf-cf7a-4185-92d1-89a6bfca2d0a",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "845cc8e3-533c-421d-bc10-d82dbbd3892f",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent maintained a clear and polite conversation. However, the empathy expression could be improved by acknowledging the AI's response more warmly. The resolution efficiency was adequate, but the agent could have asked more questions to better understand the AI's needs. The rebuttal was somewhat appropriate but could have been more persuasive. Overall, the interaction was decent but has room for improvement in engagement and persuasion.\"\n}"
+    },
+    {
+        "call_id": "6605af90-2a33-463e-a9da-097652c98f4e",
+        "calification": "{\n\"Communication Clarity\": 0,\n\"Empathy Expression\": 0,\n\"Resolution Efficiency\": 0,\n\"Rebuttal Appropriateness\": 0,\n\"Overall Interaction Quality\": 0,\n\"Notes\": \"No information provided\"\n}"
+    },
+    {
+        "call_id": "bb9c636a-f265-4272-8001-28fe708674ff",
+        "calification": "\n{\n  \"Communication Clarity\": 0,\n  \"Empathy Expression\": 0,\n  \"Resolution Efficiency\": 0,\n  \"Rebuttal Appropriateness\": 0,\n  \"Overall Interaction Quality\": 0,\n  \"Notes\": \"No information provided\"\n}\n"
+    },
+    {
+        "call_id": "6ea032ca-8956-447d-a91c-b296d364ce76",
+        "calification": "{\n\"Communication Clarity\": 4,\n\"Empathy Expression\": 3,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 3,\n\"Notes\": \"The agent's communication lacks clarity and professionalism. The responses are abrupt and do not provide the requested information. There is a lack of empathy and politeness in addressing the caller. The agent should focus on being more courteous and providing clear, concise information. Additionally, the agent should avoid confrontational language and instead seek to understand the caller's needs.\"\n}"
+    },
+    {
+        "call_id": "a1d43f32-ed00-4b12-87a3-29e9da6cf8d1",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and to the point, but it could be improved by including a more personal touch, such as introducing themselves by name. Empathy was somewhat lacking; the agent could have expressed more warmth or eagerness to assist. The efficiency of the resolution was good, but the agent should ensure they fully understand the customer's needs before proceeding. The rebuttal was appropriate but could be more engaging. Overall, the interaction was satisfactory but could benefit from a more personable and empathetic approach.\"\n}"
+    },
+    {
+        "call_id": "ac57318b-88d1-4ea7-bc90-43ab3e76bc85",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and to the point, which is good for communication clarity. However, adding a bit more warmth or personalization could improve empathy expression. The agent was efficient in addressing the customer's needs, but there is room for improvement in making the interaction feel more personalized and empathetic.\"\n}"
+    },
+    {
+        "call_id": "fe0dcd07-6763-421d-b3bf-1bf007f09547",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "f888cdee-7f7d-447d-b807-c422ce6a14c8",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's response was somewhat unclear and did not fully address the customer's request. The agent should have provided the complete store number clearly and confirmed if the customer needed any additional assistance. Empathy was minimal, and the resolution was not efficient as the customer\u00e2\u0080\u0099s request was not fully met. The agent should aim to provide clear, complete information and show more understanding of the customer's needs.\"\n}"
+    },
+    {
+        "call_id": "e61f5def-26c0-4f39-9d16-a777a9fbcaa3",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by reducing filler words like 'um' and 'uh'. Empathy was minimal; the agent could have acknowledged the customer's need for a moment more warmly. Resolution efficiency was average as the interaction did not progress far enough to fully assess this. The agent's responses were appropriate but lacked engagement. Overall, the interaction quality was average, with room for improvement in clarity, empathy, and engagement.\"\n}"
+    },
+    {
+        "call_id": "a5bac7a6-88ea-48f7-a60f-068fac42c987",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency in addressing the customer's needs was good, but there is room for improvement in handling potential objections or questions more smoothly.\"\n}"
+    },
+    {
+        "call_id": "9dcaa21f-8a2e-491f-94d9-cfac4170d0e4",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked warmth and empathy. The agent did not directly address the user's request for a number, which could have been handled more efficiently. The agent should have asked for more context or provided a reason why they couldn't give out the number if that was the case. Overall, the interaction could benefit from more direct and empathetic communication.\"\n}"
+    },
+    {
+        "call_id": "a6e436cf-e9c9-4edf-8155-a4ad875b4b4c",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction."
+    },
+    {
+        "call_id": "a187b482-dc25-4c4e-bdec-82c4814d5c5e",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more valued. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "0a04a3c3-4b05-44ac-b782-add29cc25d55",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked detail and engagement. The agent did not provide the requested number, which could have been a misunderstanding or a refusal without explanation. Empathy was minimal, as the agent did not acknowledge the customer's needs or concerns. The resolution was inefficient because the customer's request was not addressed. The rebuttal was appropriate but could have been more informative. Overall, the interaction quality was average, with room for improvement in providing clear, empathetic, and efficient responses.\"\n}"
+    },
+    {
+        "call_id": "48240487-7d4c-4521-8d54-7caa923f0d92",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by avoiding filler words like 'uh' and 'um'. Empathy was minimally expressed; the agent could have shown more interest in the caller's well-being. The resolution efficiency was low as the conversation did not progress towards a resolution. The rebuttal appropriateness was average; the agent did not effectively steer the conversation towards understanding the caller's needs. Overall, the interaction quality was average but could be improved with more proactive engagement and clearer communication.\"\n}"
+    },
+    {
+        "call_id": "fd2d3100-20a5-4b9b-9658-5eda89ac24c5",
+        "calification": "User: Hi, I ordered a pizza an hour ago, and it still hasn't arrived. Can you check on the status for me?\n\nAI: I'm really sorry to hear that your pizza hasn't arrived yet. Can you please provide me with your order number or the phone number you used to place the order?"
+    },
+    {
+        "call_id": "0604123a-fc68-4bd9-9cb7-7c5c98c10d48",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more welcome. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "26ce10ed-bf28-43c9-af4d-b532922d394e",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more personalized and welcoming. Adding a friendly tone and expressing eagerness to assist could improve empathy. The efficiency of resolution is average; the agent should aim to quickly identify and address the customer's needs. The rebuttal appropriateness is acceptable but could be enhanced by anticipating common questions or concerns. Overall, the interaction quality is decent but has room for improvement in warmth and efficiency.\"\n}"
+    },
+    {
+        "call_id": "98819315-c31e-43bc-82f5-a75b84980859",
+        "calification": "{\n\"Communication Clarity\": 5,\n\"Empathy Expression\": 4,\n\"Resolution Efficiency\": 3,\n\"Rebuttal Appropriateness\": 4,\n\"Overall Interaction Quality\": 4,\n\"Notes\": \"The agent's communication was somewhat unclear, particularly in the final response where 'It lands' does not provide sufficient information. Empathy was minimal, as the agent did not acknowledge the business owner's needs or concerns. The resolution was inefficient due to the lack of clear information about the program. The rebuttal was not very appropriate as it did not address the business owner's potential interest or questions. Overall, the interaction quality was below average, with significant room for improvement in clarity, empathy, and providing detailed information.\"\n}"
+    },
+    {
+        "call_id": "e950cfdf-34a6-4143-99dd-74f6ab354279",
+        "calification": "\n{\n  \"Communication Clarity\": 3,\n  \"Empathy Expression\": 2,\n  \"Resolution Efficiency\": 2,\n  \"Rebuttal Appropriateness\": 3,\n  \"Overall Interaction Quality\": 2,\n  \"Notes\": \"The agent's communication was unclear and disjointed, making it difficult to follow the conversation. There was a lack of empathy and understanding of the customer's needs. The resolution was not efficient as the conversation did not lead to a clear outcome or solution. The rebuttals were inappropriate and did not address the customer's concerns effectively. Overall, the interaction quality was poor and needs significant improvement in clarity, empathy, and resolution strategies.\"\n}\n"
+    },
+    {
+        "call_id": "1b8d812b-cefd-4659-8cc8-8dbb0ee6dfa7",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response is highly unclear and does not make sense in the context of a typical call center interaction. The communication lacks clarity, making it difficult for the customer to understand. There is no expression of empathy or attempt to resolve any issue. The response does not appropriately address any potential rebuttals or concerns the customer might have. Overall, the interaction quality is very poor and needs significant improvement in all areas.\"\n}"
+    },
+    {
+        "call_id": "845cc8e3-533c-421d-bc10-d82dbbd3892f",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent maintained a clear and polite conversation. However, the empathy expression could be improved by acknowledging the AI's response more warmly. The resolution efficiency was adequate, but the agent could have asked more questions to better understand the AI's needs. The rebuttal was somewhat appropriate but could have been more persuasive. Overall, the interaction was decent but has room for improvement in engagement and persuasion.\"\n}"
+    },
+    {
+        "call_id": "6605af90-2a33-463e-a9da-097652c98f4e",
+        "calification": "{\n\"Communication Clarity\": 0,\n\"Empathy Expression\": 0,\n\"Resolution Efficiency\": 0,\n\"Rebuttal Appropriateness\": 0,\n\"Overall Interaction Quality\": 0,\n\"Notes\": \"No information provided\"\n}"
+    },
+    {
+        "call_id": "bb9c636a-f265-4272-8001-28fe708674ff",
+        "calification": "\n{\n  \"Communication Clarity\": 0,\n  \"Empathy Expression\": 0,\n  \"Resolution Efficiency\": 0,\n  \"Rebuttal Appropriateness\": 0,\n  \"Overall Interaction Quality\": 0,\n  \"Notes\": \"No information provided\"\n}\n"
+    },
+    {
+        "call_id": "6ea032ca-8956-447d-a91c-b296d364ce76",
+        "calification": "{\n\"Communication Clarity\": 4,\n\"Empathy Expression\": 3,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 3,\n\"Notes\": \"The agent's communication lacks clarity and professionalism. The responses are abrupt and do not provide the requested information. There is a lack of empathy and politeness in addressing the caller. The agent should focus on being more courteous and providing clear, concise information. Additionally, the agent should avoid confrontational language and instead seek to understand the caller's needs.\"\n}"
+    },
+    {
+        "call_id": "a1d43f32-ed00-4b12-87a3-29e9da6cf8d1",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and to the point, but it could be improved by including a more personal touch, such as introducing themselves by name. Empathy was somewhat lacking; the agent could have expressed more warmth or eagerness to assist. The efficiency of the resolution was good, but the agent should ensure they fully understand the customer's needs before proceeding. The rebuttal was appropriate but could be more engaging. Overall, the interaction was satisfactory but could benefit from a more personable and empathetic approach.\"\n}"
+    },
+    {
+        "call_id": "ac57318b-88d1-4ea7-bc90-43ab3e76bc85",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and to the point, which is good for communication clarity. However, adding a bit more warmth or personalization could improve empathy expression. The agent was efficient in addressing the customer's needs, but there is room for improvement in making the interaction feel more personalized and empathetic.\"\n}"
+    },
+    {
+        "call_id": "fe0dcd07-6763-421d-b3bf-1bf007f09547",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "f888cdee-7f7d-447d-b807-c422ce6a14c8",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's response was somewhat unclear and did not fully address the customer's request. The agent should have provided the complete store number clearly and confirmed if the customer needed any additional assistance. Empathy was minimal, and the resolution was not efficient as the customer\u00e2\u0080\u0099s request was not fully met. The agent should aim to provide clear, complete information and show more understanding of the customer's needs.\"\n}"
+    },
+    {
+        "call_id": "e61f5def-26c0-4f39-9d16-a777a9fbcaa3",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by reducing filler words like 'um' and 'uh'. Empathy was minimal; the agent could have acknowledged the customer's need for a moment more warmly. Resolution efficiency was average as the interaction did not progress far enough to fully assess this. The agent's responses were appropriate but lacked engagement. Overall, the interaction quality was average, with room for improvement in clarity, empathy, and engagement.\"\n}"
+    },
+    {
+        "call_id": "a5bac7a6-88ea-48f7-a60f-068fac42c987",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency in addressing the customer's needs was good, but there is room for improvement in handling potential objections or questions more smoothly.\"\n}"
+    },
+    {
+        "call_id": "9dcaa21f-8a2e-491f-94d9-cfac4170d0e4",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked warmth and empathy. The agent did not directly address the user's request for a number, which could have been handled more efficiently. The agent should have asked for more context or provided a reason why they couldn't give out the number if that was the case. Overall, the interaction could benefit from more direct and empathetic communication.\"\n}"
+    },
+    {
+        "call_id": "a6e436cf-e9c9-4edf-8155-a4ad875b4b4c",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction."
+    },
+    {
+        "call_id": "a187b482-dc25-4c4e-bdec-82c4814d5c5e",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more valued. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "0a04a3c3-4b05-44ac-b782-add29cc25d55",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked detail and engagement. The agent did not provide the requested number, which could have been a misunderstanding or a refusal without explanation. Empathy was minimal, as the agent did not acknowledge the customer's needs or concerns. The resolution was inefficient because the customer's request was not addressed. The rebuttal was appropriate but could have been more informative. Overall, the interaction quality was average, with room for improvement in providing clear, empathetic, and efficient responses.\"\n}"
+    },
+    {
+        "call_id": "48240487-7d4c-4521-8d54-7caa923f0d92",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by avoiding filler words like 'uh' and 'um'. Empathy was minimally expressed; the agent could have shown more interest in the caller's well-being. The resolution efficiency was low as the conversation did not progress towards a resolution. The rebuttal appropriateness was average; the agent did not effectively steer the conversation towards understanding the caller's needs. Overall, the interaction quality was average but could be improved with more proactive engagement and clearer communication.\"\n}"
+    },
+    {
+        "call_id": "fd2d3100-20a5-4b9b-9658-5eda89ac24c5",
+        "calification": "User: Hi, I ordered a pizza an hour ago, and it still hasn't arrived. Can you check on the status for me?\n\nAI: I'm really sorry to hear that your pizza hasn't arrived yet. Can you please provide me with your order number or the phone number you used to place the order?"
+    },
+    {
+        "call_id": "0604123a-fc68-4bd9-9cb7-7c5c98c10d48",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more welcome. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "26ce10ed-bf28-43c9-af4d-b532922d394e",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more personalized and welcoming. Adding a friendly tone and expressing eagerness to assist could improve empathy. The efficiency of resolution is average; the agent should aim to quickly identify and address the customer's needs. The rebuttal appropriateness is acceptable but could be enhanced by anticipating common questions or concerns. Overall, the interaction quality is decent but has room for improvement in warmth and efficiency.\"\n}"
+    },
+    {
+        "call_id": "98819315-c31e-43bc-82f5-a75b84980859",
+        "calification": "{\n\"Communication Clarity\": 5,\n\"Empathy Expression\": 4,\n\"Resolution Efficiency\": 3,\n\"Rebuttal Appropriateness\": 4,\n\"Overall Interaction Quality\": 4,\n\"Notes\": \"The agent's communication was somewhat unclear, particularly in the final response where 'It lands' does not provide sufficient information. Empathy was minimal, as the agent did not acknowledge the business owner's needs or concerns. The resolution was inefficient due to the lack of clear information about the program. The rebuttal was not very appropriate as it did not address the business owner's potential interest or questions. Overall, the interaction quality was below average, with significant room for improvement in clarity, empathy, and providing detailed information.\"\n}"
+    },
+    {
+        "call_id": "e950cfdf-34a6-4143-99dd-74f6ab354279",
+        "calification": "\n{\n  \"Communication Clarity\": 3,\n  \"Empathy Expression\": 2,\n  \"Resolution Efficiency\": 2,\n  \"Rebuttal Appropriateness\": 3,\n  \"Overall Interaction Quality\": 2,\n  \"Notes\": \"The agent's communication was unclear and disjointed, making it difficult to follow the conversation. There was a lack of empathy and understanding of the customer's needs. The resolution was not efficient as the conversation did not lead to a clear outcome or solution. The rebuttals were inappropriate and did not address the customer's concerns effectively. Overall, the interaction quality was poor and needs significant improvement in clarity, empathy, and resolution strategies.\"\n}\n"
+    },
+    {
+        "call_id": "1b8d812b-cefd-4659-8cc8-8dbb0ee6dfa7",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response is highly unclear and does not make sense in the context of a typical call center interaction. The communication lacks clarity, making it difficult for the customer to understand. There is no expression of empathy or attempt to resolve any issue. The response does not appropriately address any potential rebuttals or concerns the customer might have. Overall, the interaction quality is very poor and needs significant improvement in all areas.\"\n}"
+    },
+    {
+        "call_id": "82d8ed61-f80d-4cdb-82c0-14157a90ea5c",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting is clear but could be more specific by including the name of the pizzeria. Empathy is not strongly expressed, and the efficiency of resolution cannot be fully assessed with the given information. The overall interaction quality is average, with room for improvement in personalization and empathy.\"\n}"
+    },
+    {
+        "call_id": "652be889-5905-4534-bc88-38339e3abb3b",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more professional and welcoming. Adding a friendly tone and a more structured greeting, such as 'Thank you for calling [Pizzeria Name], how can I assist you today?' would improve the interaction. Empathy was not strongly conveyed, and the efficiency of resolution cannot be fully assessed from this single line. The agent should aim to sound more engaging and ready to help.\"\n}"
+    },
+    {
+        "call_id": "fef67675-23f7-41ab-9b7f-7e2eda8a54d0",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. However, the agent could have expressed more empathy by adding a friendly tone or asking how they can assist the customer more personally. The efficiency of the resolution cannot be fully assessed from this single line, but the agent's willingness to help is evident. The rebuttal appropriateness is not applicable in this context as there was no rebuttal needed. Overall, the interaction quality is good, but there is room for improvement in empathy and personalization.\"\n}"
+    },
+    {
+        "call_id": "f8599070-dc03-4d23-a7a5-004b9c6ea4da",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "0a2a09e6-f11b-4c43-9e19-9aa546ad2313",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction based on the specified criteria."
+    },
+    {
+        "call_id": "de0fb225-f246-4713-b2c3-d812f159c262",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "5f475f10-2f3c-4c9d-a042-650321f8bedd",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response was abrupt and dismissive, lacking any form of clarity or empathy. There was no attempt to understand or address the customer's needs, and the interaction was not resolved efficiently. The agent should focus on being more polite, empathetic, and clear in their communication to improve the overall quality of the interaction.\"\n}"
+    },
+    {
+        "call_id": "dd007075-19bd-4536-b2a7-953ceac36c58",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency of the resolution and appropriateness of rebuttals will depend on the continuation of the conversation, but the initial interaction sets a positive tone.\"\n}"
+    },
+    {
+        "call_id": "0c7bae4c-758f-45c4-a3eb-7b8aaf5815db",
+        "calification": "{\n\"Communication Clarity\": 3,\n\"Empathy Expression\": 2,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 2,\n\"Notes\": \"The agent's response was unclear and did not address the customer's query effectively. The agent should have asked for clarification in a more empathetic and professional manner. For example, 'I'm sorry, I didn't quite catch that. Could you please repeat or clarify your request?' This would have shown more empathy and a willingness to assist.\"\n}"
+    },
+    {
+        "call_id": "237da93e-ed14-4a7e-9130-25de91a6bc22",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch of warmth or personalization to express more empathy. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "6aee69a3-a830-4dbf-96dc-b86edac8bdc8",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "d5338b10-d6be-4e23-b3fa-77f5690c5215",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "de633d0e-5f57-4577-a331-52634986bd48",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response was unclear and did not address the customer's needs. The agent should aim to provide clear, concise, and relevant information. Additionally, there was no expression of empathy or attempt to resolve the issue. The agent should also ensure that their responses are appropriate and relevant to the customer's query.\"\n}"
+    },
+    {
+        "call_id": "2b7db3be-63f5-4800-87ba-7b5e2a54c370",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction based on the specified criteria."
+    },
+    {
+        "call_id": "df9a98c8-4de3-4fa9-a145-8985ef4e763f",
+        "calification": "Please provide the full conversation transcript so I can evaluate the interaction based on the specified criteria."
+    },
+    {
+        "call_id": "32140479-2301-4bbb-8aca-fe37f5777b8c",
+        "calification": "{\n\"Communication Clarity\": 9,\n\"Empathy Expression\": 8,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and professional. They expressed a willingness to help, which is a good start. However, the agent could improve by adding a bit more warmth or personalization to their greeting to enhance empathy. For example, 'Good afternoon, Vapis Pizzeria! How can I assist you today?' would make the interaction feel more welcoming.\"\n}"
+    },
+    {
+        "call_id": "b8492ac6-a315-4bda-ae47-18a23ccbac9f",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "26aeefdf-0a12-4f04-919b-26592be65b1b",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "aaa91008-9e60-40cf-9625-7544c8bb5f4f",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "a88c8ff4-d2c9-48b0-a1b6-5a66b261002c",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "11caf309-2b39-4006-a197-cf1d6fe751e6",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking to and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy, such as 'Good afternoon, VAPPE's pizzeria. How can I assist you today?' This would make the interaction feel more welcoming. Overall, the agent's performance was strong, with room for minor improvements in empathy and personalization.\"\n}"
+    },
+    {
+        "call_id": "78d5b7c7-4f40-49c3-8861-4524ebad2fc2",
+        "calification": "{\n\"Communication Clarity\": 9,\n\"Empathy Expression\": 8,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 8,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and professional, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a bit more warmth or personalization to the greeting to enhance empathy. The efficiency of resolution is not fully assessable from this single line, but the agent's promptness in addressing the customer's needs is a positive indicator. Overall, a strong start to the interaction.\"\n}"
+    },
+    {
+        "call_id": "91f441b5-c003-4e9c-8835-ed5c62bf6046",
+        "calification": "Please provide the conversation transcript that you would like me to evaluate."
+    },
+    {
+        "call_id": "b4b53fe2-780e-4ee9-9105-0a6b82139e59",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and polite, setting a positive tone for the interaction. However, the agent could improve by introducing themselves by name to create a more personal connection. Additionally, expressing empathy more explicitly could enhance the customer's experience.\"\n}"
+    },
+    {
+        "call_id": "69e8ebdf-cf7a-4185-92d1-89a6bfca2d0a",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "845cc8e3-533c-421d-bc10-d82dbbd3892f",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent maintained a clear and polite conversation. However, the empathy expression could be improved by acknowledging the AI's response more warmly. The resolution efficiency was adequate, but the agent could have asked more questions to better understand the AI's needs. The rebuttal was somewhat appropriate but could have been more persuasive. Overall, the interaction was decent but has room for improvement in engagement and persuasion.\"\n}"
+    },
+    {
+        "call_id": "6605af90-2a33-463e-a9da-097652c98f4e",
+        "calification": "{\n\"Communication Clarity\": 0,\n\"Empathy Expression\": 0,\n\"Resolution Efficiency\": 0,\n\"Rebuttal Appropriateness\": 0,\n\"Overall Interaction Quality\": 0,\n\"Notes\": \"No information provided\"\n}"
+    },
+    {
+        "call_id": "bb9c636a-f265-4272-8001-28fe708674ff",
+        "calification": "\n{\n  \"Communication Clarity\": 0,\n  \"Empathy Expression\": 0,\n  \"Resolution Efficiency\": 0,\n  \"Rebuttal Appropriateness\": 0,\n  \"Overall Interaction Quality\": 0,\n  \"Notes\": \"No information provided\"\n}\n"
+    },
+    {
+        "call_id": "6ea032ca-8956-447d-a91c-b296d364ce76",
+        "calification": "{\n\"Communication Clarity\": 4,\n\"Empathy Expression\": 3,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 3,\n\"Notes\": \"The agent's communication lacks clarity and professionalism. The responses are abrupt and do not provide the requested information. There is a lack of empathy and politeness in addressing the caller. The agent should focus on being more courteous and providing clear, concise information. Additionally, the agent should avoid confrontational language and instead seek to understand the caller's needs.\"\n}"
+    },
+    {
+        "call_id": "a1d43f32-ed00-4b12-87a3-29e9da6cf8d1",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and to the point, but it could be improved by including a more personal touch, such as introducing themselves by name. Empathy was somewhat lacking; the agent could have expressed more warmth or eagerness to assist. The efficiency of the resolution was good, but the agent should ensure they fully understand the customer's needs before proceeding. The rebuttal was appropriate but could be more engaging. Overall, the interaction was satisfactory but could benefit from a more personable and empathetic approach.\"\n}"
+    },
+    {
+        "call_id": "ac57318b-88d1-4ea7-bc90-43ab3e76bc85",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and to the point, which is good for communication clarity. However, adding a bit more warmth or personalization could improve empathy expression. The agent was efficient in addressing the customer's needs, but there is room for improvement in making the interaction feel more personalized and empathetic.\"\n}"
+    },
+    {
+        "call_id": "fe0dcd07-6763-421d-b3bf-1bf007f09547",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "f888cdee-7f7d-447d-b807-c422ce6a14c8",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's response was somewhat unclear and did not fully address the customer's request. The agent should have provided the complete store number clearly and confirmed if the customer needed any additional assistance. Empathy was minimal, and the resolution was not efficient as the customer\u00e2\u0080\u0099s request was not fully met. The agent should aim to provide clear, complete information and show more understanding of the customer's needs.\"\n}"
+    },
+    {
+        "call_id": "e61f5def-26c0-4f39-9d16-a777a9fbcaa3",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by reducing filler words like 'um' and 'uh'. Empathy was minimal; the agent could have acknowledged the customer's need for a moment more warmly. Resolution efficiency was average as the interaction did not progress far enough to fully assess this. The agent's responses were appropriate but lacked engagement. Overall, the interaction quality was average, with room for improvement in clarity, empathy, and engagement.\"\n}"
+    },
+    {
+        "call_id": "a5bac7a6-88ea-48f7-a60f-068fac42c987",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency in addressing the customer's needs was good, but there is room for improvement in handling potential objections or questions more smoothly.\"\n}"
+    },
+    {
+        "call_id": "9dcaa21f-8a2e-491f-94d9-cfac4170d0e4",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked warmth and empathy. The agent did not directly address the user's request for a number, which could have been handled more efficiently. The agent should have asked for more context or provided a reason why they couldn't give out the number if that was the case. Overall, the interaction could benefit from more direct and empathetic communication.\"\n}"
+    },
+    {
+        "call_id": "a6e436cf-e9c9-4edf-8155-a4ad875b4b4c",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction."
+    },
+    {
+        "call_id": "a187b482-dc25-4c4e-bdec-82c4814d5c5e",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more valued. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "0a04a3c3-4b05-44ac-b782-add29cc25d55",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked detail and engagement. The agent did not provide the requested number, which could have been a misunderstanding or a refusal without explanation. Empathy was minimal, as the agent did not acknowledge the customer's needs or concerns. The resolution was inefficient because the customer's request was not addressed. The rebuttal was appropriate but could have been more informative. Overall, the interaction quality was average, with room for improvement in providing clear, empathetic, and efficient responses.\"\n}"
+    },
+    {
+        "call_id": "48240487-7d4c-4521-8d54-7caa923f0d92",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by avoiding filler words like 'uh' and 'um'. Empathy was minimally expressed; the agent could have shown more interest in the caller's well-being. The resolution efficiency was low as the conversation did not progress towards a resolution. The rebuttal appropriateness was average; the agent did not effectively steer the conversation towards understanding the caller's needs. Overall, the interaction quality was average but could be improved with more proactive engagement and clearer communication.\"\n}"
+    },
+    {
+        "call_id": "fd2d3100-20a5-4b9b-9658-5eda89ac24c5",
+        "calification": "User: Hi, I ordered a pizza an hour ago, and it still hasn't arrived. Can you check on the status for me?\n\nAI: I'm really sorry to hear that your pizza hasn't arrived yet. Can you please provide me with your order number or the phone number you used to place the order?"
+    },
+    {
+        "call_id": "0604123a-fc68-4bd9-9cb7-7c5c98c10d48",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more welcome. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "26ce10ed-bf28-43c9-af4d-b532922d394e",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more personalized and welcoming. Adding a friendly tone and expressing eagerness to assist could improve empathy. The efficiency of resolution is average; the agent should aim to quickly identify and address the customer's needs. The rebuttal appropriateness is acceptable but could be enhanced by anticipating common questions or concerns. Overall, the interaction quality is decent but has room for improvement in warmth and efficiency.\"\n}"
+    },
+    {
+        "call_id": "98819315-c31e-43bc-82f5-a75b84980859",
+        "calification": "{\n\"Communication Clarity\": 5,\n\"Empathy Expression\": 4,\n\"Resolution Efficiency\": 3,\n\"Rebuttal Appropriateness\": 4,\n\"Overall Interaction Quality\": 4,\n\"Notes\": \"The agent's communication was somewhat unclear, particularly in the final response where 'It lands' does not provide sufficient information. Empathy was minimal, as the agent did not acknowledge the business owner's needs or concerns. The resolution was inefficient due to the lack of clear information about the program. The rebuttal was not very appropriate as it did not address the business owner's potential interest or questions. Overall, the interaction quality was below average, with significant room for improvement in clarity, empathy, and providing detailed information.\"\n}"
+    },
+    {
+        "call_id": "e950cfdf-34a6-4143-99dd-74f6ab354279",
+        "calification": "\n{\n  \"Communication Clarity\": 3,\n  \"Empathy Expression\": 2,\n  \"Resolution Efficiency\": 2,\n  \"Rebuttal Appropriateness\": 3,\n  \"Overall Interaction Quality\": 2,\n  \"Notes\": \"The agent's communication was unclear and disjointed, making it difficult to follow the conversation. There was a lack of empathy and understanding of the customer's needs. The resolution was not efficient as the conversation did not lead to a clear outcome or solution. The rebuttals were inappropriate and did not address the customer's concerns effectively. Overall, the interaction quality was poor and needs significant improvement in clarity, empathy, and resolution strategies.\"\n}\n"
+    },
+    {
+        "call_id": "1b8d812b-cefd-4659-8cc8-8dbb0ee6dfa7",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response is highly unclear and does not make sense in the context of a typical call center interaction. The communication lacks clarity, making it difficult for the customer to understand. There is no expression of empathy or attempt to resolve any issue. The response does not appropriately address any potential rebuttals or concerns the customer might have. Overall, the interaction quality is very poor and needs significant improvement in all areas.\"\n}"
+    },
+    {
+        "call_id": "845cc8e3-533c-421d-bc10-d82dbbd3892f",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent maintained a clear and polite conversation. However, the empathy expression could be improved by acknowledging the AI's response more warmly. The resolution efficiency was adequate, but the agent could have asked more questions to better understand the AI's needs. The rebuttal was somewhat appropriate but could have been more persuasive. Overall, the interaction was decent but has room for improvement in engagement and persuasion.\"\n}"
+    },
+    {
+        "call_id": "6605af90-2a33-463e-a9da-097652c98f4e",
+        "calification": "{\n\"Communication Clarity\": 0,\n\"Empathy Expression\": 0,\n\"Resolution Efficiency\": 0,\n\"Rebuttal Appropriateness\": 0,\n\"Overall Interaction Quality\": 0,\n\"Notes\": \"No information provided\"\n}"
+    },
+    {
+        "call_id": "bb9c636a-f265-4272-8001-28fe708674ff",
+        "calification": "\n{\n  \"Communication Clarity\": 0,\n  \"Empathy Expression\": 0,\n  \"Resolution Efficiency\": 0,\n  \"Rebuttal Appropriateness\": 0,\n  \"Overall Interaction Quality\": 0,\n  \"Notes\": \"No information provided\"\n}\n"
+    },
+    {
+        "call_id": "6ea032ca-8956-447d-a91c-b296d364ce76",
+        "calification": "{\n\"Communication Clarity\": 4,\n\"Empathy Expression\": 3,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 3,\n\"Notes\": \"The agent's communication lacks clarity and professionalism. The responses are abrupt and do not provide the requested information. There is a lack of empathy and politeness in addressing the caller. The agent should focus on being more courteous and providing clear, concise information. Additionally, the agent should avoid confrontational language and instead seek to understand the caller's needs.\"\n}"
+    },
+    {
+        "call_id": "a1d43f32-ed00-4b12-87a3-29e9da6cf8d1",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and to the point, but it could be improved by including a more personal touch, such as introducing themselves by name. Empathy was somewhat lacking; the agent could have expressed more warmth or eagerness to assist. The efficiency of the resolution was good, but the agent should ensure they fully understand the customer's needs before proceeding. The rebuttal was appropriate but could be more engaging. Overall, the interaction was satisfactory but could benefit from a more personable and empathetic approach.\"\n}"
+    },
+    {
+        "call_id": "ac57318b-88d1-4ea7-bc90-43ab3e76bc85",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and to the point, which is good for communication clarity. However, adding a bit more warmth or personalization could improve empathy expression. The agent was efficient in addressing the customer's needs, but there is room for improvement in making the interaction feel more personalized and empathetic.\"\n}"
+    },
+    {
+        "call_id": "fe0dcd07-6763-421d-b3bf-1bf007f09547",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "f888cdee-7f7d-447d-b807-c422ce6a14c8",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's response was somewhat unclear and did not fully address the customer's request. The agent should have provided the complete store number clearly and confirmed if the customer needed any additional assistance. Empathy was minimal, and the resolution was not efficient as the customer\u00e2\u0080\u0099s request was not fully met. The agent should aim to provide clear, complete information and show more understanding of the customer's needs.\"\n}"
+    },
+    {
+        "call_id": "e61f5def-26c0-4f39-9d16-a777a9fbcaa3",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by reducing filler words like 'um' and 'uh'. Empathy was minimal; the agent could have acknowledged the customer's need for a moment more warmly. Resolution efficiency was average as the interaction did not progress far enough to fully assess this. The agent's responses were appropriate but lacked engagement. Overall, the interaction quality was average, with room for improvement in clarity, empathy, and engagement.\"\n}"
+    },
+    {
+        "call_id": "a5bac7a6-88ea-48f7-a60f-068fac42c987",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency in addressing the customer's needs was good, but there is room for improvement in handling potential objections or questions more smoothly.\"\n}"
+    },
+    {
+        "call_id": "9dcaa21f-8a2e-491f-94d9-cfac4170d0e4",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked warmth and empathy. The agent did not directly address the user's request for a number, which could have been handled more efficiently. The agent should have asked for more context or provided a reason why they couldn't give out the number if that was the case. Overall, the interaction could benefit from more direct and empathetic communication.\"\n}"
+    },
+    {
+        "call_id": "a6e436cf-e9c9-4edf-8155-a4ad875b4b4c",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction."
+    },
+    {
+        "call_id": "a187b482-dc25-4c4e-bdec-82c4814d5c5e",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more valued. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "0a04a3c3-4b05-44ac-b782-add29cc25d55",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked detail and engagement. The agent did not provide the requested number, which could have been a misunderstanding or a refusal without explanation. Empathy was minimal, as the agent did not acknowledge the customer's needs or concerns. The resolution was inefficient because the customer's request was not addressed. The rebuttal was appropriate but could have been more informative. Overall, the interaction quality was average, with room for improvement in providing clear, empathetic, and efficient responses.\"\n}"
+    },
+    {
+        "call_id": "48240487-7d4c-4521-8d54-7caa923f0d92",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by avoiding filler words like 'uh' and 'um'. Empathy was minimally expressed; the agent could have shown more interest in the caller's well-being. The resolution efficiency was low as the conversation did not progress towards a resolution. The rebuttal appropriateness was average; the agent did not effectively steer the conversation towards understanding the caller's needs. Overall, the interaction quality was average but could be improved with more proactive engagement and clearer communication.\"\n}"
+    },
+    {
+        "call_id": "fd2d3100-20a5-4b9b-9658-5eda89ac24c5",
+        "calification": "User: Hi, I ordered a pizza an hour ago, and it still hasn't arrived. Can you check on the status for me?\n\nAI: I'm really sorry to hear that your pizza hasn't arrived yet. Can you please provide me with your order number or the phone number you used to place the order?"
+    },
+    {
+        "call_id": "0604123a-fc68-4bd9-9cb7-7c5c98c10d48",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more welcome. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "26ce10ed-bf28-43c9-af4d-b532922d394e",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more personalized and welcoming. Adding a friendly tone and expressing eagerness to assist could improve empathy. The efficiency of resolution is average; the agent should aim to quickly identify and address the customer's needs. The rebuttal appropriateness is acceptable but could be enhanced by anticipating common questions or concerns. Overall, the interaction quality is decent but has room for improvement in warmth and efficiency.\"\n}"
+    },
+    {
+        "call_id": "98819315-c31e-43bc-82f5-a75b84980859",
+        "calification": "{\n\"Communication Clarity\": 5,\n\"Empathy Expression\": 4,\n\"Resolution Efficiency\": 3,\n\"Rebuttal Appropriateness\": 4,\n\"Overall Interaction Quality\": 4,\n\"Notes\": \"The agent's communication was somewhat unclear, particularly in the final response where 'It lands' does not provide sufficient information. Empathy was minimal, as the agent did not acknowledge the business owner's needs or concerns. The resolution was inefficient due to the lack of clear information about the program. The rebuttal was not very appropriate as it did not address the business owner's potential interest or questions. Overall, the interaction quality was below average, with significant room for improvement in clarity, empathy, and providing detailed information.\"\n}"
+    },
+    {
+        "call_id": "e950cfdf-34a6-4143-99dd-74f6ab354279",
+        "calification": "\n{\n  \"Communication Clarity\": 3,\n  \"Empathy Expression\": 2,\n  \"Resolution Efficiency\": 2,\n  \"Rebuttal Appropriateness\": 3,\n  \"Overall Interaction Quality\": 2,\n  \"Notes\": \"The agent's communication was unclear and disjointed, making it difficult to follow the conversation. There was a lack of empathy and understanding of the customer's needs. The resolution was not efficient as the conversation did not lead to a clear outcome or solution. The rebuttals were inappropriate and did not address the customer's concerns effectively. Overall, the interaction quality was poor and needs significant improvement in clarity, empathy, and resolution strategies.\"\n}\n"
+    },
+    {
+        "call_id": "1b8d812b-cefd-4659-8cc8-8dbb0ee6dfa7",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response is highly unclear and does not make sense in the context of a typical call center interaction. The communication lacks clarity, making it difficult for the customer to understand. There is no expression of empathy or attempt to resolve any issue. The response does not appropriately address any potential rebuttals or concerns the customer might have. Overall, the interaction quality is very poor and needs significant improvement in all areas.\"\n}"
+    },
+    {
+        "call_id": "82d8ed61-f80d-4cdb-82c0-14157a90ea5c",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting is clear but could be more specific by including the name of the pizzeria. Empathy is not strongly expressed, and the efficiency of resolution cannot be fully assessed with the given information. The overall interaction quality is average, with room for improvement in personalization and empathy.\"\n}"
+    },
+    {
+        "call_id": "652be889-5905-4534-bc88-38339e3abb3b",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more professional and welcoming. Adding a friendly tone and a more structured greeting, such as 'Thank you for calling [Pizzeria Name], how can I assist you today?' would improve the interaction. Empathy was not strongly conveyed, and the efficiency of resolution cannot be fully assessed from this single line. The agent should aim to sound more engaging and ready to help.\"\n}"
+    },
+    {
+        "call_id": "fef67675-23f7-41ab-9b7f-7e2eda8a54d0",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. However, the agent could have expressed more empathy by adding a friendly tone or asking how they can assist the customer more personally. The efficiency of the resolution cannot be fully assessed from this single line, but the agent's willingness to help is evident. The rebuttal appropriateness is not applicable in this context as there was no rebuttal needed. Overall, the interaction quality is good, but there is room for improvement in empathy and personalization.\"\n}"
+    },
+    {
+        "call_id": "f8599070-dc03-4d23-a7a5-004b9c6ea4da",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "0a2a09e6-f11b-4c43-9e19-9aa546ad2313",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction based on the specified criteria."
+    },
+    {
+        "call_id": "de0fb225-f246-4713-b2c3-d812f159c262",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "5f475f10-2f3c-4c9d-a042-650321f8bedd",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response was abrupt and dismissive, lacking any form of clarity or empathy. There was no attempt to understand or address the customer's needs, and the interaction was not resolved efficiently. The agent should focus on being more polite, empathetic, and clear in their communication to improve the overall quality of the interaction.\"\n}"
+    },
+    {
+        "call_id": "dd007075-19bd-4536-b2a7-953ceac36c58",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency of the resolution and appropriateness of rebuttals will depend on the continuation of the conversation, but the initial interaction sets a positive tone.\"\n}"
+    },
+    {
+        "call_id": "0c7bae4c-758f-45c4-a3eb-7b8aaf5815db",
+        "calification": "{\n\"Communication Clarity\": 3,\n\"Empathy Expression\": 2,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 2,\n\"Notes\": \"The agent's response was unclear and did not address the customer's query effectively. The agent should have asked for clarification in a more empathetic and professional manner. For example, 'I'm sorry, I didn't quite catch that. Could you please repeat or clarify your request?' This would have shown more empathy and a willingness to assist.\"\n}"
+    },
+    {
+        "call_id": "237da93e-ed14-4a7e-9130-25de91a6bc22",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch of warmth or personalization to express more empathy. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "6aee69a3-a830-4dbf-96dc-b86edac8bdc8",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "d5338b10-d6be-4e23-b3fa-77f5690c5215",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "de633d0e-5f57-4577-a331-52634986bd48",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response was unclear and did not address the customer's needs. The agent should aim to provide clear, concise, and relevant information. Additionally, there was no expression of empathy or attempt to resolve the issue. The agent should also ensure that their responses are appropriate and relevant to the customer's query.\"\n}"
+    },
+    {
+        "call_id": "2b7db3be-63f5-4800-87ba-7b5e2a54c370",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction based on the specified criteria."
+    },
+    {
+        "call_id": "df9a98c8-4de3-4fa9-a145-8985ef4e763f",
+        "calification": "Please provide the full conversation transcript so I can evaluate the interaction based on the specified criteria."
+    },
+    {
+        "call_id": "32140479-2301-4bbb-8aca-fe37f5777b8c",
+        "calification": "{\n\"Communication Clarity\": 9,\n\"Empathy Expression\": 8,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and professional. They expressed a willingness to help, which is a good start. However, the agent could improve by adding a bit more warmth or personalization to their greeting to enhance empathy. For example, 'Good afternoon, Vapis Pizzeria! How can I assist you today?' would make the interaction feel more welcoming.\"\n}"
+    },
+    {
+        "call_id": "b8492ac6-a315-4bda-ae47-18a23ccbac9f",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "26aeefdf-0a12-4f04-919b-26592be65b1b",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "aaa91008-9e60-40cf-9625-7544c8bb5f4f",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "a88c8ff4-d2c9-48b0-a1b6-5a66b261002c",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "11caf309-2b39-4006-a197-cf1d6fe751e6",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking to and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy, such as 'Good afternoon, VAPPE's pizzeria. How can I assist you today?' This would make the interaction feel more welcoming. Overall, the agent's performance was strong, with room for minor improvements in empathy and personalization.\"\n}"
+    },
+    {
+        "call_id": "78d5b7c7-4f40-49c3-8861-4524ebad2fc2",
+        "calification": "{\n\"Communication Clarity\": 9,\n\"Empathy Expression\": 8,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 8,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and professional, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a bit more warmth or personalization to the greeting to enhance empathy. The efficiency of resolution is not fully assessable from this single line, but the agent's promptness in addressing the customer's needs is a positive indicator. Overall, a strong start to the interaction.\"\n}"
+    },
+    {
+        "call_id": "91f441b5-c003-4e9c-8835-ed5c62bf6046",
+        "calification": "Please provide the conversation transcript that you would like me to evaluate."
+    },
+    {
+        "call_id": "b4b53fe2-780e-4ee9-9105-0a6b82139e59",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and polite, setting a positive tone for the interaction. However, the agent could improve by introducing themselves by name to create a more personal connection. Additionally, expressing empathy more explicitly could enhance the customer's experience.\"\n}"
+    },
+    {
+        "call_id": "69e8ebdf-cf7a-4185-92d1-89a6bfca2d0a",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "845cc8e3-533c-421d-bc10-d82dbbd3892f",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent maintained a clear and polite conversation. However, the empathy expression could be improved by acknowledging the AI's response more warmly. The resolution efficiency was adequate, but the agent could have asked more questions to better understand the AI's needs. The rebuttal was somewhat appropriate but could have been more persuasive. Overall, the interaction was decent but has room for improvement in engagement and persuasion.\"\n}"
+    },
+    {
+        "call_id": "6605af90-2a33-463e-a9da-097652c98f4e",
+        "calification": "{\n\"Communication Clarity\": 0,\n\"Empathy Expression\": 0,\n\"Resolution Efficiency\": 0,\n\"Rebuttal Appropriateness\": 0,\n\"Overall Interaction Quality\": 0,\n\"Notes\": \"No information provided\"\n}"
+    },
+    {
+        "call_id": "bb9c636a-f265-4272-8001-28fe708674ff",
+        "calification": "\n{\n  \"Communication Clarity\": 0,\n  \"Empathy Expression\": 0,\n  \"Resolution Efficiency\": 0,\n  \"Rebuttal Appropriateness\": 0,\n  \"Overall Interaction Quality\": 0,\n  \"Notes\": \"No information provided\"\n}\n"
+    },
+    {
+        "call_id": "6ea032ca-8956-447d-a91c-b296d364ce76",
+        "calification": "{\n\"Communication Clarity\": 4,\n\"Empathy Expression\": 3,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 3,\n\"Notes\": \"The agent's communication lacks clarity and professionalism. The responses are abrupt and do not provide the requested information. There is a lack of empathy and politeness in addressing the caller. The agent should focus on being more courteous and providing clear, concise information. Additionally, the agent should avoid confrontational language and instead seek to understand the caller's needs.\"\n}"
+    },
+    {
+        "call_id": "a1d43f32-ed00-4b12-87a3-29e9da6cf8d1",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and to the point, but it could be improved by including a more personal touch, such as introducing themselves by name. Empathy was somewhat lacking; the agent could have expressed more warmth or eagerness to assist. The efficiency of the resolution was good, but the agent should ensure they fully understand the customer's needs before proceeding. The rebuttal was appropriate but could be more engaging. Overall, the interaction was satisfactory but could benefit from a more personable and empathetic approach.\"\n}"
+    },
+    {
+        "call_id": "ac57318b-88d1-4ea7-bc90-43ab3e76bc85",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and to the point, which is good for communication clarity. However, adding a bit more warmth or personalization could improve empathy expression. The agent was efficient in addressing the customer's needs, but there is room for improvement in making the interaction feel more personalized and empathetic.\"\n}"
+    },
+    {
+        "call_id": "fe0dcd07-6763-421d-b3bf-1bf007f09547",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "f888cdee-7f7d-447d-b807-c422ce6a14c8",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's response was somewhat unclear and did not fully address the customer's request. The agent should have provided the complete store number clearly and confirmed if the customer needed any additional assistance. Empathy was minimal, and the resolution was not efficient as the customer\u00e2\u0080\u0099s request was not fully met. The agent should aim to provide clear, complete information and show more understanding of the customer's needs.\"\n}"
+    },
+    {
+        "call_id": "e61f5def-26c0-4f39-9d16-a777a9fbcaa3",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by reducing filler words like 'um' and 'uh'. Empathy was minimal; the agent could have acknowledged the customer's need for a moment more warmly. Resolution efficiency was average as the interaction did not progress far enough to fully assess this. The agent's responses were appropriate but lacked engagement. Overall, the interaction quality was average, with room for improvement in clarity, empathy, and engagement.\"\n}"
+    },
+    {
+        "call_id": "a5bac7a6-88ea-48f7-a60f-068fac42c987",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency in addressing the customer's needs was good, but there is room for improvement in handling potential objections or questions more smoothly.\"\n}"
+    },
+    {
+        "call_id": "9dcaa21f-8a2e-491f-94d9-cfac4170d0e4",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked warmth and empathy. The agent did not directly address the user's request for a number, which could have been handled more efficiently. The agent should have asked for more context or provided a reason why they couldn't give out the number if that was the case. Overall, the interaction could benefit from more direct and empathetic communication.\"\n}"
+    },
+    {
+        "call_id": "a6e436cf-e9c9-4edf-8155-a4ad875b4b4c",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction."
+    },
+    {
+        "call_id": "a187b482-dc25-4c4e-bdec-82c4814d5c5e",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more valued. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "0a04a3c3-4b05-44ac-b782-add29cc25d55",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked detail and engagement. The agent did not provide the requested number, which could have been a misunderstanding or a refusal without explanation. Empathy was minimal, as the agent did not acknowledge the customer's needs or concerns. The resolution was inefficient because the customer's request was not addressed. The rebuttal was appropriate but could have been more informative. Overall, the interaction quality was average, with room for improvement in providing clear, empathetic, and efficient responses.\"\n}"
+    },
+    {
+        "call_id": "48240487-7d4c-4521-8d54-7caa923f0d92",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by avoiding filler words like 'uh' and 'um'. Empathy was minimally expressed; the agent could have shown more interest in the caller's well-being. The resolution efficiency was low as the conversation did not progress towards a resolution. The rebuttal appropriateness was average; the agent did not effectively steer the conversation towards understanding the caller's needs. Overall, the interaction quality was average but could be improved with more proactive engagement and clearer communication.\"\n}"
+    },
+    {
+        "call_id": "fd2d3100-20a5-4b9b-9658-5eda89ac24c5",
+        "calification": "User: Hi, I ordered a pizza an hour ago, and it still hasn't arrived. Can you check on the status for me?\n\nAI: I'm really sorry to hear that your pizza hasn't arrived yet. Can you please provide me with your order number or the phone number you used to place the order?"
+    },
+    {
+        "call_id": "0604123a-fc68-4bd9-9cb7-7c5c98c10d48",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more welcome. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "26ce10ed-bf28-43c9-af4d-b532922d394e",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more personalized and welcoming. Adding a friendly tone and expressing eagerness to assist could improve empathy. The efficiency of resolution is average; the agent should aim to quickly identify and address the customer's needs. The rebuttal appropriateness is acceptable but could be enhanced by anticipating common questions or concerns. Overall, the interaction quality is decent but has room for improvement in warmth and efficiency.\"\n}"
+    },
+    {
+        "call_id": "98819315-c31e-43bc-82f5-a75b84980859",
+        "calification": "{\n\"Communication Clarity\": 5,\n\"Empathy Expression\": 4,\n\"Resolution Efficiency\": 3,\n\"Rebuttal Appropriateness\": 4,\n\"Overall Interaction Quality\": 4,\n\"Notes\": \"The agent's communication was somewhat unclear, particularly in the final response where 'It lands' does not provide sufficient information. Empathy was minimal, as the agent did not acknowledge the business owner's needs or concerns. The resolution was inefficient due to the lack of clear information about the program. The rebuttal was not very appropriate as it did not address the business owner's potential interest or questions. Overall, the interaction quality was below average, with significant room for improvement in clarity, empathy, and providing detailed information.\"\n}"
+    },
+    {
+        "call_id": "e950cfdf-34a6-4143-99dd-74f6ab354279",
+        "calification": "\n{\n  \"Communication Clarity\": 3,\n  \"Empathy Expression\": 2,\n  \"Resolution Efficiency\": 2,\n  \"Rebuttal Appropriateness\": 3,\n  \"Overall Interaction Quality\": 2,\n  \"Notes\": \"The agent's communication was unclear and disjointed, making it difficult to follow the conversation. There was a lack of empathy and understanding of the customer's needs. The resolution was not efficient as the conversation did not lead to a clear outcome or solution. The rebuttals were inappropriate and did not address the customer's concerns effectively. Overall, the interaction quality was poor and needs significant improvement in clarity, empathy, and resolution strategies.\"\n}\n"
+    },
+    {
+        "call_id": "1b8d812b-cefd-4659-8cc8-8dbb0ee6dfa7",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response is highly unclear and does not make sense in the context of a typical call center interaction. The communication lacks clarity, making it difficult for the customer to understand. There is no expression of empathy or attempt to resolve any issue. The response does not appropriately address any potential rebuttals or concerns the customer might have. Overall, the interaction quality is very poor and needs significant improvement in all areas.\"\n}"
+    },
+    {
+        "call_id": "845cc8e3-533c-421d-bc10-d82dbbd3892f",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent maintained a clear and polite conversation. However, the empathy expression could be improved by acknowledging the AI's response more warmly. The resolution efficiency was adequate, but the agent could have asked more questions to better understand the AI's needs. The rebuttal was somewhat appropriate but could have been more persuasive. Overall, the interaction was decent but has room for improvement in engagement and persuasion.\"\n}"
+    },
+    {
+        "call_id": "6605af90-2a33-463e-a9da-097652c98f4e",
+        "calification": "{\n\"Communication Clarity\": 0,\n\"Empathy Expression\": 0,\n\"Resolution Efficiency\": 0,\n\"Rebuttal Appropriateness\": 0,\n\"Overall Interaction Quality\": 0,\n\"Notes\": \"No information provided\"\n}"
+    },
+    {
+        "call_id": "bb9c636a-f265-4272-8001-28fe708674ff",
+        "calification": "\n{\n  \"Communication Clarity\": 0,\n  \"Empathy Expression\": 0,\n  \"Resolution Efficiency\": 0,\n  \"Rebuttal Appropriateness\": 0,\n  \"Overall Interaction Quality\": 0,\n  \"Notes\": \"No information provided\"\n}\n"
+    },
+    {
+        "call_id": "6ea032ca-8956-447d-a91c-b296d364ce76",
+        "calification": "{\n\"Communication Clarity\": 4,\n\"Empathy Expression\": 3,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 3,\n\"Notes\": \"The agent's communication lacks clarity and professionalism. The responses are abrupt and do not provide the requested information. There is a lack of empathy and politeness in addressing the caller. The agent should focus on being more courteous and providing clear, concise information. Additionally, the agent should avoid confrontational language and instead seek to understand the caller's needs.\"\n}"
+    },
+    {
+        "call_id": "a1d43f32-ed00-4b12-87a3-29e9da6cf8d1",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and to the point, but it could be improved by including a more personal touch, such as introducing themselves by name. Empathy was somewhat lacking; the agent could have expressed more warmth or eagerness to assist. The efficiency of the resolution was good, but the agent should ensure they fully understand the customer's needs before proceeding. The rebuttal was appropriate but could be more engaging. Overall, the interaction was satisfactory but could benefit from a more personable and empathetic approach.\"\n}"
+    },
+    {
+        "call_id": "ac57318b-88d1-4ea7-bc90-43ab3e76bc85",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and to the point, which is good for communication clarity. However, adding a bit more warmth or personalization could improve empathy expression. The agent was efficient in addressing the customer's needs, but there is room for improvement in making the interaction feel more personalized and empathetic.\"\n}"
+    },
+    {
+        "call_id": "fe0dcd07-6763-421d-b3bf-1bf007f09547",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "f888cdee-7f7d-447d-b807-c422ce6a14c8",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's response was somewhat unclear and did not fully address the customer's request. The agent should have provided the complete store number clearly and confirmed if the customer needed any additional assistance. Empathy was minimal, and the resolution was not efficient as the customer\u00e2\u0080\u0099s request was not fully met. The agent should aim to provide clear, complete information and show more understanding of the customer's needs.\"\n}"
+    },
+    {
+        "call_id": "e61f5def-26c0-4f39-9d16-a777a9fbcaa3",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by reducing filler words like 'um' and 'uh'. Empathy was minimal; the agent could have acknowledged the customer's need for a moment more warmly. Resolution efficiency was average as the interaction did not progress far enough to fully assess this. The agent's responses were appropriate but lacked engagement. Overall, the interaction quality was average, with room for improvement in clarity, empathy, and engagement.\"\n}"
+    },
+    {
+        "call_id": "a5bac7a6-88ea-48f7-a60f-068fac42c987",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency in addressing the customer's needs was good, but there is room for improvement in handling potential objections or questions more smoothly.\"\n}"
+    },
+    {
+        "call_id": "9dcaa21f-8a2e-491f-94d9-cfac4170d0e4",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked warmth and empathy. The agent did not directly address the user's request for a number, which could have been handled more efficiently. The agent should have asked for more context or provided a reason why they couldn't give out the number if that was the case. Overall, the interaction could benefit from more direct and empathetic communication.\"\n}"
+    },
+    {
+        "call_id": "a6e436cf-e9c9-4edf-8155-a4ad875b4b4c",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction."
+    },
+    {
+        "call_id": "a187b482-dc25-4c4e-bdec-82c4814d5c5e",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more valued. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "0a04a3c3-4b05-44ac-b782-add29cc25d55",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked detail and engagement. The agent did not provide the requested number, which could have been a misunderstanding or a refusal without explanation. Empathy was minimal, as the agent did not acknowledge the customer's needs or concerns. The resolution was inefficient because the customer's request was not addressed. The rebuttal was appropriate but could have been more informative. Overall, the interaction quality was average, with room for improvement in providing clear, empathetic, and efficient responses.\"\n}"
+    },
+    {
+        "call_id": "48240487-7d4c-4521-8d54-7caa923f0d92",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by avoiding filler words like 'uh' and 'um'. Empathy was minimally expressed; the agent could have shown more interest in the caller's well-being. The resolution efficiency was low as the conversation did not progress towards a resolution. The rebuttal appropriateness was average; the agent did not effectively steer the conversation towards understanding the caller's needs. Overall, the interaction quality was average but could be improved with more proactive engagement and clearer communication.\"\n}"
+    },
+    {
+        "call_id": "fd2d3100-20a5-4b9b-9658-5eda89ac24c5",
+        "calification": "User: Hi, I ordered a pizza an hour ago, and it still hasn't arrived. Can you check on the status for me?\n\nAI: I'm really sorry to hear that your pizza hasn't arrived yet. Can you please provide me with your order number or the phone number you used to place the order?"
+    },
+    {
+        "call_id": "0604123a-fc68-4bd9-9cb7-7c5c98c10d48",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more welcome. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "26ce10ed-bf28-43c9-af4d-b532922d394e",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more personalized and welcoming. Adding a friendly tone and expressing eagerness to assist could improve empathy. The efficiency of resolution is average; the agent should aim to quickly identify and address the customer's needs. The rebuttal appropriateness is acceptable but could be enhanced by anticipating common questions or concerns. Overall, the interaction quality is decent but has room for improvement in warmth and efficiency.\"\n}"
+    },
+    {
+        "call_id": "98819315-c31e-43bc-82f5-a75b84980859",
+        "calification": "{\n\"Communication Clarity\": 5,\n\"Empathy Expression\": 4,\n\"Resolution Efficiency\": 3,\n\"Rebuttal Appropriateness\": 4,\n\"Overall Interaction Quality\": 4,\n\"Notes\": \"The agent's communication was somewhat unclear, particularly in the final response where 'It lands' does not provide sufficient information. Empathy was minimal, as the agent did not acknowledge the business owner's needs or concerns. The resolution was inefficient due to the lack of clear information about the program. The rebuttal was not very appropriate as it did not address the business owner's potential interest or questions. Overall, the interaction quality was below average, with significant room for improvement in clarity, empathy, and providing detailed information.\"\n}"
+    },
+    {
+        "call_id": "e950cfdf-34a6-4143-99dd-74f6ab354279",
+        "calification": "\n{\n  \"Communication Clarity\": 3,\n  \"Empathy Expression\": 2,\n  \"Resolution Efficiency\": 2,\n  \"Rebuttal Appropriateness\": 3,\n  \"Overall Interaction Quality\": 2,\n  \"Notes\": \"The agent's communication was unclear and disjointed, making it difficult to follow the conversation. There was a lack of empathy and understanding of the customer's needs. The resolution was not efficient as the conversation did not lead to a clear outcome or solution. The rebuttals were inappropriate and did not address the customer's concerns effectively. Overall, the interaction quality was poor and needs significant improvement in clarity, empathy, and resolution strategies.\"\n}\n"
+    },
+    {
+        "call_id": "1b8d812b-cefd-4659-8cc8-8dbb0ee6dfa7",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response is highly unclear and does not make sense in the context of a typical call center interaction. The communication lacks clarity, making it difficult for the customer to understand. There is no expression of empathy or attempt to resolve any issue. The response does not appropriately address any potential rebuttals or concerns the customer might have. Overall, the interaction quality is very poor and needs significant improvement in all areas.\"\n}"
+    },
+    {
+        "call_id": "82d8ed61-f80d-4cdb-82c0-14157a90ea5c",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting is clear but could be more specific by including the name of the pizzeria. Empathy is not strongly expressed, and the efficiency of resolution cannot be fully assessed with the given information. The overall interaction quality is average, with room for improvement in personalization and empathy.\"\n}"
+    },
+    {
+        "call_id": "652be889-5905-4534-bc88-38339e3abb3b",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more professional and welcoming. Adding a friendly tone and a more structured greeting, such as 'Thank you for calling [Pizzeria Name], how can I assist you today?' would improve the interaction. Empathy was not strongly conveyed, and the efficiency of resolution cannot be fully assessed from this single line. The agent should aim to sound more engaging and ready to help.\"\n}"
+    },
+    {
+        "call_id": "fef67675-23f7-41ab-9b7f-7e2eda8a54d0",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. However, the agent could have expressed more empathy by adding a friendly tone or asking how they can assist the customer more personally. The efficiency of the resolution cannot be fully assessed from this single line, but the agent's willingness to help is evident. The rebuttal appropriateness is not applicable in this context as there was no rebuttal needed. Overall, the interaction quality is good, but there is room for improvement in empathy and personalization.\"\n}"
+    },
+    {
+        "call_id": "f8599070-dc03-4d23-a7a5-004b9c6ea4da",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "0a2a09e6-f11b-4c43-9e19-9aa546ad2313",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction based on the specified criteria."
+    },
+    {
+        "call_id": "de0fb225-f246-4713-b2c3-d812f159c262",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "5f475f10-2f3c-4c9d-a042-650321f8bedd",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response was abrupt and dismissive, lacking any form of clarity or empathy. There was no attempt to understand or address the customer's needs, and the interaction was not resolved efficiently. The agent should focus on being more polite, empathetic, and clear in their communication to improve the overall quality of the interaction.\"\n}"
+    },
+    {
+        "call_id": "dd007075-19bd-4536-b2a7-953ceac36c58",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency of the resolution and appropriateness of rebuttals will depend on the continuation of the conversation, but the initial interaction sets a positive tone.\"\n}"
+    },
+    {
+        "call_id": "0c7bae4c-758f-45c4-a3eb-7b8aaf5815db",
+        "calification": "{\n\"Communication Clarity\": 3,\n\"Empathy Expression\": 2,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 2,\n\"Notes\": \"The agent's response was unclear and did not address the customer's query effectively. The agent should have asked for clarification in a more empathetic and professional manner. For example, 'I'm sorry, I didn't quite catch that. Could you please repeat or clarify your request?' This would have shown more empathy and a willingness to assist.\"\n}"
+    },
+    {
+        "call_id": "237da93e-ed14-4a7e-9130-25de91a6bc22",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch of warmth or personalization to express more empathy. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "6aee69a3-a830-4dbf-96dc-b86edac8bdc8",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "d5338b10-d6be-4e23-b3fa-77f5690c5215",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "de633d0e-5f57-4577-a331-52634986bd48",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response was unclear and did not address the customer's needs. The agent should aim to provide clear, concise, and relevant information. Additionally, there was no expression of empathy or attempt to resolve the issue. The agent should also ensure that their responses are appropriate and relevant to the customer's query.\"\n}"
+    },
+    {
+        "call_id": "2b7db3be-63f5-4800-87ba-7b5e2a54c370",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction based on the specified criteria."
+    },
+    {
+        "call_id": "df9a98c8-4de3-4fa9-a145-8985ef4e763f",
+        "calification": "Please provide the full conversation transcript so I can evaluate the interaction based on the specified criteria."
+    },
+    {
+        "call_id": "32140479-2301-4bbb-8aca-fe37f5777b8c",
+        "calification": "{\n\"Communication Clarity\": 9,\n\"Empathy Expression\": 8,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and professional. They expressed a willingness to help, which is a good start. However, the agent could improve by adding a bit more warmth or personalization to their greeting to enhance empathy. For example, 'Good afternoon, Vapis Pizzeria! How can I assist you today?' would make the interaction feel more welcoming.\"\n}"
+    },
+    {
+        "call_id": "b8492ac6-a315-4bda-ae47-18a23ccbac9f",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "26aeefdf-0a12-4f04-919b-26592be65b1b",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "aaa91008-9e60-40cf-9625-7544c8bb5f4f",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "a88c8ff4-d2c9-48b0-a1b6-5a66b261002c",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "11caf309-2b39-4006-a197-cf1d6fe751e6",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking to and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy, such as 'Good afternoon, VAPPE's pizzeria. How can I assist you today?' This would make the interaction feel more welcoming. Overall, the agent's performance was strong, with room for minor improvements in empathy and personalization.\"\n}"
+    },
+    {
+        "call_id": "78d5b7c7-4f40-49c3-8861-4524ebad2fc2",
+        "calification": "{\n\"Communication Clarity\": 9,\n\"Empathy Expression\": 8,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 8,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and professional, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a bit more warmth or personalization to the greeting to enhance empathy. The efficiency of resolution is not fully assessable from this single line, but the agent's promptness in addressing the customer's needs is a positive indicator. Overall, a strong start to the interaction.\"\n}"
+    },
+    {
+        "call_id": "91f441b5-c003-4e9c-8835-ed5c62bf6046",
+        "calification": "Please provide the conversation transcript that you would like me to evaluate."
+    },
+    {
+        "call_id": "b4b53fe2-780e-4ee9-9105-0a6b82139e59",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and polite, setting a positive tone for the interaction. However, the agent could improve by introducing themselves by name to create a more personal connection. Additionally, expressing empathy more explicitly could enhance the customer's experience.\"\n}"
+    },
+    {
+        "call_id": "69e8ebdf-cf7a-4185-92d1-89a6bfca2d0a",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "845cc8e3-533c-421d-bc10-d82dbbd3892f",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent maintained a clear and polite conversation. However, the empathy expression could be improved by acknowledging the AI's response more warmly. The resolution efficiency was adequate, but the agent could have asked more questions to better understand the AI's needs. The rebuttal was somewhat appropriate but could have been more persuasive. Overall, the interaction was decent but has room for improvement in engagement and persuasion.\"\n}"
+    },
+    {
+        "call_id": "6605af90-2a33-463e-a9da-097652c98f4e",
+        "calification": "{\n\"Communication Clarity\": 0,\n\"Empathy Expression\": 0,\n\"Resolution Efficiency\": 0,\n\"Rebuttal Appropriateness\": 0,\n\"Overall Interaction Quality\": 0,\n\"Notes\": \"No information provided\"\n}"
+    },
+    {
+        "call_id": "bb9c636a-f265-4272-8001-28fe708674ff",
+        "calification": "\n{\n  \"Communication Clarity\": 0,\n  \"Empathy Expression\": 0,\n  \"Resolution Efficiency\": 0,\n  \"Rebuttal Appropriateness\": 0,\n  \"Overall Interaction Quality\": 0,\n  \"Notes\": \"No information provided\"\n}\n"
+    },
+    {
+        "call_id": "6ea032ca-8956-447d-a91c-b296d364ce76",
+        "calification": "{\n\"Communication Clarity\": 4,\n\"Empathy Expression\": 3,\n\"Resolution Efficiency\": 2,\n\"Rebuttal Appropriateness\": 3,\n\"Overall Interaction Quality\": 3,\n\"Notes\": \"The agent's communication lacks clarity and professionalism. The responses are abrupt and do not provide the requested information. There is a lack of empathy and politeness in addressing the caller. The agent should focus on being more courteous and providing clear, concise information. Additionally, the agent should avoid confrontational language and instead seek to understand the caller's needs.\"\n}"
+    },
+    {
+        "call_id": "a1d43f32-ed00-4b12-87a3-29e9da6cf8d1",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 7,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 7,\n\"Notes\": \"The agent's greeting was clear and to the point, but it could be improved by including a more personal touch, such as introducing themselves by name. Empathy was somewhat lacking; the agent could have expressed more warmth or eagerness to assist. The efficiency of the resolution was good, but the agent should ensure they fully understand the customer's needs before proceeding. The rebuttal was appropriate but could be more engaging. Overall, the interaction was satisfactory but could benefit from a more personable and empathetic approach.\"\n}"
+    },
+    {
+        "call_id": "ac57318b-88d1-4ea7-bc90-43ab3e76bc85",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and to the point, which is good for communication clarity. However, adding a bit more warmth or personalization could improve empathy expression. The agent was efficient in addressing the customer's needs, but there is room for improvement in making the interaction feel more personalized and empathetic.\"\n}"
+    },
+    {
+        "call_id": "fe0dcd07-6763-421d-b3bf-1bf007f09547",
+        "calification": "Please provide the conversation transcript for evaluation."
+    },
+    {
+        "call_id": "f888cdee-7f7d-447d-b807-c422ce6a14c8",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's response was somewhat unclear and did not fully address the customer's request. The agent should have provided the complete store number clearly and confirmed if the customer needed any additional assistance. Empathy was minimal, and the resolution was not efficient as the customer\u00e2\u0080\u0099s request was not fully met. The agent should aim to provide clear, complete information and show more understanding of the customer's needs.\"\n}"
+    },
+    {
+        "call_id": "e61f5def-26c0-4f39-9d16-a777a9fbcaa3",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by reducing filler words like 'um' and 'uh'. Empathy was minimal; the agent could have acknowledged the customer's need for a moment more warmly. Resolution efficiency was average as the interaction did not progress far enough to fully assess this. The agent's responses were appropriate but lacked engagement. Overall, the interaction quality was average, with room for improvement in clarity, empathy, and engagement.\"\n}"
+    },
+    {
+        "call_id": "a5bac7a6-88ea-48f7-a60f-068fac42c987",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand. The agent could improve by adding a touch of warmth or personalization to express more empathy. The efficiency in addressing the customer's needs was good, but there is room for improvement in handling potential objections or questions more smoothly.\"\n}"
+    },
+    {
+        "call_id": "9dcaa21f-8a2e-491f-94d9-cfac4170d0e4",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked warmth and empathy. The agent did not directly address the user's request for a number, which could have been handled more efficiently. The agent should have asked for more context or provided a reason why they couldn't give out the number if that was the case. Overall, the interaction could benefit from more direct and empathetic communication.\"\n}"
+    },
+    {
+        "call_id": "a6e436cf-e9c9-4edf-8155-a4ad875b4b4c",
+        "calification": "Please provide the full conversation transcript so I can evaluate the call center interaction."
+    },
+    {
+        "call_id": "a187b482-dc25-4c4e-bdec-82c4814d5c5e",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more valued. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "0a04a3c3-4b05-44ac-b782-add29cc25d55",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's responses were generally clear but lacked detail and engagement. The agent did not provide the requested number, which could have been a misunderstanding or a refusal without explanation. Empathy was minimal, as the agent did not acknowledge the customer's needs or concerns. The resolution was inefficient because the customer's request was not addressed. The rebuttal was appropriate but could have been more informative. Overall, the interaction quality was average, with room for improvement in providing clear, empathetic, and efficient responses.\"\n}"
+    },
+    {
+        "call_id": "48240487-7d4c-4521-8d54-7caa923f0d92",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved by avoiding filler words like 'uh' and 'um'. Empathy was minimally expressed; the agent could have shown more interest in the caller's well-being. The resolution efficiency was low as the conversation did not progress towards a resolution. The rebuttal appropriateness was average; the agent did not effectively steer the conversation towards understanding the caller's needs. Overall, the interaction quality was average but could be improved with more proactive engagement and clearer communication.\"\n}"
+    },
+    {
+        "call_id": "fd2d3100-20a5-4b9b-9658-5eda89ac24c5",
+        "calification": "User: Hi, I ordered a pizza an hour ago, and it still hasn't arrived. Can you check on the status for me?\n\nAI: I'm really sorry to hear that your pizza hasn't arrived yet. Can you please provide me with your order number or the phone number you used to place the order?"
+    },
+    {
+        "call_id": "0604123a-fc68-4bd9-9cb7-7c5c98c10d48",
+        "calification": "{\n\"Communication Clarity\": 8,\n\"Empathy Expression\": 7,\n\"Resolution Efficiency\": 8,\n\"Rebuttal Appropriateness\": 7,\n\"Overall Interaction Quality\": 8,\n\"Notes\": \"The agent's greeting was clear and concise, making it easy for the customer to understand who they were speaking with and the purpose of the call. The agent could improve by adding a touch more warmth or personalization to express empathy and make the customer feel more welcome. Overall, the interaction was efficient and appropriate.\"\n}"
+    },
+    {
+        "call_id": "26ce10ed-bf28-43c9-af4d-b532922d394e",
+        "calification": "{\n\"Communication Clarity\": 7,\n\"Empathy Expression\": 6,\n\"Resolution Efficiency\": 6,\n\"Rebuttal Appropriateness\": 6,\n\"Overall Interaction Quality\": 6,\n\"Notes\": \"The agent's greeting was clear but could be more personalized and welcoming. Adding a friendly tone and expressing eagerness to assist could improve empathy. The efficiency of resolution is average; the agent should aim to quickly identify and address the customer's needs. The rebuttal appropriateness is acceptable but could be enhanced by anticipating common questions or concerns. Overall, the interaction quality is decent but has room for improvement in warmth and efficiency.\"\n}"
+    },
+    {
+        "call_id": "98819315-c31e-43bc-82f5-a75b84980859",
+        "calification": "{\n\"Communication Clarity\": 5,\n\"Empathy Expression\": 4,\n\"Resolution Efficiency\": 3,\n\"Rebuttal Appropriateness\": 4,\n\"Overall Interaction Quality\": 4,\n\"Notes\": \"The agent's communication was somewhat unclear, particularly in the final response where 'It lands' does not provide sufficient information. Empathy was minimal, as the agent did not acknowledge the business owner's needs or concerns. The resolution was inefficient due to the lack of clear information about the program. The rebuttal was not very appropriate as it did not address the business owner's potential interest or questions. Overall, the interaction quality was below average, with significant room for improvement in clarity, empathy, and providing detailed information.\"\n}"
+    },
+    {
+        "call_id": "e950cfdf-34a6-4143-99dd-74f6ab354279",
+        "calification": "\n{\n  \"Communication Clarity\": 3,\n  \"Empathy Expression\": 2,\n  \"Resolution Efficiency\": 2,\n  \"Rebuttal Appropriateness\": 3,\n  \"Overall Interaction Quality\": 2,\n  \"Notes\": \"The agent's communication was unclear and disjointed, making it difficult to follow the conversation. There was a lack of empathy and understanding of the customer's needs. The resolution was not efficient as the conversation did not lead to a clear outcome or solution. The rebuttals were inappropriate and did not address the customer's concerns effectively. Overall, the interaction quality was poor and needs significant improvement in clarity, empathy, and resolution strategies.\"\n}\n"
+    },
+    {
+        "call_id": "1b8d812b-cefd-4659-8cc8-8dbb0ee6dfa7",
+        "calification": "{\n\"Communication Clarity\": 2,\n\"Empathy Expression\": 1,\n\"Resolution Efficiency\": 1,\n\"Rebuttal Appropriateness\": 1,\n\"Overall Interaction Quality\": 1,\n\"Notes\": \"The agent's response is highly unclear and does not make sense in the context of a typical call center interaction. The communication lacks clarity, making it difficult for the customer to understand. There is no expression of empathy or attempt to resolve any issue. The response does not appropriately address any potential rebuttals or concerns the customer might have. Overall, the interaction quality is very poor and needs significant improvement in all areas.\"\n}"
     }
+    
 ]
