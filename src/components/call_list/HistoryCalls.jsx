@@ -11,6 +11,10 @@ function CallList() {
   const [filteredCalls, setFilteredCalls] = useState([]);
   const navigate = useNavigate();
 
+  const handleMain = () => {
+    navigate('/init');
+  };
+
   useEffect(() => {
     const fetchCalls = async () => {
       const response = await fetch('/califications_history.json');
@@ -23,9 +27,15 @@ function CallList() {
 
   useEffect(() => {
     setFilteredCalls(
-      calls.filter((call) =>
-        call.call_id.replace(/\s+/g, '').toLowerCase().includes(searchTerm.toLowerCase())
-      )
+      calls.filter((call) => {
+        const normalizedSearchTerm = searchTerm.replace(/\s+/g, '').toLowerCase();
+        const normalizedCallId = call.call_id.replace(/\s+/g, '').toLowerCase();
+        const normalizedReference = call.reference?.replace(/\s+/g, '').toLowerCase() || '';
+        return (
+          normalizedCallId.includes(normalizedSearchTerm) ||
+          normalizedReference.includes(normalizedSearchTerm)
+        );
+      })
     );
   }, [searchTerm, calls]);
 
@@ -95,7 +105,7 @@ function CallList() {
       <h1>Available Calls</h1>
       <div className="controls">
         <div className="search-bar">
-          <label htmlFor="search">Search by Call ID: </label>
+          <label htmlFor="search">Search by Call ID or Reference: </label>
           <input
             type="text"
             id="search"
@@ -124,13 +134,13 @@ function CallList() {
               onClick={() => handleCallClick(call.call_id)}
             >
               <span className="call-id">{call.call_id}</span>
-              <span className="call-identifier">{call.identifier}</span>
+              <span className="call-identifier">{call.reference}</span>
               <span className="call-time">{call.time}</span>
             </li>
           ))}
         </ul>
       ) : (
-        <p>No calls found for the given ID.</p>
+        <p>No calls found for the given ID or Reference.</p>
       )}
       <div className="pagination">
         <button onClick={handlePrevPage} disabled={currentPage === 1}>
@@ -160,6 +170,9 @@ function CallList() {
             className="styled-input"
           />
           <button onClick={handleGoToPage}>Go</button>
+          <div className="do-a-new-call ">
+            <button onClick={handleMain}>Do a new call</button>
+          </div>
         </div>
       </div>
     </div>

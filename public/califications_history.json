@@ -1,13 +1,24 @@
 [
     {
+        "call_id": "6145bbb5-0690-4c96-96f2-4daf4ea4de63",
+        "calification": "{\n\"Communication Clarity\": 5,\n\"Empathy Expression\": 4,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was somewhat clear but could be improved. There were several instances of hesitation and filler words ('uh', 'um') that affected the flow of the conversation. Empathy was minimal; the agent did not make any effort to connect with the business owner on a personal level. The resolution efficiency was average; the agent introduced the program but did not provide detailed information or next steps. The rebuttal appropriateness was neutral as there were no objections to handle. Overall, the interaction quality was average, with room for improvement in clarity, empathy, and providing more detailed information.\"\n}",
+        "time": "2024-06-25 12:52:49 NYT",
+        "reference": "hello"
+    },
+    {
+        "call_id": "c53a7bd1-c1c3-44e9-96cf-07e33d951eb1",
+        "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 5,\n\"Rebuttal Appropriateness\": 4,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was generally clear, but there were some areas where it could be improved, such as avoiding filler words like 'uh' and 'um'. Empathy was minimally expressed, and the agent could have acknowledged the business owner's response more warmly. The resolution was not very efficient as the agent did not probe further to understand the business owner's needs or offer alternative solutions. The rebuttal was weak; the agent did not attempt to address the business owner's disinterest or provide additional value propositions. Overall, the interaction was average but could benefit from more structured and empathetic communication.\"\n}",
+        "time": "2024-06-25 12:37:51 NYT"
+    },
+    {
         "call_id": "641814eb-20eb-4739-acc6-33fb01705e23",
-        "identifier": "John Doe",
+        "reference": "John Doe",
         "calification": "{\n\"Communication Clarity\": 0,\n\"Empathy Expression\": 0,\n\"Resolution Efficiency\": 0,\n\"Rebuttal Appropriateness\": 0,\n\"Overall Interaction Quality\": 0,\n\"Notes\": \"No information provided\"\n}",
         "time": "2024-06-24 18:43:15 NYT"
     },
     {
         "call_id": "8a7e2d9d-0f9c-453f-b6c9-6207cb485073",
-        "identifier": "Jane Doe",
+        "reference": "Jane Doe",
         "calification": "{\n\"Communication Clarity\": 6,\n\"Empathy Expression\": 5,\n\"Resolution Efficiency\": 4,\n\"Rebuttal Appropriateness\": 5,\n\"Overall Interaction Quality\": 5,\n\"Notes\": \"The agent's communication was clear but could be more concise. Empathy was minimal; a more engaging tone could improve this. The resolution efficiency was low as the conversation did not progress towards resolving any specific issue. The rebuttal appropriateness was average; the agent's questions were relevant but lacked depth. Overall, the interaction quality was average, with room for improvement in engagement and resolution focus.\"\n}",
         "time": "2024-06-24 17:52:50 NYT"
     }

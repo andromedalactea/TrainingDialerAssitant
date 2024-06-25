@@ -64,7 +64,7 @@
 }
 
 .call-list-item .call-id {
-  color: #ffffff; /* Color naranja */
+  color: #ffffff; /* Color blanco */
   font-weight: bold;
 }
 
@@ -139,4 +139,11 @@
 
 .search-bar input:hover {
   background-color: #0056b3;
+}
+
+.do-a-new-call {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* change the size */
 }

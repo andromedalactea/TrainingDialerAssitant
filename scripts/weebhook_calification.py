@@ -67,6 +67,7 @@ def main_call(path):
             # Extract call id
             call_data = message_vapi.get('call', {})
             call_id = data['message']['call']['assistantOverrides']['metadata']['call_secundary_id']
+            reference = data['message']['call']['assistantOverrides']['metadata']['reference']
             print(call_id)
             
 
@@ -79,7 +80,8 @@ def main_call(path):
             calification_dict = {
                 "call_id": call_id,
                 "calification": decoded_calification,
-                "time" : get_current_time_ny()
+                "time" : get_current_time_ny(),
+                "reference": reference
             }
             # Save the calification in a file like a jsonl
             # Read the existing data

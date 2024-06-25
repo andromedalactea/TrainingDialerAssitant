@@ -1,7 +1,6 @@
 import Vapi from "@vapi-ai/web";
 import Button from "../components/base/Button";
 import ActiveCallDetail from "../components/ActiveCallDetail";
-import WaitingScreen from "../components/call/WaitingScreen";
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from "uuid";
 import { useState, useEffect } from "react";
@@ -16,12 +15,14 @@ function InitVapi() {
   const [volumeLevel, setVolumeLevel] = useState(0);
   const [callID, setCallID] = useState(null);
   const [waiting, setWaiting] = useState(false);
+  const [reference, setReference] = useState("");
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
   useEffect(() => {
     if (waiting) {
-      navigate('/result?id='+callID+'');
+      navigate('/result?id=' + callID);
     }
     vapi.on("volume-level", (level) => {
       setVolumeLevel(level);
@@ -34,13 +35,21 @@ function InitVapi() {
     });
   }, [waiting, navigate]);
 
-
   const startCallInline = () => {
+    if (reference.trim() === "") {
+      setError("Please provide a reference before starting the call.");
+      return;
+    }
+
+    setError("");
     const call_secundary_id = uuidv4();
     setCallID(call_secundary_id);
 
     const assistantOverrides = {
-      metadata: { call_secundary_id: call_secundary_id },
+      metadata: {
+        call_secundary_id: call_secundary_id,
+        reference: reference.trim()
+      },
     };
 
     vapi.start(assistantOptions, assistantOverrides);
@@ -78,11 +87,20 @@ function InitVapi() {
           ) : (
             <>
               <h2>Press the button to start the evaluation</h2>
-              <Button
-                label="Training Dialer"
-                onClick={startCallInline}
-                // isLoading={connecting}
-              />
+              <div className="input-container">
+                <input
+                  type="text"
+                  value={reference}
+                  onChange={(e) => setReference(e.target.value)}
+                  placeholder="Enter reference"
+                />
+                <Button
+                  label="Training Dialer"
+                  onClick={startCallInline}
+                  // isLoading={connecting}
+                />
+              </div>
+              {error && <p className="error-message">{error}</p>}
             </>
           )}
         </div>
@@ -118,8 +136,11 @@ try {
         firstMessage = "Good morning";
     } else if (time.hour() < 18) {
         firstMessage = "Good afternoon";
-    } else {
+    } else if (time.hour() > 18){
         firstMessage = "Good night";
+    }
+    else {
+        firstMessage = "Hello";
     }
 } catch (error) {
     firstMessage = "Hello";
