@@ -101,14 +101,17 @@ function CallList() {
             id="search"
             value={searchTerm}
             onChange={handleSearchChange}
+            className="styled-input"
           />
         </div>
         <div className="per-page">
           <label>Calls per page: </label>
-          <select value={callsPerPage} onChange={handleCallsPerPageChange}>
+          <select value={callsPerPage} onChange={handleCallsPerPageChange} className="styled-select">
             <option value="10">10</option>
             <option value="20">20</option>
             <option value="30">30</option>
+            <option value="40">40</option> 
+            <option value="50">50</option> 
           </select>
         </div>
       </div>
@@ -121,6 +124,8 @@ function CallList() {
               onClick={() => handleCallClick(call.call_id)}
             >
               <span className="call-id">{call.call_id}</span>
+              <span className="call-identifier">{call.identifier}</span>
+              <span className="call-time">{call.time}</span>
             </li>
           ))}
         </ul>
@@ -152,6 +157,7 @@ function CallList() {
             onChange={handleInputPageChange}
             min="1"
             max={Math.ceil(filteredCalls.length / callsPerPage)}
+            className="styled-input"
           />
           <button onClick={handleGoToPage}>Go</button>
         </div>

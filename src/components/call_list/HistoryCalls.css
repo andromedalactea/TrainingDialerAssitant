@@ -1,102 +1,142 @@
 /* HistoryCalls.css */
 
 .call-list-container {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #010810;
-  }
-  
-  .call-list-container h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #fff; /* Ajuste de color para el fondo oscuro */
-  }
-  
-  .call-list-container label {
-    margin-right: 10px;
-    color: #fff; /* Ajuste de color para el fondo oscuro */
-  }
-  
-  .call-list-container select {
-    margin-bottom: 20px;
-  }
-  
-  .call-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .call-list-item {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .call-list-item:hover {
-    background-color: #e0e0e0;
-  }
-  
-  .call-list-item .call-id {
-    color: #007bff;
-    font-weight: bold;
-  }
-  
-  .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .pagination button {
-    margin: 0 5px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .pagination button:hover {
-    background-color: #e0e0e0;
-  }
-  
-  .pagination button:disabled {
-    background-color: #f0f0f0;
-    cursor: not-allowed;
-  }
-  
-  .pagination input {
-    width: 50px;
-    margin-left: 10px;
-    padding: 5px;
-    text-align: center;
-  }
-  
-  .pagination button.active {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-  }
-  
-  .pagination label {
-    color: #fff; /* Ajuste de color para el fondo oscuro */
-  }
-  
-  .controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .search-bar input {
-    padding: 5px;
-  }
-  
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ffffff; /* Borde blanco */
+  border-radius: 10px;
+  background-color: #010810; /* Mismo color del fondo */
+  color: #ffffff; /* Letra blanca */
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.call-list-container h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #ffffff; /* Ajuste de color para el fondo oscuro */
+}
+
+.call-list-container label {
+  margin-right: 10px;
+  color: #ffffff; /* Ajuste de color para el fondo oscuro */
+}
+
+.call-list-container select {
+  margin-bottom: 20px;
+}
+
+.styled-input,
+.styled-select {
+  padding: 5px 10px;
+  border: 1px solid #ffffff; /* Borde blanco */
+  background-color: transparent; /* Mismo color del fondo */
+  color: white; /* Letra blanca */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease;
+}
+
+.styled-input:hover,
+.styled-select:hover {
+  background-color: #0056b3;
+}
+
+.call-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.call-list-item {
+  display: flex;
+  justify-content: space-between; /* Para alinear el ID y la fecha */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ffffff; /* Borde blanco */
+  border-radius: 5px;
+  background-color: transparent; /* Mismo color del fondo */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.call-list-item:hover {
+  background-color: #0056b3;
+}
+
+.call-list-item .call-id {
+  color: #ffffff; /* Color naranja */
+  font-weight: bold;
+}
+
+.call-list-item .call-time {
+  color: #ffffff; /* Letra blanca */
+  font-weight: bold;
+  text-align: right; /* Alinear a la derecha */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ffffff; /* Borde blanco */
+  background-color: transparent; /* Mismo color del fondo */
+  color: white; /* Letra blanca */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+  color: #010810; /* Cambiar el color del texto para contraste */
+}
+
+.pagination input {
+  width: 50px;
+  margin-left: 10px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ffffff; /* Borde blanco */
+  background-color: transparent; /* Mismo color del fondo */
+  color: white; /* Letra blanca */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination label {
+  color: #fff; /* Ajuste de color para el fondo oscuro */
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 5px;
+  border: 1px solid #ffffff; /* Borde blanco */
+  background-color: transparent; /* Mismo color del fondo */
+  color: white; /* Letra blanca */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.search-bar input:hover {
+  background-color: #0056b3;
+}

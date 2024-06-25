@@ -5,6 +5,7 @@ import WaitingScreen from "../components/call/WaitingScreen";
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from "uuid";
 import { useState, useEffect } from "react";
+import './InitVapi.css';
 
 const VAPI_PUBLIC_KEY = process.env.REACT_APP_VAPI_PUBLIC_KEY;
 const vapi = new Vapi(VAPI_PUBLIC_KEY);
@@ -55,8 +56,13 @@ function InitVapi() {
   const handleRedirect = () => {
     navigate('/about');
   };
+
+  const handleHistory = () => {
+    navigate('/history_calls');
+  };
+
   return (
-    <>
+    <div className="init-container">
       {istalking ? (
         <ActiveCallDetail
           assistantIsSpeaking={assistantIsSpeaking}
@@ -64,21 +70,32 @@ function InitVapi() {
           onEndCallClick={endCall}
         />
       ) : (
-        <>
+        <div className="center-content">
           {waiting ? (
-            <h1> </h1>
+            <h1></h1>
             // () => handleRedirect()
             // <WaitingScreen callID={callID} />
           ) : (
-            <Button
-              label="Training Dialer"
-              onClick={startCallInline}
-              // isLoading={connecting}
-            />
+            <>
+              <h2>Press the button to start the evaluation</h2>
+              <Button
+                label="Training Dialer"
+                onClick={startCallInline}
+                // isLoading={connecting}
+              />
+            </>
           )}
-        </>
+        </div>
       )}
-    </>
+      {!istalking && (
+        <div className="bottom-right">
+          <Button
+            label="View call history"
+            onClick={handleHistory}
+          />
+        </div>
+      )}
+    </div>
   );
 }
 

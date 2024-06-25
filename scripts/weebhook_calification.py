@@ -4,29 +4,20 @@ import codecs
 import sys
 import signal
 import json
+import pytz
 
 # Third-party libraries
+from datetime import datetime
 from flask import Flask, request, jsonify
 from pyngrok import ngrok
 from dotenv import load_dotenv
-
-# # Guardar las referencias originales
-# original_stdout = sys.stdout
-# original_stderr = sys.stderr
-
-# # Redirigir stdout y stderr a /dev/null para suprimir la salida
-# sys.stdout = open(os.devnull, 'w')
-# sys.stderr = open(os.devnull, 'w')
-
-# # Función para imprimir mensajes críticos en la consola original
-# def print_to_console(*args, **kwargs):
-#     print(*args, file=original_stdout, **kwargs)
 
 # Load environment variables from the .env file
 load_dotenv()
 
 # Function to calificate the call
 from openai import OpenAI
+
 
 ## Define some functions
 def calificate_call(call_transcript: str):
@@ -46,6 +37,21 @@ def calificate_call(call_transcript: str):
     ]
     )
     return str(completion.choices[0].message.content)
+
+def get_current_time_ny():
+    # Define the timezone for New York
+    ny_tz = pytz.timezone('America/New_York')
+    
+    # Get the current time in the New York timezone
+    ny_time = datetime.now(ny_tz)
+    
+    # Extract the date, hour, minutes, and seconds
+    date = ny_time.strftime('%Y-%m-%d')
+    hour = ny_time.strftime('%H')
+    minute = ny_time.strftime('%M')
+    second = ny_time.strftime('%S')
+    
+    return f"{date} {hour}:{minute}:{second} NYT"
 
 # Flask app
 app = Flask(__name__)
@@ -72,7 +78,8 @@ def main_call(path):
             # Prepare the dictionary to be saved
             calification_dict = {
                 "call_id": call_id,
-                "calification": decoded_calification
+                "calification": decoded_calification,
+                "time" : get_current_time_ny()
             }
             # Save the calification in a file like a jsonl
             # Read the existing data
@@ -105,7 +112,7 @@ def main_call(path):
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    #
+    
     # Define the port of your choice, by default Flask uses port 5000
     port = 8080
     # Configura el subdominio personalizado
@@ -118,5 +125,6 @@ if __name__ == '__main__':
     # Run the Flask server, making sure it is publicly accessible and on the correct port
     app.run(host='0.0.0.0', port=port)
 
-    # Disconnect the ngrok tunnel when you are ready to end the session
+    # Disconnect the ngrok tunnel when you are ready to end the session 
     ngrok.disconnect(ngrok_tunnel.public_url)
+    

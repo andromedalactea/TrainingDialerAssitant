@@ -1,0 +1,43 @@
+/* InitVapi.css */
+
+.init-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #010810;
+    color: #fff;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+  
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .center-content h2 {
+    margin-bottom: 20px;
+  }
+  
+  .bottom-right {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
