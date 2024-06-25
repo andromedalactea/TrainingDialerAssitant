@@ -10,6 +10,13 @@
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  position: relative; /* Añadido para el posicionamiento absoluto del botón */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .call-list-container h1 {
@@ -142,8 +149,19 @@
 }
 
 .do-a-new-call {
-  position: fixed;
-  bottom: 20px;
+  position: absolute;
+  top: 20px;
   right: 20px;
-  /* change the size */
+  padding: 15px 30px;
+  font-size: 16px;
+  border: #010810;
+  border-radius: 5px;
+  background-color: #010810;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.do-a-new-call:hover {
+  background-color: #010810;
 }

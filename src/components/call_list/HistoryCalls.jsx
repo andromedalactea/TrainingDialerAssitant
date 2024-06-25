@@ -102,7 +102,12 @@ function CallList() {
 
   return (
     <div className="call-list-container">
-      <h1>Available Calls</h1>
+      <div className="header">
+        <h1>Available Calls</h1>
+        <div className="do-a-new-call">
+          <button onClick={handleMain}>Do a new call</button>
+        </div>
+      </div>
       <div className="controls">
         <div className="search-bar">
           <label htmlFor="search">Search by Call ID or Reference: </label>
@@ -170,9 +175,6 @@ function CallList() {
             className="styled-input"
           />
           <button onClick={handleGoToPage}>Go</button>
-          <div className="do-a-new-call ">
-            <button onClick={handleMain}>Do a new call</button>
-          </div>
         </div>
       </div>
     </div>
