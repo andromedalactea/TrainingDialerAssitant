@@ -1,0 +1,16 @@
+[
+    {
+    "model_id": "6145bbb5-0690-4c97-96f2-4daf4ea4ee63",
+    "output_model": "ft:gpt-3.5-turbo-0125:igd::9PXt2D06",
+    "model_name": "gpt-3.5-turbo",
+    "reference": "Initial Model",
+    "time_last_train": "2024-07-26 12:52:53 NYT",
+    "file_training path": "",
+    "audios":[
+            {
+                "path_audio":"",
+                "transcribe": ""
+            },
+        ],
+    },
+]

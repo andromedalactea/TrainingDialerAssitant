@@ -70,6 +70,11 @@ function InitVapi() {
     navigate('/history_calls');
   };
 
+  // Nueva función para manejar la redirección a /train_model
+  const handleTrainModel = () => {
+    navigate('/trained_models');
+  };
+
   return (
     <div className="init-container">
       {istalking ? (
@@ -110,6 +115,15 @@ function InitVapi() {
           <Button
             label="View call history"
             onClick={handleHistory}
+          />
+        </div>
+      )}
+      {/* Nuevo botón en la parte inferior izquierda */}
+      {!istalking && (
+        <div className="bottom-left">
+          <Button
+            label="Trained Models"
+            onClick={handleTrainModel}
           />
         </div>
       )}
