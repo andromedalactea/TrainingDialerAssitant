@@ -11,13 +11,18 @@ from datetime import datetime
 from flask import Flask, request, jsonify
 from pyngrok import ngrok
 from dotenv import load_dotenv
+from pymongo import MongoClient
+from bson import json_util, ObjectId
+from flask_cors import CORS
+
+
+
 
 # Load environment variables from the .env file
-load_dotenv()
+load_dotenv(override=True)
 
 # Function to calificate the call
 from openai import OpenAI
-
 
 ## Define some functions
 def calificate_call(call_transcript: str):
@@ -55,6 +60,8 @@ def get_current_time_ny():
 
 # Flask app
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
+
 @app.route('/<path:path>', methods=['POST', 'GET', 'POST', 'PUT', 'DELETE', 'PATCH'])
 def main_call(path):
     """Webhook endpoint that receives POST requests and processes call transcriptions."""
@@ -113,20 +120,36 @@ def main_call(path):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/trained_models', methods=['GET'])
+def get_data():
+    # Configura la conexión a MongoDB
+    mongo_uri = os.getenv('MONGO_URI')
+    client = MongoClient(mongo_uri)
+    db = client['TrainingDialerDB']  
+    collection = db['trained_models']  
+
+    try:
+        documents = list(collection.find({}))
+        # Utiliza json_util de bson para convertir los documentos a un formato JSON adecuado
+        json_docs = json.loads(json_util.dumps(documents))
+        return jsonify(json_docs), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
 if __name__ == '__main__':
     
     # Define the port of your choice, by default Flask uses port 5000
     port = 8080
-    # Configura el subdominio personalizado
-    subdomain = "hugely-cute-sunfish.ngrok-free.app"  # El subdominio que reservaste
+    # # Configura el subdominio personalizado
+    # subdomain = "hugely-cute-sunfish.ngrok-free.app"  # El subdominio que reservaste
 
-    # Configure ngrok with the port on which Flask is running
-    ngrok_tunnel = ngrok.connect(port, domain=subdomain)
-    print('NGROK Tunnel URL:', ngrok_tunnel.public_url)
+    # # Configure ngrok with the port on which Flask is running
+    # ngrok_tunnel = ngrok.connect(port, domain=subdomain)
+    # print('NGROK Tunnel URL:', ngrok_tunnel.public_url)
 
     # Run the Flask server, making sure it is publicly accessible and on the correct port
     app.run(host='0.0.0.0', port=port)
 
     # Disconnect the ngrok tunnel when you are ready to end the session 
-    ngrok.disconnect(ngrok_tunnel.public_url)
+    # ngrok.disconnect(ngrok_tunnel.public_url)
     

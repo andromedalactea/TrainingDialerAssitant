@@ -3,6 +3,7 @@
 /audios_train_assistant
 /build
 /node_modules
+/mongodb-data
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
