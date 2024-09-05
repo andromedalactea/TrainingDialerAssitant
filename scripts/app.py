@@ -47,7 +47,6 @@ def main_call():
             # Generate the calification
             calification = calificate_call(transcript)
             
-            
             # Prepare the dictionary to be saved
             calification_dict = {
                 "call_id": call_id,
@@ -67,7 +66,26 @@ def main_call():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+@app.route("/call_info", methods=["GET"])
+def get_call():
+
+    # create the connection to the MongoDB
+    call_id = request.args.get("call_id")
+    mongo_uri = os.getenv('MONGO_URI')
+    client = MongoClient(mongo_uri)
+    db = client['TrainingDialer']
+    collection = db['performanceCalification']
+
+    # Exclude the '_id' field from the results
+    call = collection.find_one({"call_id": call_id}, {'_id': 0})
     
+    if call:
+        return jsonify(call), 200
+    else:
+        return jsonify({"error": "Call not found"}), 404
+    
+
 @app.route("/trained_models", methods=["GET"])
 def get_data():
     # Configura la conexión a MongoDB
@@ -92,7 +110,7 @@ if __name__ == "__main__":
 
 
     # Run the Flask server, making sure it is publicly accessible and on the correct port
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port, debug=True)
 
     # Disconnect the ngrok tunnel when you are ready to end the session 
     # ngrok.disconnect(ngrok_tunnel.public_url)
