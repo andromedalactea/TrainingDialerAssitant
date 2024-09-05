@@ -162,7 +162,7 @@ try {
 
 console.log(firstMessage);
 
-const domain = "hugely-cute-sunfish.ngrok-free.app";
+const domain = "x.butlercrm.com/api";
 const serverUrl = `https://${domain}/calificate_call`;
 const assistantOptions = {
   serverUrl: serverUrl,
