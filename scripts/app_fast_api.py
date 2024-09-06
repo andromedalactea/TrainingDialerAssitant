@@ -31,31 +31,40 @@ mongo_uri = os.getenv("MONGO_URI")
 client = MongoClient(mongo_uri)
 db = client['TrainingDialer']
 
-# Model for Call Data Input
-class CallData(BaseModel):
-    
 
 @app.post("/api/calificate_call")
-async def main_call(data: dict):
-    message_vapi = data.get("message")
-
-    if data.type == "end-of-call-report":
-        vapi_call_id = data.call.get("id")
-        call_id = data.call["assistantOverrides"]["metadata"]["call_secundary_id"]
-        reference = data.call["assistantOverrides"]["metadata"]["reference"]
-        transcript = data.transcript
+async def main_call( message: dict):
+    """Webhook endpoint that receives POST requests and processes call transcriptions."""   
         
+    if  message.get("type") == "end-of-call-report":
+
+        # Extract call id of vapi
+        call_info = message.get("call")
+        vapi_call_id = call_info.get("id")
+
+        # Extract call id
+        call_data = message.get("call", {})
+        call_id = message["call"]["assistantOverrides"]["metadata"]["call_secundary_id"]
+        reference = message["call"]["assistantOverrides"]["metadata"]["reference"]
+        
+        
+        # Extract the transcript from the message
+        transcript = message.get("transcript")
+        
+        # Generate the calification
         calification = calificate_call(transcript)
         
+        # Prepare the dictionary to be saved
         calification_dict = {
             "call_id": call_id,
             "vapi_call_id": vapi_call_id,
             "transcript": transcript,
             "calification": calification,
-            "time": get_current_time_ny(),
+            "time" : get_current_time_ny(),
             "reference": reference,
         }
-        
+
+        # Save the calification in a file like a jsonl
         save_calification_mongo(calification_dict)
         return {"status": "success", "calification": calification}
     else:
