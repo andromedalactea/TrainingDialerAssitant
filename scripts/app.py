@@ -69,9 +69,12 @@ def main_call():
 
 @app.route("/call_info", methods=["GET"])
 def get_call():
-
-    # create the connection to the MongoDB
+   
+    # Extract the call_id from the query parameters
     call_id = request.args.get("call_id")
+    print('-'*50)
+    print(call_id)
+    # create the connection to the MongoDB
     mongo_uri = os.getenv('MONGO_URI')
     client = MongoClient(mongo_uri)
     db = client['TrainingDialer']
@@ -79,7 +82,7 @@ def get_call():
 
     # Exclude the '_id' field from the results
     call = collection.find_one({"call_id": call_id}, {'_id': 0})
-    
+    print(call)
     if call:
         return jsonify(call), 200
     else:
