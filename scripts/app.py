@@ -110,7 +110,7 @@ if __name__ == "__main__":
 
 
     # Run the Flask server, making sure it is publicly accessible and on the correct port
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(host="0.0.0.0", port=port)
 
     # Disconnect the ngrok tunnel when you are ready to end the session 
     # ngrok.disconnect(ngrok_tunnel.public_url)
