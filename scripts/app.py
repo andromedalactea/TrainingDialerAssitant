@@ -21,7 +21,7 @@ load_dotenv(override=True)
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-@app.route("/calificate_call", methods=["POST"])
+@app.route("/api/calificate_call", methods=["POST"])
 def main_call():
     """Webhook endpoint that receives POST requests and processes call transcriptions."""
     try:
@@ -67,7 +67,7 @@ def main_call():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-@app.route("/call_info", methods=["GET"])
+@app.route("/api/call_info", methods=["GET"])
 def get_call():
    
     # Extract the call_id from the query parameters
@@ -89,7 +89,7 @@ def get_call():
         return jsonify({"error": "Call not found"}), 404
     
 
-@app.route("/trained_models", methods=["GET"])
+@app.route("/api/trained_models", methods=["GET"])
 def get_data():
     # Configura la conexión a MongoDB
     mongo_uri = os.getenv("MONGO_URI")

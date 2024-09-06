@@ -33,12 +33,12 @@ db = client['TrainingDialer']
 
 # Model for Call Data Input
 class CallData(BaseModel):
-    type: str
-    call: dict
-    transcript: str
+    
 
 @app.post("/api/calificate_call")
-async def main_call(data: CallData):
+async def main_call(data: dict):
+    message_vapi = data.get("message")
+
     if data.type == "end-of-call-report":
         vapi_call_id = data.call.get("id")
         call_id = data.call["assistantOverrides"]["metadata"]["call_secundary_id"]
