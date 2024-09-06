@@ -37,7 +37,7 @@ class CallData(BaseModel):
     call: dict
     transcript: str
 
-@app.post("/calificate_call")
+@app.post("/api/calificate_call")
 async def main_call(data: CallData):
     if data.type == "end-of-call-report":
         vapi_call_id = data.call.get("id")
@@ -61,7 +61,7 @@ async def main_call(data: CallData):
     else:
         return {"status": "ignored"}
 
-@app.get("/call_info")
+@app.get("/api/call_info")
 async def get_call(call_id: str):
     collection = db['performanceCalification']
     call = collection.find_one({"call_id": call_id}, {'_id': 0})
