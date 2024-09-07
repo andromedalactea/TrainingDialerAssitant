@@ -33,9 +33,10 @@ db = client['TrainingDialer']
 
 
 @app.post("/api/calificate_call")
-async def main_call( message: dict):
+async def main_call( data: dict):
     """Webhook endpoint that receives POST requests and processes call transcriptions."""   
-        
+    
+    message = data.get("message")
     if  message.get("type") == "end-of-call-report":
 
         # Extract call id of vapi
