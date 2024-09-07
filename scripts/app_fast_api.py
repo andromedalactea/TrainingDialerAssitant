@@ -66,6 +66,7 @@ async def main_call( message: dict):
 
         # Save the calification in a file like a jsonl
         save_calification_mongo(calification_dict)
+        print("Calification saved")
         return {"status": "success", "calification": calification}
     else:
         return {"status": "ignored"}
