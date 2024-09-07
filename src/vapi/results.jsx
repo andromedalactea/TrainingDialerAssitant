@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import './Result.css'; // Asegúrate de crear y ajustar este archivo CSS
+import ReactMarkdown from 'react-markdown';
+import './Result.css'; // Asegúrate de tener el archivo CSS ajustado
 
 function Result() {
   const location = useLocation();
@@ -11,30 +12,57 @@ function Result() {
   const id = searchParams.get('id');
   let callID = id;
 
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [showJSON, setShowJSON] = useState(false);
   const navigate = useNavigate();
+  const MAX_RETRIES = 40; // 40 intentos de 3 segundos = 2 minutos
 
   useEffect(() => {
-    const interval = setInterval(async () => {
-      const response = await fetch('/califications_history.json');
-      // Ajusta esta URL según tu estructura de archivos
-      const data = await response.json();
-      const findData = data.filter((item) => item.call_id === callID);
+    let retries = 0;
 
-      let arr = [];
-      for (const i in findData) {
-        findData[i].calification = JSON.parse(findData[i].calification);
-        arr.push(findData[i]);
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`https://x.butlercrm.com/api/call_info?call_id=${callID}`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data && Object.keys(data).length > 0) {
+            setResults(data);
+            setLoading(false);
+          } else {
+            // Si no se encuentra la información, vuelve a intentar hasta los 2 minutos
+            if (retries < MAX_RETRIES) {
+              retries++;
+              setTimeout(fetchData, 3000); // Reintenta cada 3 segundos
+            } else {
+              setError('No se encontró la llamada después de 2 minutos.');
+              setLoading(false);
+            }
+          }
+        } else {
+          // Ignorar errores y seguir reintentando hasta que pase el tiempo máximo
+          if (retries < MAX_RETRIES) {
+            retries++;
+            setTimeout(fetchData, 3000); // Reintenta cada 3 segundos
+          } else {
+            setError('No se encontró la llamada después de 2 minutos.');
+            setLoading(false);
+          }
+        }
+      } catch (err) {
+        // Ignorar errores de red y seguir reintentando hasta que pase el tiempo máximo
+        if (retries < MAX_RETRIES) {
+          retries++;
+          setTimeout(fetchData, 3000); // Reintenta cada 3 segundos
+        } else {
+          setError('No se encontró la llamada después de 2 minutos.');
+          setLoading(false);
+        }
       }
+    };
 
-      if (findData.length > 0) {
-        setResults(arr);
-        setLoading(false);
-        clearInterval(interval);
-      }
-    }, 500); // Cambia el intervalo a 5000 milisegundos (5 segundos)
+    fetchData();
   }, [callID]);
 
   const handleMain = () => {
@@ -55,12 +83,6 @@ function Result() {
     setShowJSON(!showJSON);
   };
 
-  const handleCopyJSON = (text) => {
-    navigator.clipboard.writeText(text).then(() => {
-      alert('JSON copied to clipboard!');
-    });
-  };
-
   return (
     <div className="page-container">
       <div className="result-container">
@@ -70,52 +92,32 @@ function Result() {
             <p>Processing the evaluation, please wait a moment...</p>
             <div className="loading-animation"></div>
           </div>
+        ) : error ? (
+          <p className="error-message">{error}</p>
         ) : (
           <div className="results-content">
-            {results.map((item) => (
-              <div key={item.call_id} className="result-item">
+            {results && (
+              <div key={results.call_id} className="result-item">
                 <div className="call-id-container">
-                  <h2>Call ID: {item.call_id}</h2>
-                  <button onClick={() => handleCopy(item.call_id)} className="copy-button">Copy</button>
+                  <h2>Call ID: {results.call_id}</h2>
+                  <button onClick={() => handleCopy(results.call_id)} className="copy-button">Copy</button>
                 </div>
-                <h3>Metrics of evaluation (0-10):</h3>
-                <div className="metrics">
-                  <div className="metric-item">
-                    <p className="metric-title"><strong>Communication Clarity:</strong></p>
-                    <p className="metric-value">{item.calification['Communication Clarity']}</p>
-                  </div>
-                  <div className="metric-item">
-                    <p className="metric-title"><strong>Empathy Expression:</strong></p>
-                    <p className="metric-value">{item.calification['Empathy Expression']}</p>
-                  </div>
-                  <div className="metric-item">
-                    <p className="metric-title"><strong>Resolution Efficiency:</strong></p>
-                    <p className="metric-value">{item.calification['Resolution Efficiency']}</p>
-                  </div>
-                  <div className="metric-item">
-                    <p className="metric-title"><strong>Rebuttal Appropriateness:</strong></p>
-                    <p className="metric-value">{item.calification['Rebuttal Appropriateness']}</p>
-                  </div>
-                  <div className="metric-item">
-                    <p className="metric-title"><strong>Overall Interaction Quality:</strong></p>
-                    <p className="metric-value">{item.calification['Overall Interaction Quality']}</p>
-                  </div>
-                </div>
-                <h3>Detailed Notes:</h3>
-                <p>{item.calification.Notes}</p>
+                <h3>Performance Evaluation:</h3>
+                <ReactMarkdown>{results.calification}</ReactMarkdown>
+                <h3>Transcript:</h3>
+                <pre>{results.transcript}</pre>
+                <h3>Time:</h3>
+                <p>{results.time}</p>
+                <h3>Reference:</h3>
+                <p>{results.reference}</p>
                 <h3>
                   <span className="json-toggle" onClick={toggleJSON}>
-                    {showJSON ? '▼' : '▶'} JSON Complete:
+                    {showJSON ? '▼' : '▶'} Raw JSON:
                   </span>
-                  {showJSON && (
-                    <span className="copy-json-icon" onClick={() => handleCopyJSON(JSON.stringify(item.calification, null, 2))}>
-                      📋
-                    </span>
-                  )}
                 </h3>
-                {showJSON && <pre>{JSON.stringify(item.calification, null, 2)}</pre>}
+                {showJSON && <pre>{JSON.stringify(results, null, 2)}</pre>}
               </div>
-            ))}
+            )}
           </div>
         )}
         <div className="button-group">
