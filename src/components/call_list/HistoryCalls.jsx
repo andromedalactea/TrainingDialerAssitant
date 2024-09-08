@@ -15,9 +15,13 @@ function CallList() {
     navigate('/init');
   };
 
-  // Fetch paginated calls from API
-  const fetchCalls = async (page, limit) => {
-    const response = await fetch(`https://x.butlercrm.com/api/call_info_paginated?page=${page}&limit=${limit}`);
+  // Fetch paginated or searched calls from API
+  const fetchCalls = async (page, limit, searchQuery = '') => {
+    let url = searchQuery
+      ? `https://x.butlercrm.com/api/search_calls?query=${searchQuery}&page=${page}&limit=${limit}`
+      : `https://x.butlercrm.com/api/call_info_paginated?page=${page}&limit=${limit}`;
+    
+    const response = await fetch(url);
     const data = await response.json();
     setCalls(data.calls);
     setTotalCalls(data.total_calls); // Actualiza el número total de llamadas
@@ -29,8 +33,14 @@ function CallList() {
 
   // Función para manejar el cambio en el campo de búsqueda
   const handleSearchChange = (event) => {
-    const input = event.target.value.replace(/\s+/g, '');
-    setSearchTerm(input);
+    const input = event.target.value;
+    setSearchTerm(input); // Actualiza el estado de búsqueda
+  };
+
+  // Función para realizar la búsqueda al hacer clic en el botón
+  const handleSearchClick = () => {
+    setCurrentPage(1); // Reiniciar la paginación a la página 1
+    fetchCalls(1, callsPerPage, searchTerm); // Realiza la búsqueda con el término ingresado
   };
 
   // Función para redirigir a la página de resultados al hacer clic en una llamada
@@ -104,6 +114,9 @@ function CallList() {
             onChange={handleSearchChange}
             className="styled-input"
           />
+          <button onClick={handleSearchClick} className="search-button">
+            Search
+          </button>
         </div>
         <div className="per-page">
           <label>Calls per page: </label>
