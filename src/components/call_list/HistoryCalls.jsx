@@ -6,59 +6,50 @@ function CallList() {
   const [calls, setCalls] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [callsPerPage, setCallsPerPage] = useState(10);
+  const [totalCalls, setTotalCalls] = useState(0); // Número total de llamadas
   const [inputPage, setInputPage] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredCalls, setFilteredCalls] = useState([]);
   const navigate = useNavigate();
 
   const handleMain = () => {
     navigate('/init');
   };
 
-  useEffect(() => {
-    const fetchCalls = async () => {
-      const response = await fetch('/califications_history.json');
-      const data = await response.json();
-      setCalls(data);
-      setFilteredCalls(data);
-    };
-    fetchCalls();
-  }, []);
+  // Fetch paginated calls from API
+  const fetchCalls = async (page, limit) => {
+    const response = await fetch(`https://x.butlercrm.com/api/call_info_paginated?page=${page}&limit=${limit}`);
+    const data = await response.json();
+    setCalls(data.calls);
+    setTotalCalls(data.total_calls); // Actualiza el número total de llamadas
+  };
 
   useEffect(() => {
-    setFilteredCalls(
-      calls.filter((call) => {
-        const normalizedSearchTerm = searchTerm.replace(/\s+/g, '').toLowerCase();
-        const normalizedCallId = call.call_id.replace(/\s+/g, '').toLowerCase();
-        const normalizedReference = call.reference?.replace(/\s+/g, '').toLowerCase() || '';
-        return (
-          normalizedCallId.includes(normalizedSearchTerm) ||
-          normalizedReference.includes(normalizedSearchTerm)
-        );
-      })
-    );
-  }, [searchTerm, calls]);
+    fetchCalls(currentPage, callsPerPage);
+  }, [currentPage, callsPerPage]);
 
-  // Calculate the displayed calls for the current page
-  const indexOfLastCall = currentPage * callsPerPage;
-  const indexOfFirstCall = indexOfLastCall - callsPerPage;
-  const currentCalls = filteredCalls.slice(indexOfFirstCall, indexOfLastCall);
+  // Función para manejar el cambio en el campo de búsqueda
+  const handleSearchChange = (event) => {
+    const input = event.target.value.replace(/\s+/g, '');
+    setSearchTerm(input);
+  };
 
+  // Función para redirigir a la página de resultados al hacer clic en una llamada
   const handleCallClick = (callId) => {
     navigate(`/result?id=${callId}`);
   };
 
+  // Change page
   const handlePageChange = (event) => {
     setCurrentPage(Number(event.target.id));
   };
 
   const handleCallsPerPageChange = (event) => {
     setCallsPerPage(Number(event.target.value));
-    setCurrentPage(1);
+    setCurrentPage(1); // Reinicia a la primera página cuando cambias el límite de llamadas por página
   };
 
   const handleNextPage = () => {
-    if (currentPage < Math.ceil(filteredCalls.length / callsPerPage)) {
+    if (currentPage < Math.ceil(totalCalls / callsPerPage)) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -75,19 +66,14 @@ function CallList() {
 
   const handleGoToPage = () => {
     const pageNumber = Number(inputPage);
-    if (pageNumber > 0 && pageNumber <= Math.ceil(filteredCalls.length / callsPerPage)) {
+    if (pageNumber > 0 && pageNumber <= Math.ceil(totalCalls / callsPerPage)) {
       setCurrentPage(pageNumber);
     }
     setInputPage('');
   };
 
-  const handleSearchChange = (event) => {
-    const input = event.target.value.replace(/\s+/g, '');
-    setSearchTerm(input);
-  };
-
   const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(filteredCalls.length / callsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalCalls / callsPerPage); i++) {
     pageNumbers.push(i);
   }
 
@@ -125,14 +111,14 @@ function CallList() {
             <option value="10">10</option>
             <option value="20">20</option>
             <option value="30">30</option>
-            <option value="40">40</option> 
+            <option value="40">40</option>
             <option value="50">50</option> 
           </select>
         </div>
       </div>
-      {currentCalls.length > 0 ? (
+      {calls.length > 0 ? (
         <ul className="call-list">
-          {currentCalls.map((call) => (
+          {calls.map((call) => (
             <li
               key={call.call_id}
               className="call-list-item"
@@ -161,7 +147,7 @@ function CallList() {
             {number}
           </button>
         ))}
-        <button onClick={handleNextPage} disabled={currentPage === Math.ceil(filteredCalls.length / callsPerPage)}>
+        <button onClick={handleNextPage} disabled={currentPage === Math.ceil(totalCalls / callsPerPage)}>
           Next
         </button>
         <div>
@@ -171,7 +157,7 @@ function CallList() {
             value={inputPage}
             onChange={handleInputPageChange}
             min="1"
-            max={Math.ceil(filteredCalls.length / callsPerPage)}
+            max={Math.ceil(totalCalls / callsPerPage)}
             className="styled-input"
           />
           <button onClick={handleGoToPage}>Go</button>

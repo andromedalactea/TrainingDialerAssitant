@@ -98,6 +98,30 @@ async def get_calls_paginated(page: int = 1, limit: int = 10):
         "limit": limit
     }
 
+@app.get("/api/search_calls")
+async def search_calls(query: str, page: int = 1, limit: int = 10):
+    collection = db['performanceCalification']
+    
+    # Realizar la búsqueda por coincidencias parciales en call_id o reference
+    search_filter = {
+        "$or": [
+            {"call_id": {"$regex": query, "$options": "i"}},  # Búsqueda insensible a mayúsculas
+            {"reference": {"$regex": query, "$options": "i"}}
+        ]
+    }
+    
+    total_calls = collection.count_documents(search_filter)
+    
+    # Ordenar por tiempo, como lo haces en la otra API
+    calls = collection.find(search_filter, {'_id': 0}).sort('time', -1).skip((page - 1) * limit).limit(limit)
+    
+    return {
+        "total_calls": total_calls,
+        "calls": list(calls),
+        "page": page,
+        "limit": limit
+    }
+
 @app.get("/trained_models")
 async def get_data():
     collection = db["TrainingDialerDB"]["trained_models"]
