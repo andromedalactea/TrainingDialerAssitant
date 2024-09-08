@@ -80,6 +80,23 @@ async def get_call(call_id: str):
         return JSONResponse(content=json.loads(json_util.dumps(call)))
     else:
         raise HTTPException(status_code=404, detail="Call not found")
+    
+@app.get("/api/call_info_paginated")
+async def get_calls_paginated(page: int = 1, limit: int = 10):
+    collection = db['performanceCalification']
+    
+    # Total documents in the collection
+    total_calls = collection.count_documents({})
+    
+    # Sort the calls by time and get the paginated result
+    calls = collection.find({}, {'_id': 0}).sort('time', -1).skip((page - 1) * limit).limit(limit)
+    
+    return {
+        "total_calls": total_calls,
+        "calls": list(calls),
+        "page": page,
+        "limit": limit
+    }
 
 @app.get("/trained_models")
 async def get_data():
