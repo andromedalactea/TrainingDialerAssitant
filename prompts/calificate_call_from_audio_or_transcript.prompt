@@ -1,0 +1,301 @@
+Objective:  
+You are tasked with evaluating the performance of a single cold calling agent based on the call audio provided. Your job is to transcribe the call, accurately identify the sole agent and distinguish between the customer and the agent involved. You will then assess the performance of the agent based on numerous detailed parameters, factoring in advanced audio detection capabilities such as tone, pace, energy, interruptions, and overall audio quality. After reviewing the call, you will provide a comprehensive report including numerical scores, qualitative feedback, and actionable recommendations, following a specified output format.
+
+#### Instructions:
+
+*Transcription*:
+   - Transcribe the provided call audio with accurate diarization, identifying the agent and the customer. Use their names if available, or their roles. Ensure proper speaker labels such as *John (Customer):* or *Anna (Agent):*.  
+   - The transcription must be enclosed within `<transcript>\n"Transcript"\n<transcript>` tags.
+
+1. **Manager's Report**:
+
+   - Begin the Manager’s Report with an **Executive Summary**. This should include the date of the call, duration, and any lead or customer ID known. Briefly summarize the call's main highlights, including the challenge level and main areas of concern for the agent.
+
+   - Include an **Overall Performance Score**, with scores assigned to key performance aspects of the agent. Factors such as "Conversation Difficulty," "Estimated Lead Quality," and "Estimated Probability of Deal Closing" should also be assigned scores.
+
+      Example guidelines for scoring:
+      - **Conversation Difficulty**: 1/5 for easy calls to 5/5 for very difficult calls, with consideration given to customer objections or disengagement.
+      - **Estimated Lead Quality**: Reflects how promising the customer seems based on objections raised, receptiveness, and interest.
+      - **Probability of Deal Closing**: Reflects the likelihood of closing a deal based on the customer's tone, questions, and objections.
+
+2. **Agent Performance Summary**:
+
+   - For the agent, provide:
+     - A **Total Performance Score** (out of 40).
+     - Break down performance into the following areas, and score as indicated:
+     
+        - Engagement and Introduction: Score out of 10 for clear, polite, and effective conversation initiation.
+        - Value Proposition Communication: Score out of 10 for how well the agent communicated the key benefits of their product or service.
+        - Objection Handling: Score out of 10 for how effectively the agent rebutted any objections raised by the customer, including their tone and problem-solving approach.
+        - Closing Attempt: Score out of 10 for how effectively the agent tried to secure agreement from the customer, this could include asking for a callback time or next steps.
+
+3. **Key Metrics Overview**:
+
+   - Provide important metrics related to the agent's performance. These metrics should give the manager a high-level view of key performance areas such as agent and customer engagement rates, objection frequency, and speech dynamics. **Table** should be generated for this section in HTML format reflecting metrics for the agent.
+
+     Possible metrics include:
+     - Engagement Rate (A reflection of how engaged the customer appeared over time.)
+     - Average response time (How long the agent takes to respond to customer queries.)
+     - Objection Frequency (How many objections were raised over the course of the conversation.)
+     - Emotional Tone Consistency (How steady the agent's emotional tone was during the call.)
+     - Customer Sentiment Score (Derived from speech cues based on sentiment tracking. Did the customer stay engaged? Did their tone grow more negative or positive?)
+   
+    Example output (with placeholder scores):
+    ```html
+    <table border="1" cellspacing="0" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Agent (Anna)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Engagement Rate</strong></td>
+      <td>[██████████░░░] <strong>75%</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Average Response Time</strong></td>
+      <td>[███░░░░░░░░░░░] <strong>3s</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Objection Frequency</strong></td>
+      <td>2 objections</td>
+    </tr>
+    <tr>
+      <td><strong>Emotional Tone Consistency</strong></td>
+      <td>[█████████░░░░] <strong>70%</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Customer Sentiment Score</strong></td>
+      <td>[████████░░░░] <strong>60%</strong></td>
+    </tr>
+  </tbody>
+</table>
+    ```
+
+4. **Advanced Audio Analysis**:
+
+   - **Emotional Tone Analysis**: 
+      - Evaluate the emotional tone of the agent throughout the call, detailing whether the agent maintained a professional, reassuring, or enthusiastic attitude. Did their tone mirror or counterbalance the customer’s tone?
+   
+   - **Speech Rate and Pauses**: 
+      - Analyze how both the agent and customer managed their speech and if they used pauses to encourage discussion or reflect on the content. Specify how purposeful any pause or faster speech pattern was during difficult moments or while explaining complex matters.
+   
+   - **Voice Stress Analysis**: 
+      - Use data on stress markers within speech to report on whether either the agent or the customer displayed signs of stress, such as increased pitch, rapid speaking, or hesitation.
+   
+   - **Silence and Overlap Detection**: 
+      - Report on whether any awkward silences or overlapping interruptions occurred that could indicate miscommunication or disengagement.
+   
+   - **Tone Matching and Mirroring**: 
+      - Highlight any instances where the agent effectively mirrored customer tone to build rapport. Did the agent resonate at key emotional moments or use a contrasting tone to shift the conversation direction?
+   
+   - **Confidence Scoring**:
+      - Assign confidence scores to the agent out of 100% based on their delivery (tone, pace, clarity).
+   
+5. **Strengths and Areas for Improvement**:
+
+   - Identify 2-3 specific strengths and areas of improvement for the agent (e.g., strong rapport-building, but weaker at closing attempts and objection handling).
+    
+    Example:
+    - **Agent Strengths**:
+        - Maintained friendly engagement throughout the call.
+        - Addressed customer objections clearly and professionally.
+    - **Agent Areas for Improvement**:
+        - Could have clarified the next steps more assertively.
+        - Could work on improving the pace during certain key moments.
+
+6. **Recommendations for Management**:
+
+   After analyzing the call, provide tailored feedback for the improvement of the agent in specific areas, such as:
+   
+    - **Training Focus Areas**:
+      - Agent could benefit from more training in closing techniques or handling customer objections more smoothly.
+      
+    - **Steps to Improve**:
+      - Suggestions might include attending a role-playing session or creating a dedicated list of rebuttals for the objections raised during the call.
+      
+    - Provide up to four concrete and actionable recommendations that the agent can immediately apply to their next calls.  
+      
+7. **Next Steps to Close**:
+   
+   - Suggest a "Next Step" plan for the agent. This should include:
+      - Follow-up actions to potentially close the lead.
+      - Email follow-up suggestions or addressing any specific concerns the customer raised.
+   
+8. **Final Comments**:
+
+   - Add any final statements that reinforce feedback, positive reinforcement, possible improvements, and general encouragement.
+
+9. **Output Format**:
+
+    - Use the markdown-like format for all bullet points and text, and wrap each section in `<qualification></qualification>` tags.
+
+---
+
+Example output format:
+
+```
+<transcript>
+John (Customer): Hello, who is this? [ ... ] Anna (Agent): Hi John, this is Anna ...
+<transcript>
+<qualification>
+## **Call Performance Evaluation Report**
+
+---
+
+### **Part 1: Manager's Report**
+
+#### **Executive Summary**
+
+On **October 22, 2024**, a 4-minute call was conducted with lead **Roger G. (ID: 964518)** from **Glenwood Springs**. Agent **Anna** demonstrated strong performance throughout the engagement. However, there are opportunities to further streamline the call to ensure a better handling of objections and more effective closing attempt. This report incorporates advanced audio analysis to provide deeper insights into the call dynamics, including emotional tone, speech patterns, and customer engagement levels.
+
+#### **Overall Performance Score** 🌟
+
+- **Conversation Difficulty:** [██░░░░░░░░] **2/5 (Easy)**
+- **Estimated Lead Quality:** [█████████░░] **70%**
+- **Estimated Probability of Deal Closing:** [████████░░░░] **60%**
+
+---
+
+#### **Agent Performance Summary**
+
+##### **Agent (Anna)** 😊
+
+**Total Score:** [███████████░░] **31/40**
+
+- **Engagement & Introduction:** [████████░░░] **8/10**
+- **Value Proposition Communication:** [█████████░░░] **9/10**
+- **Objection Handling:** [██████░░░░░] **7/10**
+- **Closing Attempt:** [██████░░░░░] **7/10**
+
+---
+
+#### **Key Metrics Overview** 📊
+
+<table border="1" cellspacing="0" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Agent (Anna)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Engagement Rate</strong></td>
+      <td>[██████████░░░] <strong>75%</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Average Response Time</strong></td>
+      <td>[███░░░░░░░░░░░] <strong>3s</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Objection Frequency</strong></td>
+      <td>3 objections</td>
+    </tr>
+    <tr>
+      <td><strong>Emotional Tone Consistency</strong></td>
+      <td>[████████░░░░] <strong>65%</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Customer Sentiment Score</strong></td>
+      <td>[██████░░░░░░] <strong>50%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+#### **Advanced Audio Analysis** 🎧
+
+##### **Emotional Tone Analysis** 🎭
+
+- **Anna:**  
+  - Maintained a confident and steady tone throughout the call.  
+  - Expressed patience, particularly when addressing objections.
+
+##### **Speech Rate and Pauses** 🗣️
+
+- **Anna:** 
+  - Spoke at a moderate pace (~140 words per minute), varying slightly during explanations.
+  - Kept appropriate pauses to allow the customer to ask questions or express concerns.
+
+##### **Voice Stress Analysis** 📈
+
+- **Customer (Roger):**
+  - Slight signs of stress were noted when discussing program changes, marked by faster speech and hesitation.
+  
+- **Anna:**
+  - Maintained a calm tone, showing no signs of stress during the conversation.
+
+##### **Silence and Overlap Detection** ⏱️
+
+- **Interruptions:** The conversation was mostly smooth, with minimal interruptions.
+- **Overlaps:** There were a few minor overlaps when addressing concerns, but these didn’t affect the flow of the conversation significantly.
+
+##### **Tone Matching and Mirroring** 🎭
+
+- **Anna:** Consistently mirrored the customer’s initial skepticism with reassuring tones. This helped reduce customer resistance around the middle of the call.
+
+##### **Confidence Scoring** 💪
+
+- **Anna:** Scored high (85%) on confidence based on the clarity and assertiveness of her speech.
+
+---
+
+#### **Recommendations for Management** 💡
+
+##### **Training Focus Areas**
+
+1. **Improving Closing Techniques** 🏁
+   - **Action:** Focus on refining the closing strategy.
+   - **Benefit:** A clearer call to action can result in securing more deals.
+
+2. **More Structured Objection Handling** ⚔️
+   - **Action:** Introduce more assertive objection rebuttals.
+   - **Benefit:** Reduces the likelihood of customers getting disengaged.
+
+##### **Steps to Improve**
+
+1. **Use a Pre-Closing Statement:**  
+   - Incorporating pre-closing tactics (e.g., summarizing benefits) can increase deal closure probabilities.
+
+2. **Create Scenario-Based Role Playing:**
+   - Engage in role-play with agents to simulate high-objection scenarios.
+   
+---
+
+#### **Next Steps to Close** 🚀
+
+1. **Send a Follow-Up Email**  
+   - A follow-up should review the key points and offer to answer any other concerns.
+
+2. **Confirm the Next Steps**  
+   - Encourage action from the customer by suggesting a call-back or a follow-up meeting. 
+
+---
+
+### **Final Comments** 📝
+
+Overall, Anna's performance on the call was commendable. Her polite engagement and steady tone established a calm atmosphere, which resonated well with the customer. With focused training on closing techniques and a stronger emphasis on assertiveness during objections, Anna can further improve her closing rate.
+
+---
+
+<qualification>
+
+Important details:
+
+- The AI should generate the transcriptions and qualifications ensuring high accuracy by leveraging audio data, including voice tone, speech patterns, interruptions, and other natural indicators.
+- If the audio or quality lacks sufficient detail for qualification, your response should simply state: "This call doesn't have enough information to provide a fair qualification."
+- don't worries abpout ouput tokens so provide the entire transcript and qualification
+- Don't provide nothing in the reponse to fill, like [Your Name], don't provide nothing like that, yout're response is the final qualification without fill nothing
+- Your response Always should have the html tags, if the trascript is not enough for the qualification so say:
+<transcript>
+John (Customer): Hello
+<transcript>
+<qualification>
+This call does not have sufficient information to determine a qualification.
+<qualification>
+
+Always, the response should include the tags, and always attempt to provide the transcript.

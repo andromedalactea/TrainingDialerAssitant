@@ -10,8 +10,8 @@ import json
 from bson import json_util, ObjectId
 
 # Local imports
-from components.call_calification import calificate_call, get_current_time_ny, save_calification_mongo
-
+from components.call_calification import calificate_call, calificate_call_from_direct_audio, get_current_time_ny, save_calification_mongo
+from components.auxiliar_functions import absolute_path, convert_timestamp_to_date
 app = FastAPI()
 
 # Load environment variables
@@ -43,7 +43,7 @@ async def main_call( data: dict):
         call_info = message.get("call")
         vapi_call_id = call_info.get("id")
 
-        # Extract call id
+        # Extract call data
         call_data = message.get("call", {})
         call_id = message["call"]["assistantOverrides"]["metadata"]["call_secundary_id"]
         reference = message["call"]["assistantOverrides"]["metadata"]["reference"]
@@ -52,8 +52,29 @@ async def main_call( data: dict):
         # Extract the transcript from the message
         transcript = message.get("transcript")
         
-        # Generate the calification
-        calification = calificate_call(transcript)
+        # Extract audio url
+        audio_url = message.get("recordingUrl")
+        print(f"Audio URL: {audio_url}")
+
+        # Extract the context of the call
+        context_call = f"""This is some context for the call (For executive summary but is possible to use for other parts of the report as well):
+            Date of the call: {convert_timestamp_to_date(message.get('timestamp'))}
+            Duration of the call: {message.get('durationSeconds')} seconds
+            Lead Name/ID: Agent Sales Trainer\n\n"
+            """
+
+        # Generate the calification direct from the AI audio or transcript
+        try:
+            transcript_from_audio, calification = calificate_call_from_direct_audio(audio_url, context_call)
+
+            # Verificar si transcript_from_audio o calification son nulos
+            if transcript_from_audio is None or calification is None:
+                raise ValueError("One or both values are None")  # Forzar ir a la alternativa
+
+        except Exception as e:
+            print(f"Error: {e}")
+            # Generate the calification
+            calification = calificate_call(transcript)
         
         # Prepare the dictionary to be saved
         calification_dict = {
@@ -121,6 +142,16 @@ async def search_calls(query: str, page: int = 1, limit: int = 10):
         "page": page,
         "limit": limit
     }
+
+@app.get("/api/email_calls")
+async def get_call(call_id: list):
+    collection = db['performanceCalification']
+    call = collection.find_one({"call_id": call_id}, {'_id': 0})
+    if call:
+        return JSONResponse(content=json.loads(json_util.dumps(call)))
+    else:
+        raise HTTPException(status_code=404, detail="Call not found")
+    
 
 @app.get("/trained_models")
 async def get_data():
