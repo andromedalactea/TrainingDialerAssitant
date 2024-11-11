@@ -1,11 +1,11 @@
-from fastapi import FastAPI, HTTPException, Request, status, Query  # Ensure Query is imported
+from fastapi import FastAPI, HTTPException, Request, status, Query, BackgroundTasks  
 from typing import List
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import StreamingResponse
 from pymongo import MongoClient
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 from dotenv import load_dotenv
 import os
 import json
@@ -16,10 +16,14 @@ from io import BytesIO
 from components.call_calification import calificate_call, calificate_call_from_direct_audio, get_current_time_ny, save_calification_mongo
 from components.auxiliar_functions import absolute_path, convert_timestamp_to_date
 from components.reports_for_email import generate_pdf_report
-app = FastAPI()
+from components.send_emails import send_email_with_attachment
+
 
 # Load environment variables
 load_dotenv(override=True)
+
+# Initialize the API
+app = FastAPI()
 
 # CORS configuration
 app.add_middleware(
@@ -174,7 +178,50 @@ async def get_report(call_ids: List[str] = Query(...)):
     return StreamingResponse(pdf_stream, media_type="application/pdf", headers={
         "Content-Disposition": "attachment; filename=call_report.pdf"
     })
+
+@app.get("/api/send_report_email")
+async def send_report_email(
+    background_tasks: BackgroundTasks,        
+    call_ids: List[str] = Query(...),
+    receiver_email: EmailStr = Query(...),
+    merge_pdfs: bool = Query(False)            
+):
+    # Accedemos a la colección
+    collection = db['performanceCalification']
+
+    # Realizamos una búsqueda con el operador $in
+    calls = collection.find({"call_id": {"$in": call_ids}}, {'_id': 0})
     
+    # Convertimos el cursor de MongoDB a una lista de diccionarios
+    calls_info = list(calls)
+
+    # Si no se encontraron llamadas, lanzamos un error 404
+    if not calls_info:
+        raise HTTPException(status_code=404, detail="Calls not found")
+
+    # Si "merge_pdfs" es True, generamos un solo PDF con todos los reportes
+    if merge_pdfs:
+        pdf_bytes = generate_pdf_report(calls_info, absolute_path("../../css/style_report.css"))
+        pdf_files = [('call_report.pdf', pdf_bytes)]  # Empaquetamos el nombre y los bytes del PDF
+    else:
+        # Generamos un PDF por cada llamada y los almacenamos en una lista
+        pdf_files = [
+            (f"call_report_{call['call_id']}.pdf", generate_pdf_report([call], absolute_path("../../css/style_report.css")))
+            for call in calls_info
+        ]
+
+    # Enviamos el correo en segundo plano
+    background_tasks.add_task(
+        send_email_with_attachment,
+        os.getenv("SENDER_EMAIL"),  # Tu dirección de correo configurada en el entorno
+        receiver_email,
+        "Call Reports",  # El asunto del correo
+        "Please find the attached call reports.",  # El cuerpo del correo
+        pdf_files  # Lista de PDFs (nombre y bytes)
+    )
+
+    # Retornamos un 200 si todo salió bien
+    return {"message": "Email sent successfully."}
 
 @app.get("/trained_models")
 async def get_data():

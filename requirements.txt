@@ -12,6 +12,7 @@ WeasyPrint==62.3
 markdown2==2.5.0
 pdfkit==1.0.0
 python-multipart
+pydantic[email]
 # git+https://github.com/m-bain/whisperx.git
 # openai-whisper==20231117
 # pyngrok==7.1.6
