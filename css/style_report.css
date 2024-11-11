@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 20mm 2mm;  /* Margen superior e inferior ahora 20mm, márgenes laterales 10mm */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #1a5f7a;
+    font-size: 22px; /* Reducido a 28px si 32px era demasiado grande para tu diseño */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1a5f7a;
+    padding-bottom: 5px;
+}
+
+h2 {
+    color: #2c7da0;
+    margin-top: 17px;
+    margin-bottom: 10px;
+    font-size: 19px;  /* Ajuste tamaño de encabezado para ser consistente con el diseño */
+}
+
+h3 {
+    color: #2c7da0;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 17px;  /* Ajuste tamaño de encabezado para ser consistente con el diseño */
+}
+
+h4 {
+    color: #468faf;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+h5 {
+    color: #468faf;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+
+p {
+    font-size: 12px;  /* Disminuir el tamaño de las fuentes en los párrafos para encajar más contenido */
+    margin-bottom: 10px;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+strong {
+    color: #1a5f7a;
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+table, th, td {
+    border: 1px solid #a9d6e5;
+    padding: 10px; /* Disminuido los rellenos (padding) para mejor relación de espacio */
+    text-align: left;
+    font-size: 10px; /* Tamaño de letra para celdas y encabezados */
+}
+
+th {
+    background-color: #2c7da0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #e8f4f8;
+}
+
+.transcript-box {
+    background-color: #ffffff;
+    border: 1px solid #a9d6e5;
+    border-radius: 5px;
+    padding: 15px;  /* Ajuste del relleno interno */
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 10px;  /* Ajuste del relleno en los bloques de `pre` */
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px; /* Ajustado el tamaño de `code` en líneas de texto */
+}
+
+/* CSS for page breaks */
+.page-break {
+    page-break-after: always;
+}

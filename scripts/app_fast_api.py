@@ -1,17 +1,21 @@
-from fastapi import FastAPI, HTTPException, Request, status
+from fastapi import FastAPI, HTTPException, Request, status, Query  # Ensure Query is imported
+from typing import List
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.responses import StreamingResponse
 from pymongo import MongoClient
 from pydantic import BaseModel
 from dotenv import load_dotenv
 import os
 import json
 from bson import json_util, ObjectId
+from io import BytesIO
 
 # Local imports
 from components.call_calification import calificate_call, calificate_call_from_direct_audio, get_current_time_ny, save_calification_mongo
 from components.auxiliar_functions import absolute_path, convert_timestamp_to_date
+from components.reports_for_email import generate_pdf_report
 app = FastAPI()
 
 # Load environment variables
@@ -47,7 +51,7 @@ async def main_call( data: dict):
         call_data = message.get("call", {})
         call_id = message["call"]["assistantOverrides"]["metadata"]["call_secundary_id"]
         reference = message["call"]["assistantOverrides"]["metadata"]["reference"]
-        
+        duration = message.get('durationSeconds')
         
         # Extract the transcript from the message
         transcript = message.get("transcript")
@@ -84,6 +88,7 @@ async def main_call( data: dict):
             "calification": calification,
             "time" : get_current_time_ny(),
             "reference": reference,
+            "duration": duration
         }
 
         # Save the calification in a file like a jsonl
@@ -143,14 +148,32 @@ async def search_calls(query: str, page: int = 1, limit: int = 10):
         "limit": limit
     }
 
-@app.get("/api/email_calls")
-async def get_call(call_id: list):
+
+@app.get("/api/generate_report_file")
+async def get_report(call_ids: List[str] = Query(...)):
+    # Accedemos a la colección
     collection = db['performanceCalification']
-    call = collection.find_one({"call_id": call_id}, {'_id': 0})
-    if call:
-        return JSONResponse(content=json.loads(json_util.dumps(call)))
-    else:
-        raise HTTPException(status_code=404, detail="Call not found")
+
+    # Realizamos una búsqueda con el operador $in
+    calls = collection.find({"call_id": {"$in": call_ids}}, {'_id': 0})
+    
+    # Convert the MongoDB cursor to a list of dictionaries
+    calls_info = list(calls)
+
+    # Si no se encontraron llamadas, lanzamos un error 404
+    if not calls_info:
+        raise HTTPException(status_code=404, detail="Calls not found")
+
+    # Generamos el PDF como bytes (sin escribirlo en disco)
+    pdf_bytes = generate_pdf_report(calls_info, absolute_path("../../css/style_report.css"))
+
+    # Envolvemos los bytes en un BytesIO para poder retornarlos como StreamingResponse
+    pdf_stream = BytesIO(pdf_bytes)
+
+    # Devolvemos el PDF con el encabezado adecuado para el tipo de contenido
+    return StreamingResponse(pdf_stream, media_type="application/pdf", headers={
+        "Content-Disposition": "attachment; filename=call_report.pdf"
+    })
     
 
 @app.get("/trained_models")

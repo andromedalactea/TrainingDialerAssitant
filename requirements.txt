@@ -8,6 +8,10 @@ fastapi==0.113.0
 pymongo==4.8.0
 flask-cors==5.0.0
 uvicorn==0.30.6
+WeasyPrint==62.3
+markdown2==2.5.0
+pdfkit==1.0.0
+python-multipart
 # git+https://github.com/m-bain/whisperx.git
 # openai-whisper==20231117
 # pyngrok==7.1.6
