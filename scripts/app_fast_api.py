@@ -92,7 +92,8 @@ async def main_call( data: dict):
             "calification": calification,
             "time" : get_current_time_ny(),
             "reference": reference,
-            "duration": duration
+            "duration": duration,
+            "audio_url": audio_url
         }
 
         # Save the calification in a file like a jsonl
