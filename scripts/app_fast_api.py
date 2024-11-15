@@ -1,5 +1,5 @@
-from fastapi import FastAPI, HTTPException, Request, status, Query, BackgroundTasks  
-from typing import List
+from fastapi import FastAPI, HTTPException, File, UploadFile, Form, Query, BackgroundTasks  
+from typing import List, Optional
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
@@ -7,6 +7,10 @@ from starlette.responses import StreamingResponse
 from pymongo import MongoClient
 from pydantic import BaseModel, EmailStr
 from dotenv import load_dotenv
+from pytz import timezone
+import uuid
+from datetime import datetime
+import base64
 import os
 import json
 from bson import json_util, ObjectId
@@ -17,7 +21,7 @@ from components.call_calification import calificate_call, calificate_call_from_d
 from components.auxiliar_functions import absolute_path, convert_timestamp_to_date
 from components.reports_for_email import generate_pdf_report
 from components.send_emails import send_email_with_attachment
-
+from components.diarization_with_openai import diarization
 
 # Load environment variables
 load_dotenv(override=True)
@@ -224,6 +228,67 @@ async def send_report_email(
     # Retornamos un 200 si todo salió bien
     return {"message": "Email sent successfully."}
 
+@app.post("/api/upload_audio")
+async def upload_audio(
+    file: UploadFile = File(...),  # Audio file in mp3 or wav format
+    model: str = Form(..., description="The model for which the audio will be used"),  # Form data, not query
+    filename: str = Form(..., description="The name of the audio file"),  # Form data, not query
+    background_tasks: BackgroundTasks = BackgroundTasks()
+):
+    """
+    Endpoint to upload an audio file, transcribe and diarize it, and save it to the database.
+    """
+    
+    # Supported file extensions
+    allowed_extensions = ["mp3", "wav"]
+    file_extension = file.filename.split(".")[-1].lower()
+
+    if file_extension not in allowed_extensions:
+        raise HTTPException(status_code=400, detail=f"Invalid file extension '{file_extension}'. Supported: {allowed_extensions}")
+    
+    # Read the file content in base64 format
+    audio_data = await file.read()
+    audio_base64 = base64.b64encode(audio_data).decode('utf-8')
+
+    # Generate a UUID for the audio
+    audio_id = str(uuid.uuid4())
+
+    # Get the current time in the New York timezone
+    ny_tz = timezone('America/New_York')
+    timestamp = datetime.now(ny_tz)
+    
+    # Call the diarization function to get the transcript (ai_like_assistant) and swapped version (ai_like_user)
+    transcript_list, swapped_transcript_list = diarization(audio_base64, file_extension)  # This function now returns two lists
+    
+    # Determine if diarization was successful (i.e., not an empty list)
+    diarization_successful = bool(transcript_list)  # True if transcript_list is not empty
+
+    # Prepare the data to be saved in MongoDB
+    audio_document = {
+        "audio_id": audio_id,  # Unique audio identifier (UUID)
+        "filename": filename,  # Original file name
+        "file_extension": file_extension,  # mp3 or wav
+        "audio_base64": audio_base64,  # Base64-encoded audio
+        "models": [model],  # Model to associate with this audio
+        "timestamp": timestamp.isoformat(),  # Date and time of the upload in NY time, ISO format
+        "ai_like_assistant": transcript_list,  # Diarization as if spoken by an assistant
+        "ai_like_user": swapped_transcript_list,  # Diarization as if spoken by a user
+        "diarization_successful": diarization_successful,  # Boolean indicating if diarization succeeded
+    }
+
+    # Insert the document into the audio collection in Mongo
+    collection = db["audio_uploads"]  # Create or use the "audio_uploads" collection
+    result = collection.insert_one(audio_document)
+
+    if result.inserted_id:
+        return {
+            "status": "success", 
+            "message": "Audio uploaded and processed successfully", 
+            "diarization_successful": diarization_successful
+        }
+    else:
+        raise HTTPException(status_code=500, detail="Failed to save audio data in the database")
+    
 @app.get("/trained_models")
 async def get_data():
     collection = db["TrainingDialerDB"]["trained_models"]
