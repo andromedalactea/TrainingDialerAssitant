@@ -291,7 +291,8 @@ async def upload_audio(
         audio_info = {
             "audio_id": audio_id,
             "filename": filename,
-            "last_updated": last_updated
+            "last_updated": last_updated,
+            "diarization_successful": diarization_successful
         }
 
         # Update the model: Add the new audio information to the `audios` list
