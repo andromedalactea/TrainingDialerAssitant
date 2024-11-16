@@ -4,7 +4,7 @@ from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import StreamingResponse
-from pymongo import MongoClient
+from pymongo import MongoClient, DESCENDING
 from pydantic import BaseModel, EmailStr
 from dotenv import load_dotenv
 from pytz import timezone
@@ -231,12 +231,13 @@ async def send_report_email(
 @app.post("/api/upload_audio")
 async def upload_audio(
     file: UploadFile = File(...),  # Audio file in mp3 or wav format
-    model: str = Form(..., description="The model for which the audio will be used"),  # Form data, not query
-    filename: str = Form(..., description="The name of the audio file"),  # Form data, not query
+    model_id: str = Form(..., description="The model_id for which the audio will be used"),  # Form data to receive model_id
+    filename: str = Form(..., description="The name of the audio file"),  # Form data to receive the filename
     background_tasks: BackgroundTasks = BackgroundTasks()
 ):
     """
     Endpoint to upload an audio file, transcribe and diarize it, and save it to the database.
+    Additionally, this endpoint will update the specified model (by model_id) with the audio details.
     """
     
     # Supported file extensions
@@ -256,45 +257,138 @@ async def upload_audio(
     # Get the current time in the New York timezone
     ny_tz = timezone('America/New_York')
     timestamp = datetime.now(ny_tz)
-    
+    last_updated = timestamp.isoformat()
+
     # Call the diarization function to get the transcript (ai_like_assistant) and swapped version (ai_like_user)
     transcript_list, swapped_transcript_list = diarization(audio_base64, file_extension)  # This function now returns two lists
     
     # Determine if diarization was successful (i.e., not an empty list)
     diarization_successful = bool(transcript_list)  # True if transcript_list is not empty
 
-    # Prepare the data to be saved in MongoDB
+    # Prepare the data to be saved in MongoDB for the audio document
     audio_document = {
         "audio_id": audio_id,  # Unique audio identifier (UUID)
         "filename": filename,  # Original file name
         "file_extension": file_extension,  # mp3 or wav
         "audio_base64": audio_base64,  # Base64-encoded audio
-        "models": [model],  # Model to associate with this audio
+        "models": [model_id],  # Model ID to associate with this audio
         "timestamp": timestamp.isoformat(),  # Date and time of the upload in NY time, ISO format
         "ai_like_assistant": transcript_list,  # Diarization as if spoken by an assistant
         "ai_like_user": swapped_transcript_list,  # Diarization as if spoken by a user
         "diarization_successful": diarization_successful,  # Boolean indicating if diarization succeeded
+        "last_updated": last_updated  # New field for the last update time
     }
 
     # Insert the document into the audio collection in Mongo
-    collection = db["audio_uploads"]  # Create or use the "audio_uploads" collection
-    result = collection.insert_one(audio_document)
+    audio_collection = db["audio_uploads"]
+    result = audio_collection.insert_one(audio_document)
 
     if result.inserted_id:
+        # Now update the related model's information in the models collection
+        model_collection = db["models"]
+        
+        # Prepare the audio info to be added to the model's `audios` list
+        audio_info = {
+            "audio_id": audio_id,
+            "filename": filename,
+            "last_updated": last_updated
+        }
+
+        # Update the model: Add the new audio information to the `audios` list
+        update_result = model_collection.update_one(
+            {"model_id": model_id},  # Find the model by model_id
+            {
+                "$push": {"audios": audio_info},  # Push the new audio info into the audios list
+                "$set": {"last_updated": last_updated}  # Also update the model's last_updated field
+            }
+        )
+
+        if update_result.matched_count == 0:
+            # The model_id wasn’t found, raise a 404 error
+            raise HTTPException(status_code=404, detail="Model not found")
+
         return {
             "status": "success", 
-            "message": "Audio uploaded and processed successfully", 
+            "message": "Audio uploaded, diarized, and processed successfully", 
             "diarization_successful": diarization_successful
         }
     else:
         raise HTTPException(status_code=500, detail="Failed to save audio data in the database")
     
-@app.get("/trained_models")
-async def get_data():
-    collection = db["TrainingDialerDB"]["trained_models"]
-    documents = list(collection.find({}))
-    return JSONResponse(content=json.loads(json_util.dumps(documents)))
+@app.post("/api/create_model")
+async def create_model(model_name: str = Form(...)):
+    """
+    Endpoint to create a new model.
+    Generates a UUID for the model and stores initial metadata fields, including timestamps and empty lists for audios and trained models.
+    """
+    collection = db['models']
 
+    # Generate a new UUID for the model
+    model_id = str(uuid.uuid4())
+
+    # Get the current timestamp in NY Timezone
+    # Define timezone
+    NY_TIMEZONE = timezone('America/New_York')
+    ny_timestamp = datetime.now(NY_TIMEZONE).isoformat()
+
+    # Prepare the document to insert into MongoDB
+    model_document = {
+        "model_id": model_id,
+        "name": model_name,
+        "created_at": ny_timestamp,  # Timestamp of creation in NY time
+        "last_updated": ny_timestamp,  # Last update, same as creation time initially
+        "audios": [],  # Empty list for audios related to this model
+        "trained_models": []  # Empty list for trained models
+    }
+
+    # Insert the document into the models collection
+    result = collection.insert_one(model_document)
+
+    if result.inserted_id:
+        return {"status": "success", "model_id": model_id}
+    else:
+        raise HTTPException(status_code=500, detail="Failed to create a new model")
+
+
+# 2. Endpoint: Get models with pagination, sorted by `last_updated` and without `audios` and `trained_models`
+@app.get("/api/models")
+async def get_models_paginated(page: int = 1, limit: int = 10):
+    """
+    Endpoint to get models paginated and sort by last_updated field.
+    The response omits `audios` and `trained_models` from the results.
+    """
+    collection = db['models']
+
+    # Total number of documents in the collection
+    total_models = collection.count_documents({})
+
+    # Fetch the sorted models paginated, exclude `audios`, `trained_models`, and `_id`
+    models = collection.find({}, {"audios": 0, "trained_models": 0, "_id": 0})  # Excluye también `_id`
+    models = models.sort('last_updated', DESCENDING).skip((page - 1) * limit).limit(limit)
+
+    return {
+        "total_models": total_models,
+        "models": list(models),
+        "page": page,
+        "limit": limit
+    }
+
+# 3. Endpoint: Get full details for a specific model by its `model_id`
+@app.get("/api/model/{model_id}")
+async def get_model(model_id: str):
+    """
+    Endpoint to get full information for a specific model.
+    """
+    collection = db['models']
+
+    # Find the model by model_id
+    model = collection.find_one({"model_id": model_id}, {'_id': 0})  # Don't return the MongoDB `_id` field
+
+    if model:
+        return JSONResponse(content=model)
+    else:
+        raise HTTPException(status_code=404, detail="Model not found")
+    
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8080)
