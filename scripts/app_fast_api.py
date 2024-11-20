@@ -8,6 +8,7 @@ from pymongo import MongoClient, DESCENDING
 from pydantic import BaseModel, EmailStr
 from dotenv import load_dotenv
 from pytz import timezone
+from openai import OpenAI
 import uuid
 from datetime import datetime
 import base64
@@ -22,6 +23,7 @@ from components.auxiliar_functions import absolute_path, convert_timestamp_to_da
 from components.reports_for_email import generate_pdf_report
 from components.send_emails import send_email_with_attachment
 from components.diarization_with_openai import diarization
+from components.train_model import fine_tunning_model
 
 # Load environment variables
 load_dotenv(override=True)
@@ -43,6 +45,8 @@ mongo_uri = os.getenv("MONGO_URI")
 client = MongoClient(mongo_uri)
 db = client['TrainingDialer']
 
+# Openai client
+client = OpenAI()
 
 @app.post("/api/calificate_call")
 async def main_call( data: dict):
@@ -374,21 +378,98 @@ async def get_models_paginated(page: int = 1, limit: int = 10):
         "limit": limit
     }
 
+
+
 # 3. Endpoint: Get full details for a specific model by its `model_id`
 @app.get("/api/model/{model_id}")
 async def get_model(model_id: str):
     """
-    Endpoint to get full information for a specific model.
+    Endpoint to get full information for a specific model,
+    updating 'trained_models' data if fine-tuning jobs have changed status.
     """
     collection = db['models']
 
-    # Find the model by model_id
-    model = collection.find_one({"model_id": model_id}, {'_id': 0})  # Don't return the MongoDB `_id` field
+    # Buscar el modelo por model_id
+    model = collection.find_one({"model_id": model_id}, {'_id': 0})
 
-    if model:
-        return JSONResponse(content=model)
-    else:
+    if not model:
         raise HTTPException(status_code=404, detail="Model not found")
+
+    # Verificar si hay trabajos de fine-tuning que no estén "succeeded" o "failed"
+    trained_models = model.get("trained_models", [])
+    model_updated = False  # Para saber si actualizamos el modelo
+    # Definir zona horaria NY
+    NY_TIMEZONE = timezone('America/New_York')
+    current_time = datetime.now(NY_TIMEZONE).isoformat()
+
+    for trained_model in trained_models:
+        current_status = trained_model.get("status")
+        job_id = trained_model.get("job_id")  # Extraer el job_id del diccionario correspondiente
+
+        # Revisamos solo los trabajos que no están finalizados y tienen un job_id válido
+        if current_status not in ["succeeded", "failed"] and job_id:
+            try:
+                # Llamada a OpenAI para obtener el nuevo estado del job
+                status_response = client.fine_tuning.jobs.retrieve(job_id)
+                new_status = status_response.status  # Asegurar que obtenemos el campo status
+
+                # Si el estado cambió o es diferente, actualizamos en la base de datos
+                if new_status != current_status:
+                    trained_model["status"] = new_status  # Actualizamos el estado en la lista
+                    trained_model["updated_at"] = current_time  # Actualizamos el tiempo
+                    model_updated = True
+
+                    # Solo si el estado es "succeeded", intentamos extraer fine_tuned_model
+                    if new_status == "succeeded":
+                        fine_tuned_model = status_response.fine_tuned_model
+                        if fine_tuned_model:
+                            trained_model["output_model"] = fine_tuned_model  # Reemplazamos el campo "output_model"
+
+            except Exception as e:
+                # Si hay un error al consultar la API, actualizamos ese trabajo a "failed"
+                trained_model["status"] = "failed"
+                trained_model["updated_at"] = current_time
+                model_updated = True
+                print(f"Error updating job {job_id}: {str(e)}")
+
+    # Si hubo algún cambio en el modelo, actualizamos la base de datos
+    if model_updated:
+        model["last_updated"] = current_time  # Actualizamos el campo last_updated del modelo
+        collection.update_one(
+            {"model_id": model_id},
+            {
+                "$set": {
+                    "trained_models": trained_models,
+                    "last_updated": current_time
+                },
+            }
+        )
+
+    # Retornamos el modelo actualizado (o no actualizado si no hubo cambios)
+    return JSONResponse(content=model)
+
+@app.post("/api/fine_tune")
+async def fine_tune_model_api(
+    model_id: str = Form(..., description="The model_id to use for fine-tuning."),
+    ai_like: str = Form(..., description="The field to use (ai_like_'assistant' or ai_like_'user')."),
+    openai_model: str = Form(..., description="The OpenAI model to fine-tune.")
+    ):
+
+    """
+    Endpoint to fine-tune an OpenAI model given a model_id and the field to use in the audios.
+    """
+    # Try to call the fine-tunning function and handle errors
+    try:
+        result = fine_tunning_model(model_id, db, openai_model, f"ai_like_{ai_like}")  # Use the fine_tunning_model function from your script
+        return {"status": "success", "message": "Fine-tuning started successfully", "result": result}
+    
+    except ValueError as e:
+        # Handle value errors (e.g., the model doesn't exist or no audios found)
+        raise HTTPException(status_code=404, detail=str(e))
+    
+    except Exception as e:
+        # Handle any other type of errors
+        raise HTTPException(status_code=500, detail=f"An error occurred during fine-tuning: {str(e)}")
     
 if __name__ == "__main__":
     import uvicorn
