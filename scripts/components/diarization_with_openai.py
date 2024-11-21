@@ -7,7 +7,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 # Define the absolute path function (adapt this for your project structure)
-from auxiliar_functions import absolute_path
+from components.auxiliar_functions import absolute_path
 
 # Load environment variables
 load_dotenv(override=True)
