@@ -7,10 +7,17 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 # Define the absolute path function (adapt this for your project structure)
-from components.auxiliar_functions import absolute_path
+from auxiliar_functions import absolute_path
 
 # Load environment variables
 load_dotenv(override=True)
+
+# Ensure the final role is always 'assistant' by truncating the list
+def truncate_to_assistant(transcript_list):
+    # Traverse the list in reverse and remove trailing 'user' entries
+    while transcript_list and transcript_list[-1]['role'] == 'user':
+        transcript_list.pop()  # Remove the last element if it's 'user'
+    return transcript_list
 
 def diarization(audio_data_base_64: str, audio_format: str="mp3") -> tuple:
     """Function that uses OpenAI to perform diarization and return a list of speaker-labeled transcripts."""
@@ -82,7 +89,12 @@ def diarization(audio_data_base_64: str, audio_format: str="mp3") -> tuple:
                 # Append the swapped dictionary to the new list
                 swapped_transcript_list.append(new_transcript)
 
+            # Truncate the list to finish with the 'assistant' role
+            transcript_list = truncate_to_assistant(transcript_list)
+            swapped_transcript_list = truncate_to_assistant(swapped_transcript_list)
+            
             return transcript_list, swapped_transcript_list
+        
         except json.JSONDecodeError as e:
             print("Error: Failed to decode JSON.", e)
             return [], []

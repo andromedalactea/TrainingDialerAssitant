@@ -76,14 +76,13 @@ def fine_tunning_model(model_id: str, db, openai_model: str, ai_like: str) -> st
             file=f,
             purpose="fine-tune",
         )
-    print(response_file)
 
     # Generate the fine tunning job
     response_fine_tunning = client.fine_tuning.jobs.create(
         training_file=response_file.id,
         model=openai_model
     )
-    print(response_fine_tunning)
+    
     # Get the current time in the New York timezone
     ny_tz = timezone('America/New_York')
     timestamp = datetime.now(ny_tz)
@@ -95,6 +94,7 @@ def fine_tunning_model(model_id: str, db, openai_model: str, ai_like: str) -> st
         {"model_id": model_id},
         {"$push": {"trained_models": {"output_model": "processing",
                                       "openai_model": openai_model,
+                                      "ai_like": ai_like,
                                       "training_file_id": response_file.id,
                                       "training_file_name": response_file.filename,
                                       "job_id": response_fine_tunning.id,
