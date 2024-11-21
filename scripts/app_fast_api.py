@@ -368,7 +368,7 @@ async def get_models_paginated(page: int = 1, limit: int = 10):
     total_models = collection.count_documents({})
 
     # Fetch the sorted models paginated, exclude `audios`, `trained_models`, and `_id`
-    models = collection.find({}, {"audios": 0, "trained_models": 0, "_id": 0})  # Excluye también `_id`
+    models = collection.find({}, {"audios": 0, "_id": 0})  # Excluye también `_id`
     models = models.sort('last_updated', DESCENDING).skip((page - 1) * limit).limit(limit)
 
     return {
