@@ -1,0 +1,18 @@
+# Ignorar carpetas no útiles
+/test
+/attic
+/audios_train_assistant
+/build
+/node_modules
+/mongodb-data
+/src
+/ssl
+/public
+/outpu_files
+
+
+# Ignorar configuraciones locales
+*.pyc
+*.pyo
+*.pyd
+__pycache__/

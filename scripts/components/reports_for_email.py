@@ -1,5 +1,4 @@
 # Third Party imports
-import pandas as pd
 import markdown2
 from weasyprint import HTML, CSS
 from io import BytesIO  # Import BytesIO para trabajar en memoria

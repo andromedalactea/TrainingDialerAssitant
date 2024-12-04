@@ -1,11 +1,11 @@
 from fastapi import FastAPI, HTTPException, File, UploadFile, Form, Query, BackgroundTasks  
-from typing import List, Optional
+from typing import List
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import StreamingResponse
 from pymongo import MongoClient, DESCENDING
-from pydantic import BaseModel, EmailStr
+from pydantic import  EmailStr
 from dotenv import load_dotenv
 from pytz import timezone
 from openai import OpenAI
@@ -14,7 +14,7 @@ from datetime import datetime
 import base64
 import os
 import json
-from bson import json_util, ObjectId
+from bson import json_util
 from io import BytesIO
 
 # Local imports
@@ -473,4 +473,4 @@ async def fine_tune_model_api(
     
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=8000)

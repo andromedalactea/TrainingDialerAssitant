@@ -1,7 +1,4 @@
-import os
 import re
-import requests
-import base64
 import json
 from openai import OpenAI
 from dotenv import load_dotenv
