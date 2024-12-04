@@ -27,8 +27,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar todos los archivos de la aplicación en el contenedor
 COPY . .
 
-# Exponer el puerto 8080 para la aplicación FastAPI
-EXPOSE 8080
+# Exponer el puerto 8000 para la aplicación FastAPI
+EXPOSE 8000
 
 # Comando para ejecutar la aplicación
 CMD ["python", "scripts/app_fast_api.py"]
+
+# Commands to build and run the Docker container
+# sudo docker build -t backend-trainingdialerassistant .
+# sudo docker run -d --name backend-trainingdialerassistant-container -p 8000:8000 backend-trainingdialerassistant
